@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="820" y="-17"/>
         </scene>
-        <!--David-->
+        <!--Kukuh-->
         <scene sceneID="uUk-Ap-XzQ">
             <objects>
-                <viewControllerPlaceholder storyboardName="David" id="tto-g6-Ogo" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Kukuh" id="tto-g6-Ogo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5VW-GK-Ydd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1399" y="-18"/>
