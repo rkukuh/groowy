@@ -26,9 +26,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG3-49-aad">
-                                <rect key="frame" x="164" y="352" width="46" height="30"/>
+                                <rect key="frame" x="156" y="352" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="To DEWE"/>
                                 <connections>
                                     <segue destination="tto-g6-Ogo" kind="show" id="c6v-iP-JhA"/>
                                 </connections>
