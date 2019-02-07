@@ -12,6 +12,15 @@
 		4894D7AE220BC3E8007F34F5 /* GroowySleep.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7AB220BC3E8007F34F5 /* GroowySleep.atlas */; };
 		4894D7AF220BC3E8007F34F5 /* GroowyWake.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7AC220BC3E8007F34F5 /* GroowyWake.atlas */; };
 		4894D7B0220BC3E8007F34F5 /* GroowyAsleep.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7AD220BC3E8007F34F5 /* GroowyAsleep.atlas */; };
+		4894D7B2220BC564007F34F5 /* GroowyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7B1220BC564007F34F5 /* GroowyViewController.swift */; };
+		4894D7B5220BC5F9007F34F5 /* GroowyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7B4220BC5F9007F34F5 /* GroowyCharacter.swift */; };
+		4894D7B7220BC623007F34F5 /* GroowyAnimationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7B6220BC623007F34F5 /* GroowyAnimationState.swift */; };
+		4894D7BA220BC661007F34F5 /* SpriteKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7B9220BC661007F34F5 /* SpriteKitExtension.swift */; };
+		4894D7BD220BC97E007F34F5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7BC220BC97E007F34F5 /* GameScene.swift */; };
+		4894D7C0220BC9BC007F34F5 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7BF220BC9BC007F34F5 /* ColorTheme.swift */; };
+		4894D7C3220BCB46007F34F5 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7C2220BCB46007F34F5 /* UIViewController.swift */; };
+		4894D7C6220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7C5220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift */; };
+		4894D7C8220BCF67007F34F5 /* UITextFieldInputAccessory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7C7220BCF67007F34F5 /* UITextFieldInputAccessory.xib */; };
 		4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F1220AD12700C180F9 /* AppDelegate.swift */; };
 		4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4F5220AD12700C180F9 /* Main.storyboard */; };
 		4A33E4FA220AD12700C180F9 /* Groowy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F8220AD12700C180F9 /* Groowy.xcdatamodeld */; };
@@ -19,8 +28,6 @@
 		4A33E4FF220AD12800C180F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4FD220AD12800C180F9 /* LaunchScreen.storyboard */; };
 		4A33E508220ADA0300C180F9 /* Jaya.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E506220ADA0300C180F9 /* Jaya.storyboard */; };
 		4A33E50B220ADA4000C180F9 /* Kukuh.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E509220ADA4000C180F9 /* Kukuh.storyboard */; };
-		B16E1D26220BD7B8007AD855 /* MessageDialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16E1D25220BD7B8007AD855 /* MessageDialogView.xib */; };
-		B17FF3A7220BCA5200BC09D9 /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17FF3A6220BCA5200BC09D9 /* GiftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,15 @@
 		4894D7AB220BC3E8007F34F5 /* GroowySleep.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowySleep.atlas; sourceTree = "<group>"; };
 		4894D7AC220BC3E8007F34F5 /* GroowyWake.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyWake.atlas; sourceTree = "<group>"; };
 		4894D7AD220BC3E8007F34F5 /* GroowyAsleep.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyAsleep.atlas; sourceTree = "<group>"; };
+		4894D7B1220BC564007F34F5 /* GroowyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroowyViewController.swift; sourceTree = "<group>"; };
+		4894D7B4220BC5F9007F34F5 /* GroowyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroowyCharacter.swift; sourceTree = "<group>"; };
+		4894D7B6220BC623007F34F5 /* GroowyAnimationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroowyAnimationState.swift; sourceTree = "<group>"; };
+		4894D7B9220BC661007F34F5 /* SpriteKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitExtension.swift; sourceTree = "<group>"; };
+		4894D7BC220BC97E007F34F5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		4894D7BF220BC9BC007F34F5 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
+		4894D7C2220BCB46007F34F5 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		4894D7C5220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldInputAccessoryView.swift; sourceTree = "<group>"; };
+		4894D7C7220BCF67007F34F5 /* UITextFieldInputAccessory.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextFieldInputAccessory.xib; sourceTree = "<group>"; };
 		4A33E4EE220AD12700C180F9 /* Groowy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groowy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A33E4F1220AD12700C180F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A33E4F6220AD12700C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,8 +54,6 @@
 		4A33E500220AD12800C180F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A33E507220ADA0300C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Groowy/Base.lproj/Jaya.storyboard; sourceTree = "<group>"; };
 		4A33E50A220ADA4000C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Groowy/Groowy/Base.lproj/Kukuh.storyboard; sourceTree = "<group>"; };
-		B16E1D25220BD7B8007AD855 /* MessageDialogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageDialogView.xib; sourceTree = "<group>"; };
-		B17FF3A6220BCA5200BC09D9 /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 		4894D7A3220BC30F007F34F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4894D7B3220BC5BB007F34F5 /* GroowyCharacter */,
 				4894D7A5220BC31F007F34F5 /* BaseModel.swift */,
 			);
 			path = Model;
@@ -64,8 +79,9 @@
 		4894D7A7220BC32A007F34F5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4894D7BC220BC97E007F34F5 /* GameScene.swift */,
+				4894D7B1220BC564007F34F5 /* GroowyViewController.swift */,
 				4894D7A8220BC336007F34F5 /* BaseController.swift */,
-				B17FF3A6220BCA5200BC09D9 /* GiftViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -78,6 +94,41 @@
 				4894D7AC220BC3E8007F34F5 /* GroowyWake.atlas */,
 			);
 			path = Atlas;
+			sourceTree = "<group>";
+		};
+		4894D7B3220BC5BB007F34F5 /* GroowyCharacter */ = {
+			isa = PBXGroup;
+			children = (
+				4894D7B4220BC5F9007F34F5 /* GroowyCharacter.swift */,
+				4894D7B6220BC623007F34F5 /* GroowyAnimationState.swift */,
+			);
+			path = GroowyCharacter;
+			sourceTree = "<group>";
+		};
+		4894D7B8220BC652007F34F5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4894D7B9220BC661007F34F5 /* SpriteKitExtension.swift */,
+				4894D7C2220BCB46007F34F5 /* UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4894D7BE220BC9B0007F34F5 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				4894D7BF220BC9BC007F34F5 /* ColorTheme.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		4894D7C4220BCF11007F34F5 /* UITextFieldInputAccessoryView */ = {
+			isa = PBXGroup;
+			children = (
+				4894D7C5220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift */,
+				4894D7C7220BCF67007F34F5 /* UITextFieldInputAccessory.xib */,
+			);
+			path = UITextFieldInputAccessoryView;
 			sourceTree = "<group>";
 		};
 		4A33E4E5220AD12700C180F9 = {
@@ -99,6 +150,8 @@
 		4A33E4F0220AD12700C180F9 /* Groowy */ = {
 			isa = PBXGroup;
 			children = (
+				4894D7BE220BC9B0007F34F5 /* Constant */,
+				4894D7B8220BC652007F34F5 /* Extension */,
 				4894D7AA220BC3C8007F34F5 /* Atlas */,
 				4894D7A7220BC32A007F34F5 /* Controller */,
 				4894D7A3220BC30F007F34F5 /* Model */,
@@ -115,10 +168,10 @@
 		4A33E50D220ADE8900C180F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4894D7C4220BCF11007F34F5 /* UITextFieldInputAccessoryView */,
 				4A33E509220ADA4000C180F9 /* Kukuh.storyboard */,
 				4A33E506220ADA0300C180F9 /* Jaya.storyboard */,
 				4A33E4F5220AD12700C180F9 /* Main.storyboard */,
-				B16E1D25220BD7B8007AD855 /* MessageDialogView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,10 +239,10 @@
 				4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */,
 				4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */,
 				4A33E508220ADA0300C180F9 /* Jaya.storyboard in Resources */,
-				B16E1D26220BD7B8007AD855 /* MessageDialogView.xib in Resources */,
 				4A33E50B220ADA4000C180F9 /* Kukuh.storyboard in Resources */,
 				4894D7B0220BC3E8007F34F5 /* GroowyAsleep.atlas in Resources */,
 				4894D7AF220BC3E8007F34F5 /* GroowyWake.atlas in Resources */,
+				4894D7C8220BCF67007F34F5 /* UITextFieldInputAccessory.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,11 +253,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4894D7B5220BC5F9007F34F5 /* GroowyCharacter.swift in Sources */,
 				4A33E4FA220AD12700C180F9 /* Groowy.xcdatamodeld in Sources */,
+				4894D7B2220BC564007F34F5 /* GroowyViewController.swift in Sources */,
+				4894D7C3220BCB46007F34F5 /* UIViewController.swift in Sources */,
+				4894D7C0220BC9BC007F34F5 /* ColorTheme.swift in Sources */,
+				4894D7BD220BC97E007F34F5 /* GameScene.swift in Sources */,
 				4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */,
 				4894D7A9220BC336007F34F5 /* BaseController.swift in Sources */,
-				B17FF3A7220BCA5200BC09D9 /* GiftViewController.swift in Sources */,
+				4894D7C6220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift in Sources */,
 				4894D7A6220BC31F007F34F5 /* BaseModel.swift in Sources */,
+				4894D7B7220BC623007F34F5 /* GroowyAnimationState.swift in Sources */,
+				4894D7BA220BC661007F34F5 /* SpriteKitExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
