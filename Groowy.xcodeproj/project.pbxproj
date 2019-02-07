@@ -19,6 +19,8 @@
 		4A33E4FF220AD12800C180F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4FD220AD12800C180F9 /* LaunchScreen.storyboard */; };
 		4A33E508220ADA0300C180F9 /* Jaya.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E506220ADA0300C180F9 /* Jaya.storyboard */; };
 		4A33E50B220ADA4000C180F9 /* Kukuh.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E509220ADA4000C180F9 /* Kukuh.storyboard */; };
+		B16E1D26220BD7B8007AD855 /* MessageDialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16E1D25220BD7B8007AD855 /* MessageDialogView.xib */; };
+		B17FF3A7220BCA5200BC09D9 /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17FF3A6220BCA5200BC09D9 /* GiftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		4A33E500220AD12800C180F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A33E507220ADA0300C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Groowy/Base.lproj/Jaya.storyboard; sourceTree = "<group>"; };
 		4A33E50A220ADA4000C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Groowy/Groowy/Base.lproj/Kukuh.storyboard; sourceTree = "<group>"; };
+		B16E1D25220BD7B8007AD855 /* MessageDialogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageDialogView.xib; sourceTree = "<group>"; };
+		B17FF3A6220BCA5200BC09D9 /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				4894D7A8220BC336007F34F5 /* BaseController.swift */,
+				B17FF3A6220BCA5200BC09D9 /* GiftViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 				4A33E509220ADA4000C180F9 /* Kukuh.storyboard */,
 				4A33E506220ADA0300C180F9 /* Jaya.storyboard */,
 				4A33E4F5220AD12700C180F9 /* Main.storyboard */,
+				B16E1D25220BD7B8007AD855 /* MessageDialogView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +186,7 @@
 				4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */,
 				4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */,
 				4A33E508220ADA0300C180F9 /* Jaya.storyboard in Resources */,
+				B16E1D26220BD7B8007AD855 /* MessageDialogView.xib in Resources */,
 				4A33E50B220ADA4000C180F9 /* Kukuh.storyboard in Resources */,
 				4894D7B0220BC3E8007F34F5 /* GroowyAsleep.atlas in Resources */,
 				4894D7AF220BC3E8007F34F5 /* GroowyWake.atlas in Resources */,
@@ -196,6 +203,7 @@
 				4A33E4FA220AD12700C180F9 /* Groowy.xcdatamodeld in Sources */,
 				4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */,
 				4894D7A9220BC336007F34F5 /* BaseController.swift in Sources */,
+				B17FF3A7220BCA5200BC09D9 /* GiftViewController.swift in Sources */,
 				4894D7A6220BC31F007F34F5 /* BaseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
