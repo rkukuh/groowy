@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4894D7A6220BC31F007F34F5 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7A5220BC31F007F34F5 /* BaseModel.swift */; };
+		4894D7A9220BC336007F34F5 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7A8220BC336007F34F5 /* BaseController.swift */; };
+		4894D7AE220BC3E8007F34F5 /* GroowySleep.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7AB220BC3E8007F34F5 /* GroowySleep.atlas */; };
+		4894D7AF220BC3E8007F34F5 /* GroowyWake.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7AC220BC3E8007F34F5 /* GroowyWake.atlas */; };
+		4894D7B0220BC3E8007F34F5 /* GroowyAsleep.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7AD220BC3E8007F34F5 /* GroowyAsleep.atlas */; };
 		4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F1220AD12700C180F9 /* AppDelegate.swift */; };
 		4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4F5220AD12700C180F9 /* Main.storyboard */; };
 		4A33E4FA220AD12700C180F9 /* Groowy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F8220AD12700C180F9 /* Groowy.xcdatamodeld */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4894D7A5220BC31F007F34F5 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		4894D7A8220BC336007F34F5 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		4894D7AB220BC3E8007F34F5 /* GroowySleep.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowySleep.atlas; sourceTree = "<group>"; };
+		4894D7AC220BC3E8007F34F5 /* GroowyWake.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyWake.atlas; sourceTree = "<group>"; };
+		4894D7AD220BC3E8007F34F5 /* GroowyAsleep.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyAsleep.atlas; sourceTree = "<group>"; };
 		4A33E4EE220AD12700C180F9 /* Groowy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groowy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A33E4F1220AD12700C180F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A33E4F6220AD12700C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +49,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4894D7A3220BC30F007F34F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4894D7A5220BC31F007F34F5 /* BaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4894D7A7220BC32A007F34F5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4894D7A8220BC336007F34F5 /* BaseController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4894D7AA220BC3C8007F34F5 /* Atlas */ = {
+			isa = PBXGroup;
+			children = (
+				4894D7AD220BC3E8007F34F5 /* GroowyAsleep.atlas */,
+				4894D7AB220BC3E8007F34F5 /* GroowySleep.atlas */,
+				4894D7AC220BC3E8007F34F5 /* GroowyWake.atlas */,
+			);
+			path = Atlas;
+			sourceTree = "<group>";
+		};
 		4A33E4E5220AD12700C180F9 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +94,10 @@
 		4A33E4F0220AD12700C180F9 /* Groowy */ = {
 			isa = PBXGroup;
 			children = (
-				4A33E50C220ADE8300C180F9 /* Model */,
+				4894D7AA220BC3C8007F34F5 /* Atlas */,
+				4894D7A7220BC32A007F34F5 /* Controller */,
+				4894D7A3220BC30F007F34F5 /* Model */,
 				4A33E50D220ADE8900C180F9 /* View */,
-				4A33E50E220ADEAA00C180F9 /* Controller */,
 				4A33E4FB220AD12800C180F9 /* Assets.xcassets */,
 				4A33E4FD220AD12800C180F9 /* LaunchScreen.storyboard */,
 				4A33E4F1220AD12700C180F9 /* AppDelegate.swift */,
@@ -68,13 +105,6 @@
 				4A33E4F8220AD12700C180F9 /* Groowy.xcdatamodeld */,
 			);
 			path = Groowy;
-			sourceTree = "<group>";
-		};
-		4A33E50C220ADE8300C180F9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		4A33E50D220ADE8900C180F9 /* View */ = {
@@ -85,13 +115,6 @@
 				4A33E4F5220AD12700C180F9 /* Main.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		4A33E50E220ADEAA00C180F9 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,11 +175,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4894D7AE220BC3E8007F34F5 /* GroowySleep.atlas in Resources */,
 				4A33E4FF220AD12800C180F9 /* LaunchScreen.storyboard in Resources */,
 				4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */,
 				4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */,
 				4A33E508220ADA0300C180F9 /* Jaya.storyboard in Resources */,
 				4A33E50B220ADA4000C180F9 /* Kukuh.storyboard in Resources */,
+				4894D7B0220BC3E8007F34F5 /* GroowyAsleep.atlas in Resources */,
+				4894D7AF220BC3E8007F34F5 /* GroowyWake.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +195,8 @@
 			files = (
 				4A33E4FA220AD12700C180F9 /* Groowy.xcdatamodeld in Sources */,
 				4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */,
+				4894D7A9220BC336007F34F5 /* BaseController.swift in Sources */,
+				4894D7A6220BC31F007F34F5 /* BaseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
