@@ -32,8 +32,12 @@ class GroowyViewController: UIViewController {
     }
     
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {
-        scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
-        showKeyboardWithTextFieldAccessoryView()
+        //scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
+        //showKeyboardWithTextFieldAccessoryView()
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "jaya") as! LoveAppleViewController
+        self.present(newViewController, animated: true, completion: nil)
     }
     
     func showKeyboardWithTextFieldAccessoryView() {
