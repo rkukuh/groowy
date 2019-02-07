@@ -12,4 +12,14 @@ extension UIViewController {
     var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    func loadViewFromNib(nibName:String) -> UIView? {
+        if let views =  Bundle.main.loadNibNamed(nibName, owner: nil, options: nil) {
+            if let view = views.first as? UIView {
+                return view
+            }
+        }
+        print("Error in loadViewFromNib \(nibName)")
+        return nil
+    }
 }
