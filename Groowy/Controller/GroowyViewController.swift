@@ -37,8 +37,9 @@ class GroowyViewController: UIViewController {
     }
     
     func showKeyboardWithTextFieldAccessoryView() {
-        let textFieldInput = loadViewFromNib(nibName: "UITextFieldInputAccessory")
+        let textFieldInput = loadViewFromNib(nibName: "UITextFieldInputAccessory") as! UITextFieldInputAccessoryView
         textField.autocorrectionType = .no
+        textFieldInput.textField.autocapitalizationType = .words
         textField.inputAccessoryView = textFieldInput
         textField.becomeFirstResponder()
     }

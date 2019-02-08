@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="183"/>
+            <point key="canvasLocation" x="1010" y="464"/>
         </scene>
         <!--Jaya-->
         <scene sceneID="gZn-6S-kw0">
@@ -86,7 +86,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-762" y="-17"/>
+            <point key="canvasLocation" x="-526" y="-60"/>
         </scene>
     </scenes>
 </document>
