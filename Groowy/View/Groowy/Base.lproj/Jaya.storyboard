@@ -10,37 +10,81 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Love Apple View Controller-->
         <scene sceneID="u6X-TT-dlV">
             <objects>
-                <viewController id="Isp-ie-SYX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="jaya" id="Isp-ie-SYX" customClass="LoveAppleViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0O-ct-uYT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JAYA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYU-QB-Orc">
-                                <rect key="frame" x="168" y="323" width="39" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG3-49-aad">
-                                <rect key="frame" x="156" y="352" width="63" height="30"/>
+                                <rect key="frame" x="156" y="593" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="To DEWE"/>
                                 <connections>
                                     <segue destination="tto-g6-Ogo" kind="show" id="c6v-iP-JhA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cD-4Y-kVQ">
+                                <rect key="frame" x="94" y="150" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fn-er-32y">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                            </skView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaO-as-56U" userLabel="ViewMessageDialog">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="233.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MessageDialog" translatesAutoresizingMaskIntoConstraints="NO" id="PXf-lh-fsa">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="233.5"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RtG-xY-q6c">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="RtG-xY-q6c" firstAttribute="leading" secondItem="DaO-as-56U" secondAttribute="leading" id="325-f8-eGD"/>
+                                    <constraint firstAttribute="trailing" secondItem="PXf-lh-fsa" secondAttribute="trailing" id="3zj-P9-NOm"/>
+                                    <constraint firstItem="RtG-xY-q6c" firstAttribute="top" secondItem="DaO-as-56U" secondAttribute="top" id="6Iw-2O-e0T"/>
+                                    <constraint firstItem="PXf-lh-fsa" firstAttribute="leading" secondItem="DaO-as-56U" secondAttribute="leading" id="JrK-rD-EMR"/>
+                                    <constraint firstAttribute="bottom" secondItem="PXf-lh-fsa" secondAttribute="bottom" id="QvO-8f-mSn"/>
+                                    <constraint firstItem="PXf-lh-fsa" firstAttribute="top" secondItem="DaO-as-56U" secondAttribute="top" id="aRF-gl-a13"/>
+                                    <constraint firstAttribute="trailing" secondItem="RtG-xY-q6c" secondAttribute="trailing" id="dkt-y1-Ijg"/>
+                                    <constraint firstItem="RtG-xY-q6c" firstAttribute="height" secondItem="DaO-as-56U" secondAttribute="height" multiplier="0.8" id="ilo-7U-z1t"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.91764705882352937" green="0.68235294117647061" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DaO-as-56U" firstAttribute="trailing" secondItem="ByN-do-Gph" secondAttribute="trailing" id="2gJ-Aw-tv3"/>
+                            <constraint firstItem="0fn-er-32y" firstAttribute="height" secondItem="U0O-ct-uYT" secondAttribute="width" id="9xz-wf-5kb"/>
+                            <constraint firstItem="0fn-er-32y" firstAttribute="centerX" secondItem="U0O-ct-uYT" secondAttribute="centerX" id="HBI-cC-Jea"/>
+                            <constraint firstItem="DaO-as-56U" firstAttribute="height" secondItem="U0O-ct-uYT" secondAttribute="height" multiplier="0.35" id="RXt-az-wob"/>
+                            <constraint firstItem="0fn-er-32y" firstAttribute="width" secondItem="U0O-ct-uYT" secondAttribute="width" id="Xok-Zf-37z"/>
+                            <constraint firstItem="0fn-er-32y" firstAttribute="centerY" secondItem="U0O-ct-uYT" secondAttribute="centerY" id="YAG-7q-ag4"/>
+                            <constraint firstItem="DaO-as-56U" firstAttribute="leading" secondItem="ByN-do-Gph" secondAttribute="leading" id="bG2-QM-4WD"/>
+                            <constraint firstItem="DaO-as-56U" firstAttribute="top" secondItem="U0O-ct-uYT" secondAttribute="top" id="ky9-61-nZN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ByN-do-Gph"/>
                     </view>
+                    <connections>
+                        <outlet property="cobaText" destination="RtG-xY-q6c" id="uyR-5t-45K"/>
+                        <outlet property="eyeSKView" destination="0fn-er-32y" id="lkW-ew-INE"/>
+                        <outlet property="messageDialogView" destination="DaO-as-56U" id="e9W-or-RSk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGC-n8-a0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="820" y="-17"/>
+            <point key="canvasLocation" x="820" y="-17.541229385307346"/>
         </scene>
         <!--Kukuh-->
         <scene sceneID="uUk-Ap-XzQ">
@@ -51,4 +95,7 @@
             <point key="canvasLocation" x="1399" y="-18"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MessageDialog" width="375" height="267"/>
+    </resources>
 </document>
