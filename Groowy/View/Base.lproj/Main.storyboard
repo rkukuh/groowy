@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bWv-EH-UgV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I2c-cj-fgX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="183"/>
+            <point key="canvasLocation" x="1230" y="-55"/>
         </scene>
         <!--Jaya-->
         <scene sceneID="gZn-6S-kw0">
@@ -48,7 +48,7 @@
                 <viewControllerPlaceholder storyboardName="Jaya" id="L8n-o4-4ZI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4i-U8-EBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1108" y="-29"/>
+            <point key="canvasLocation" x="1737" y="-53"/>
         </scene>
         <!--Groowy View Controller-->
         <scene sceneID="yDI-Ul-oie">
@@ -86,7 +86,131 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-762" y="-17"/>
+            <point key="canvasLocation" x="-1214" y="-52"/>
+        </scene>
+        <!--Create Challenge First View Controller-->
+        <scene sceneID="Sbb-Hn-wYp">
+            <objects>
+                <viewController id="I2c-cj-fgX" customClass="CreateChallengeFirstViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qn4-qf-xuq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptj-yd-fKf">
+                                <rect key="frame" x="16" y="44" width="306" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want to learn ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc6-a1-zEF">
+                                <rect key="frame" x="16" y="130" width="247" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Describe your challenge" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqB-oY-VXJ" customClass="UITextViewWithPlaceholder" customModule="Groowy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="162" width="343" height="489"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IDe-lr-1ax" customClass="UITextViewWithPlaceholder" customModule="Groowy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="162" width="343" height="489"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="placeholderTextView" destination="RqB-oY-VXJ" id="niC-8p-pg4"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="oc6-a1-zEF" firstAttribute="top" secondItem="Ptj-yd-fKf" secondAttribute="bottom" constant="50" id="FGh-zR-mhD"/>
+                            <constraint firstItem="Ptj-yd-fKf" firstAttribute="top" secondItem="XB2-AK-Hkb" secondAttribute="top" constant="24" id="GqV-ed-dlD"/>
+                            <constraint firstItem="oc6-a1-zEF" firstAttribute="leading" secondItem="XB2-AK-Hkb" secondAttribute="leading" constant="16" id="Jud-7f-0mz"/>
+                            <constraint firstItem="RqB-oY-VXJ" firstAttribute="leading" secondItem="IDe-lr-1ax" secondAttribute="leading" id="Paz-Ch-ypl"/>
+                            <constraint firstItem="IDe-lr-1ax" firstAttribute="leading" secondItem="XB2-AK-Hkb" secondAttribute="leading" constant="16" id="Pfh-hf-2hf"/>
+                            <constraint firstItem="XB2-AK-Hkb" firstAttribute="bottom" secondItem="IDe-lr-1ax" secondAttribute="bottom" constant="16" id="WE2-Bs-ieE"/>
+                            <constraint firstItem="RqB-oY-VXJ" firstAttribute="height" secondItem="IDe-lr-1ax" secondAttribute="height" id="is6-Df-HqY"/>
+                            <constraint firstItem="RqB-oY-VXJ" firstAttribute="top" secondItem="IDe-lr-1ax" secondAttribute="top" id="rkZ-hc-3e3"/>
+                            <constraint firstItem="RqB-oY-VXJ" firstAttribute="width" secondItem="IDe-lr-1ax" secondAttribute="width" id="xdH-KG-ERY"/>
+                            <constraint firstItem="XB2-AK-Hkb" firstAttribute="trailing" secondItem="IDe-lr-1ax" secondAttribute="trailing" constant="16" id="y9h-kV-daf"/>
+                            <constraint firstItem="IDe-lr-1ax" firstAttribute="top" secondItem="oc6-a1-zEF" secondAttribute="bottom" constant="8" id="yIh-30-1Rr"/>
+                            <constraint firstItem="Ptj-yd-fKf" firstAttribute="leading" secondItem="XB2-AK-Hkb" secondAttribute="leading" constant="16" id="ys0-7k-LyD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XB2-AK-Hkb"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ZMe-Br-sWN" appends="YES" id="E4R-Xn-4x9"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jpf-Vs-Ohy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="ZMe-Br-sWN">
+                    <connections>
+                        <segue destination="ROL-6B-PKD" kind="custom" customClass="SwipeUpStoryboardSegue" customModule="Groowy" customModuleProvider="target" id="4dy-A1-fzf"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-317" y="-55"/>
+        </scene>
+        <!--Create Challenge Second View Controller-->
+        <scene sceneID="ptl-hK-dJh">
+            <objects>
+                <viewController id="ROL-6B-PKD" customClass="CreateChallengeSecondViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D1d-9W-HXD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe your activities " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axd-kI-6UX">
+                                <rect key="frame" x="16" y="130" width="214" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Describe your activities" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypd-6h-dg1" customClass="UITextViewWithPlaceholder" customModule="Groowy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="162" width="343" height="489"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8sp-W3-ZXS" customClass="UITextViewWithPlaceholder" customModule="Groowy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="162" width="343" height="489"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="placeholderTextView" destination="Ypd-6h-dg1" id="jlR-OR-kTc"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Ypd-6h-dg1" firstAttribute="leading" secondItem="8sp-W3-ZXS" secondAttribute="leading" id="EvF-IL-rYB"/>
+                            <constraint firstItem="2bh-bX-WFW" firstAttribute="bottom" secondItem="8sp-W3-ZXS" secondAttribute="bottom" constant="16" id="NgM-Mq-2iJ"/>
+                            <constraint firstItem="axd-kI-6UX" firstAttribute="leading" secondItem="2bh-bX-WFW" secondAttribute="leading" constant="16" id="NkQ-L1-YOa"/>
+                            <constraint firstItem="2bh-bX-WFW" firstAttribute="trailing" secondItem="8sp-W3-ZXS" secondAttribute="trailing" constant="16" id="QHC-0g-3A6"/>
+                            <constraint firstItem="Ypd-6h-dg1" firstAttribute="width" secondItem="8sp-W3-ZXS" secondAttribute="width" id="Sqm-TR-w2T"/>
+                            <constraint firstItem="axd-kI-6UX" firstAttribute="top" secondItem="2bh-bX-WFW" secondAttribute="top" constant="110" id="aUq-3T-Kd4"/>
+                            <constraint firstItem="Ypd-6h-dg1" firstAttribute="top" secondItem="8sp-W3-ZXS" secondAttribute="top" id="btL-24-GDV"/>
+                            <constraint firstItem="Ypd-6h-dg1" firstAttribute="height" secondItem="8sp-W3-ZXS" secondAttribute="height" id="g9x-lr-ZGP"/>
+                            <constraint firstItem="8sp-W3-ZXS" firstAttribute="leading" secondItem="2bh-bX-WFW" secondAttribute="leading" constant="16" id="y6D-jT-dt9"/>
+                            <constraint firstItem="8sp-W3-ZXS" firstAttribute="top" secondItem="axd-kI-6UX" secondAttribute="bottom" constant="8" id="zj1-RI-uui"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2bh-bX-WFW"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dP7-Km-DsZ" appends="YES" id="4xL-fV-QYX"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Lg-9O-eAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="dP7-Km-DsZ">
+                    <connections>
+                        <action selector="swipeBackWithSender:" destination="ROL-6B-PKD" id="QUK-ZZ-xXg"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="457" y="-55"/>
         </scene>
     </scenes>
 </document>

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4894D7A6220BC31F007F34F5 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7A5220BC31F007F34F5 /* BaseModel.swift */; };
-		4894D7A9220BC336007F34F5 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7A8220BC336007F34F5 /* BaseController.swift */; };
 		4894D7AE220BC3E8007F34F5 /* GroowySleep.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7AB220BC3E8007F34F5 /* GroowySleep.atlas */; };
 		4894D7AF220BC3E8007F34F5 /* GroowyWake.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7AC220BC3E8007F34F5 /* GroowyWake.atlas */; };
 		4894D7B0220BC3E8007F34F5 /* GroowyAsleep.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7AD220BC3E8007F34F5 /* GroowyAsleep.atlas */; };
@@ -21,6 +20,12 @@
 		4894D7C3220BCB46007F34F5 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7C2220BCB46007F34F5 /* UIViewController.swift */; };
 		4894D7C6220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7C5220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift */; };
 		4894D7C8220BCF67007F34F5 /* UITextFieldInputAccessory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7C7220BCF67007F34F5 /* UITextFieldInputAccessory.xib */; };
+		4894D80C220D271D007F34F5 /* SwipeFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D80B220D271D007F34F5 /* SwipeFormViewController.swift */; };
+		4894D80F220D2929007F34F5 /* SwipeUpStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D80E220D2929007F34F5 /* SwipeUpStoryboardSegue.swift */; };
+		4894D812220D2AED007F34F5 /* UITextViewWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D811220D2AED007F34F5 /* UITextViewWithPlaceholder.swift */; };
+		4894D814220D31C2007F34F5 /* CreateChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D813220D31C2007F34F5 /* CreateChallengeViewController.swift */; };
+		4894D816220D32AD007F34F5 /* CreateChallengeSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D815220D32AD007F34F5 /* CreateChallengeSecondViewController.swift */; };
+		4894D818220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D817220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift */; };
 		4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F1220AD12700C180F9 /* AppDelegate.swift */; };
 		4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4F5220AD12700C180F9 /* Main.storyboard */; };
 		4A33E4FA220AD12700C180F9 /* Groowy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F8220AD12700C180F9 /* Groowy.xcdatamodeld */; };
@@ -34,7 +39,6 @@
 
 /* Begin PBXFileReference section */
 		4894D7A5220BC31F007F34F5 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		4894D7A8220BC336007F34F5 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		4894D7AB220BC3E8007F34F5 /* GroowySleep.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowySleep.atlas; sourceTree = "<group>"; };
 		4894D7AC220BC3E8007F34F5 /* GroowyWake.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyWake.atlas; sourceTree = "<group>"; };
 		4894D7AD220BC3E8007F34F5 /* GroowyAsleep.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyAsleep.atlas; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		4894D7C2220BCB46007F34F5 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		4894D7C5220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldInputAccessoryView.swift; sourceTree = "<group>"; };
 		4894D7C7220BCF67007F34F5 /* UITextFieldInputAccessory.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextFieldInputAccessory.xib; sourceTree = "<group>"; };
+		4894D80B220D271D007F34F5 /* SwipeFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeFormViewController.swift; sourceTree = "<group>"; };
+		4894D80E220D2929007F34F5 /* SwipeUpStoryboardSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeUpStoryboardSegue.swift; sourceTree = "<group>"; };
+		4894D811220D2AED007F34F5 /* UITextViewWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewWithPlaceholder.swift; sourceTree = "<group>"; };
+		4894D813220D31C2007F34F5 /* CreateChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeViewController.swift; sourceTree = "<group>"; };
+		4894D815220D32AD007F34F5 /* CreateChallengeSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeSecondViewController.swift; sourceTree = "<group>"; };
+		4894D817220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewWithPlaceholderProtocol.swift; sourceTree = "<group>"; };
 		4A33E4EE220AD12700C180F9 /* Groowy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groowy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A33E4F1220AD12700C180F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A33E4F6220AD12700C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,11 +93,14 @@
 		4894D7A7220BC32A007F34F5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4894D80D220D290B007F34F5 /* Segue */,
 				4894D7BC220BC97E007F34F5 /* GameScene.swift */,
 				4894D7B1220BC564007F34F5 /* GroowyViewController.swift */,
-				4894D7A8220BC336007F34F5 /* BaseController.swift */,
 				B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */,
 				B14F69E3220BF14300D82D5B /* EyeSKScene.swift */,
+				4894D80B220D271D007F34F5 /* SwipeFormViewController.swift */,
+				4894D813220D31C2007F34F5 /* CreateChallengeViewController.swift */,
+				4894D815220D32AD007F34F5 /* CreateChallengeSecondViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -137,6 +150,23 @@
 			path = UITextFieldInputAccessoryView;
 			sourceTree = "<group>";
 		};
+		4894D80D220D290B007F34F5 /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				4894D80E220D2929007F34F5 /* SwipeUpStoryboardSegue.swift */,
+			);
+			path = Segue;
+			sourceTree = "<group>";
+		};
+		4894D810220D2A9E007F34F5 /* UITextViewWithPlaceholder */ = {
+			isa = PBXGroup;
+			children = (
+				4894D811220D2AED007F34F5 /* UITextViewWithPlaceholder.swift */,
+				4894D817220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift */,
+			);
+			path = UITextViewWithPlaceholder;
+			sourceTree = "<group>";
+		};
 		4A33E4E5220AD12700C180F9 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +204,7 @@
 		4A33E50D220ADE8900C180F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4894D810220D2A9E007F34F5 /* UITextViewWithPlaceholder */,
 				4894D7C4220BCF11007F34F5 /* UITextFieldInputAccessoryView */,
 				4A33E509220ADA4000C180F9 /* Kukuh.storyboard */,
 				4A33E506220ADA0300C180F9 /* Jaya.storyboard */,
@@ -266,12 +297,17 @@
 				4894D7C3220BCB46007F34F5 /* UIViewController.swift in Sources */,
 				4894D7C0220BC9BC007F34F5 /* ColorTheme.swift in Sources */,
 				B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */,
+				4894D812220D2AED007F34F5 /* UITextViewWithPlaceholder.swift in Sources */,
 				4894D7BD220BC97E007F34F5 /* GameScene.swift in Sources */,
 				4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */,
-				4894D7A9220BC336007F34F5 /* BaseController.swift in Sources */,
+				4894D818220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift in Sources */,
+				4894D80C220D271D007F34F5 /* SwipeFormViewController.swift in Sources */,
 				4894D7C6220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift in Sources */,
+				4894D816220D32AD007F34F5 /* CreateChallengeSecondViewController.swift in Sources */,
 				4894D7A6220BC31F007F34F5 /* BaseModel.swift in Sources */,
+				4894D80F220D2929007F34F5 /* SwipeUpStoryboardSegue.swift in Sources */,
 				4894D7B7220BC623007F34F5 /* GroowyAnimationState.swift in Sources */,
+				4894D814220D31C2007F34F5 /* CreateChallengeViewController.swift in Sources */,
 				4894D7BA220BC661007F34F5 /* SpriteKitExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
