@@ -12,36 +12,37 @@ class QuestionViewController: UIViewController {
     var textFieldInput:UICustomTextViewView?
     
     @IBOutlet weak var bottomView: UIAnswerBodyView!
-    @IBAction func answerButton1(_ sender: UIButton) {
-        print("hallo")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textFieldInput = UICustomTextViewView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 0.3))
-        if let myText = textFieldInput{
+        textFieldInput = UICustomTextViewView(frame: CGRect(x: 0, y: 0,
+                                                            width: self.view.frame.width,
+                                                            height: self.view.frame.height * 0.3))
+        
+        if let myText = textFieldInput {
             self.view.addSubview(myText)
+            
+            textFieldInput!.messageTextView.text = "Tes isi via code"
         }
         
+        bottomView.topButton.setTitle("atas", for: .normal)
+        bottomView.bottomButton.setTitle("bawah", for: .normal)
 
         
-        // Do any additional setup after loading the view.
+        bottomView.topButton.addTarget(self, action: #selector(actionButtonTop), for: .touchUpInside)
+        bottomView.bottomButton.addTarget(self, action: #selector(actionButtonBottom), for: .touchUpInside)
+    }
+    
+    @objc func actionButtonTop(_sender: UIButton){
+        print("atas")
+    }
+    
+    @objc func actionButtonBottom(_sender: UIButton){
+        print("bawah")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         textFieldInput!.startAnimationSelf()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
