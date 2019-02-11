@@ -9,11 +9,25 @@
 import UIKit
 
 class QuestionViewController: UIViewController {
-
+    var textFieldInput:UICustomTextViewView?
+    
+    @IBOutlet weak var bottomView: UIAnswerBodyView!
+    @IBAction func answerButton1(_ sender: UIButton) {
+        print("hallo")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        textFieldInput = UICustomTextViewView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 0.3))
+        self.view.addSubview(textFieldInput!)
 
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+            textFieldInput!.startAnimationSelf()
     }
     
 

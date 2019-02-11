@@ -9,7 +9,10 @@
 import UIKit
 
 class UIAnswerBodyView: UIView {
-
+    @IBOutlet weak var topButton: UIButton!
+    
+    @IBOutlet var mainView: UIView!
+    @IBOutlet weak var bottomButton: UIButton!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -17,5 +20,20 @@ class UIAnswerBodyView: UIView {
         // Drawing code
     }
     */
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    private func commonInit(){
+        Bundle.main.loadNibNamed("UIAnswerBody", owner: self, options: nil)
+        addSubview(mainView)
+        mainView.frame = self.bounds
+        mainView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    }
 
 }

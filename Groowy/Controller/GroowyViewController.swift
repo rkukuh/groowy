@@ -36,7 +36,7 @@ class GroowyViewController: UIViewController {
         //showKeyboardWithTextFieldAccessoryView()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "jaya") as! LoveAppleViewController
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "question") as! QuestionViewController
         self.present(newViewController, animated: true, completion: nil)
     }
     
