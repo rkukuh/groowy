@@ -254,6 +254,7 @@
 				4A33E4EA220AD12700C180F9 /* Sources */,
 				4A33E4EB220AD12700C180F9 /* Frameworks */,
 				4A33E4EC220AD12700C180F9 /* Resources */,
+				B121247B221132E100DBB57B /* Run Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -317,6 +318,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B121247B221132E100DBB57B /* Run Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4A33E4EA220AD12700C180F9 /* Sources */ = {

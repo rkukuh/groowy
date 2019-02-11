@@ -10,13 +10,13 @@ import Foundation
 import SpriteKit
 
 extension SKSpriteNode {
-    func loadTextureAtlas(atlasFilename:String,namingSeries:String) -> [SKTexture] {
+    func loadTextureAtlas(atlasFilename : String, namingSeries : String) -> [SKTexture] {
         let atlas = SKTextureAtlas(named: atlasFilename)
         var frames: [SKTexture] = []
         
         let numImages = atlas.textureNames.count
-        for i in 1...numImages {
-            let imageName = "\(namingSeries)\(i)"
+        for inc in 1...numImages {
+            let imageName = "\(namingSeries)\(inc)"
             frames.append(atlas.textureNamed(imageName))
         }
         return frames

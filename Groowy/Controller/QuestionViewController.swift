@@ -20,14 +20,17 @@ class QuestionViewController: UIViewController {
         super.viewDidLoad()
         
         textFieldInput = UICustomTextViewView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 0.3))
-        self.view.addSubview(textFieldInput!)
+        if let myText = textFieldInput{
+            self.view.addSubview(myText)
+        }
+        
 
         
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
-            textFieldInput!.startAnimationSelf()
+        textFieldInput!.startAnimationSelf()
     }
     
 

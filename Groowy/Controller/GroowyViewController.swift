@@ -33,16 +33,16 @@ class GroowyViewController: UIViewController {
     }
     
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {
-        scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
+        /*scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
         showKeyboardWithTextFieldAccessoryView()
         
-        stayAwake()
+        stayAwake()*/
         
         
         
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
-//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "jaya") as! LoveAppleViewController
-//        self.present(newViewController, animated: false, completion: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "question") as! QuestionViewController
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     func stayAwake() {
