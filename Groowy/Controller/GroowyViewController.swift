@@ -13,6 +13,7 @@ class GroowyViewController: UIViewController {
 
     @IBOutlet weak var spriteKitView:SKView!
     var scene: GameScene!
+    var timer:Timer!
     
     // Textfield
     let textField = UITextField(frame: CGRect(x: 0, y: -50, width: 100, height: 50))
@@ -32,12 +33,24 @@ class GroowyViewController: UIViewController {
     }
     
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {
-        //scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
-        //showKeyboardWithTextFieldAccessoryView()
+        /*scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
+        showKeyboardWithTextFieldAccessoryView()
+        
+        stayAwake()*/
+        
+        
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "question") as! QuestionViewController
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: false, completion: nil)
+    }
+    
+    func stayAwake() {
+        timer = Timer.scheduledTimer(withTimeInterval: Double.random(in: 1...3), repeats: false, block: { (timer) in
+            self.scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
+            self.stayAwake()
+            
+        })
     }
     
     func showKeyboardWithTextFieldAccessoryView() {
