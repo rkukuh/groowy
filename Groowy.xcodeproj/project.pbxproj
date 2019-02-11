@@ -39,6 +39,10 @@
 		4A5EA39F2211482500DEAD49 /* UIAnswerBody.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5EA39B2211482500DEAD49 /* UIAnswerBody.xib */; };
 		4A5EA3A02211482500DEAD49 /* UIAnswerBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA39C2211482500DEAD49 /* UIAnswerBodyView.swift */; };
 		4A5EA3A22211488C00DEAD49 /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A12211488C00DEAD49 /* GiftViewController.swift */; };
+		4A5EA3A52211552D00DEAD49 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A42211552D00DEAD49 /* Dialog.swift */; };
+		4A5EA3A72211555500DEAD49 /* DialogAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A62211555500DEAD49 /* DialogAnswer.swift */; };
+		4A5EA3A92211562E00DEAD49 /* DialogState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A82211562E00DEAD49 /* DialogState.swift */; };
+		4A5EA3AB2211567300DEAD49 /* DialogRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3AA2211567300DEAD49 /* DialogRule.swift */; };
 		B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */; };
 		B14F69E4220BF14300D82D5B /* EyeSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E3220BF14300D82D5B /* EyeSKScene.swift */; };
 /* End PBXBuildFile section */
@@ -78,6 +82,10 @@
 		4A5EA39B2211482500DEAD49 /* UIAnswerBody.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIAnswerBody.xib; sourceTree = "<group>"; };
 		4A5EA39C2211482500DEAD49 /* UIAnswerBodyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAnswerBodyView.swift; sourceTree = "<group>"; };
 		4A5EA3A12211488C00DEAD49 /* GiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
+		4A5EA3A42211552D00DEAD49 /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
+		4A5EA3A62211555500DEAD49 /* DialogAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogAnswer.swift; sourceTree = "<group>"; };
+		4A5EA3A82211562E00DEAD49 /* DialogState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogState.swift; sourceTree = "<group>"; };
+		4A5EA3AA2211567300DEAD49 /* DialogRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogRule.swift; sourceTree = "<group>"; };
 		B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveAppleViewController.swift; sourceTree = "<group>"; };
 		B14F69E3220BF14300D82D5B /* EyeSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeSKScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +104,7 @@
 		4894D7A3220BC30F007F34F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A5EA3A32211551A00DEAD49 /* Dialog */,
 				4894D7B3220BC5BB007F34F5 /* GroowyCharacter */,
 				4894D7A5220BC31F007F34F5 /* BaseModel.swift */,
 			);
@@ -247,6 +256,17 @@
 			path = UIAnswerBody;
 			sourceTree = "<group>";
 		};
+		4A5EA3A32211551A00DEAD49 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				4A5EA3A42211552D00DEAD49 /* Dialog.swift */,
+				4A5EA3A62211555500DEAD49 /* DialogAnswer.swift */,
+				4A5EA3A82211562E00DEAD49 /* DialogState.swift */,
+				4A5EA3AA2211567300DEAD49 /* DialogRule.swift */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -333,14 +353,18 @@
 				4894D7B2220BC564007F34F5 /* GroowyViewController.swift in Sources */,
 				4894D7C3220BCB46007F34F5 /* UIViewController.swift in Sources */,
 				4894D7C0220BC9BC007F34F5 /* ColorTheme.swift in Sources */,
+				4A5EA3A72211555500DEAD49 /* DialogAnswer.swift in Sources */,
 				4A5EA3A02211482500DEAD49 /* UIAnswerBodyView.swift in Sources */,
+				4A5EA3A92211562E00DEAD49 /* DialogState.swift in Sources */,
 				4A5EA3962211480C00DEAD49 /* QuestionViewController.swift in Sources */,
+				4A5EA3AB2211567300DEAD49 /* DialogRule.swift in Sources */,
 				B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */,
 				4894D812220D2AED007F34F5 /* UITextViewWithPlaceholder.swift in Sources */,
 				4A5EA39E2211482500DEAD49 /* UICustomTextViewView.swift in Sources */,
 				4894D7BD220BC97E007F34F5 /* GameScene.swift in Sources */,
 				4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */,
 				4894D818220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift in Sources */,
+				4A5EA3A52211552D00DEAD49 /* Dialog.swift in Sources */,
 				4894D80C220D271D007F34F5 /* SwipeFormViewController.swift in Sources */,
 				4894D7C6220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift in Sources */,
 				4894D816220D32AD007F34F5 /* CreateChallengeSecondViewController.swift in Sources */,
