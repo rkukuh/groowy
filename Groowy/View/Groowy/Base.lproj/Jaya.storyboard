@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Isp-ie-SYX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PnH-ox-6aC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,43 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Question View Controller-->
+        <scene sceneID="Ywt-xE-Bwf">
+            <objects>
+                <viewController storyboardIdentifier="question" id="PnH-ox-6aC" customClass="QuestionViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5XK-lk-lzg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRW-Mi-l38">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </skView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3NA-iS-Gc7" customClass="UIAnswerBodyView" customModule="Groowy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GRW-Mi-l38" firstAttribute="top" secondItem="5XK-lk-lzg" secondAttribute="top" id="Ccy-Me-A4n"/>
+                            <constraint firstItem="LaE-87-A4v" firstAttribute="bottom" secondItem="GRW-Mi-l38" secondAttribute="bottom" id="GtO-a6-cYX"/>
+                            <constraint firstItem="GRW-Mi-l38" firstAttribute="leading" secondItem="LaE-87-A4v" secondAttribute="leading" id="JLV-fW-r5m"/>
+                            <constraint firstItem="LaE-87-A4v" firstAttribute="bottom" secondItem="3NA-iS-Gc7" secondAttribute="bottom" id="Ou8-lm-kIW"/>
+                            <constraint firstItem="3NA-iS-Gc7" firstAttribute="leading" secondItem="LaE-87-A4v" secondAttribute="leading" id="QRG-vw-b6t"/>
+                            <constraint firstItem="LaE-87-A4v" firstAttribute="trailing" secondItem="GRW-Mi-l38" secondAttribute="trailing" id="WhG-Wj-FPc"/>
+                            <constraint firstItem="LaE-87-A4v" firstAttribute="trailing" secondItem="3NA-iS-Gc7" secondAttribute="trailing" id="Xrp-01-CtV"/>
+                            <constraint firstItem="3NA-iS-Gc7" firstAttribute="height" secondItem="5XK-lk-lzg" secondAttribute="height" multiplier="0.3" id="i92-pM-LDl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LaE-87-A4v"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomView" destination="3NA-iS-Gc7" id="Uda-85-6ZG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNU-mC-lP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-613.60000000000002" y="-18.440779610194905"/>
+        </scene>
         <!--Love Apple View Controller-->
         <scene sceneID="u6X-TT-dlV">
             <objects>
@@ -84,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGC-n8-a0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="820" y="-17.541229385307346"/>
+            <point key="canvasLocation" x="634" y="-18"/>
         </scene>
         <!--Kukuh-->
         <scene sceneID="uUk-Ap-XzQ">
