@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Answer {
+struct DialogAnswer {
     var text: String?
     var nextDialog: Dialog?
     

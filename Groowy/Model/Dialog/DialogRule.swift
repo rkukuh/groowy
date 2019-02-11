@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Rules {
+struct DialogRule {
     var category: String?
     var dialogs: [Dialog] = []
 }

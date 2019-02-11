@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+struct Dialog {
+    var text: String?
+    var answers: [DialogAnswer] = []
+    
+    init (_ text: String) {
+        self.text = text
+    }
+}

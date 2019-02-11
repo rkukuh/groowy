@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct State {
+struct DialogState {
     var current: Dialog?
     var history: [Dialog] = []
     
