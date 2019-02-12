@@ -15,7 +15,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // set initial view controller depends on user state
+        setupUserStateManage()
+        
         return true
+    }
+    
+    func setupUserStateManage() {
+        let lastStateOfUser = User.state
+        var storyBoardID = ""
+        var storyBoardName = ""
+        switch lastStateOfUser {
+            case .introduction:
+                storyBoardName = "Main"
+                storyBoardID = "home"
+                break
+            case .deepUnderstanding:
+                
+                break
+            case .gift:
+                
+                break
+            case .dashboard:
+                storyBoardName = "Main"
+                storyBoardID = "dashboard"
+                break
+            
+        }
+        if storyBoardID != "" && storyBoardName != "" {
+            let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: storyBoardID)
+            setInitialViewController(viewController: viewController)
+            
+        }
+    }
+    
+    func setInitialViewController(viewController:UIViewController) {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = viewController
+        self.window?.makeKeyAndVisible()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
