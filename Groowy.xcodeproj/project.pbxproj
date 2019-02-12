@@ -43,6 +43,8 @@
 		4A5EA3A72211555500DEAD49 /* DialogAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A62211555500DEAD49 /* DialogAnswer.swift */; };
 		4A5EA3A92211562E00DEAD49 /* DialogState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A82211562E00DEAD49 /* DialogState.swift */; };
 		4A5EA3AB2211567300DEAD49 /* DialogRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3AA2211567300DEAD49 /* DialogRule.swift */; };
+		B12124B92212BC2700DBB57B /* UIGift.xib in Resources */ = {isa = PBXBuildFile; fileRef = B12124B82212BC2700DBB57B /* UIGift.xib */; };
+		B12124BB2212BF9000DBB57B /* UIGiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12124BA2212BF9000DBB57B /* UIGiftView.swift */; };
 		B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */; };
 		B14F69E4220BF14300D82D5B /* EyeSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E3220BF14300D82D5B /* EyeSKScene.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,8 @@
 		4A5EA3A62211555500DEAD49 /* DialogAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogAnswer.swift; sourceTree = "<group>"; };
 		4A5EA3A82211562E00DEAD49 /* DialogState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogState.swift; sourceTree = "<group>"; };
 		4A5EA3AA2211567300DEAD49 /* DialogRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogRule.swift; sourceTree = "<group>"; };
+		B12124B82212BC2700DBB57B /* UIGift.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIGift.xib; sourceTree = "<group>"; };
+		B12124BA2212BF9000DBB57B /* UIGiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGiftView.swift; sourceTree = "<group>"; };
 		B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveAppleViewController.swift; sourceTree = "<group>"; };
 		B14F69E3220BF14300D82D5B /* EyeSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeSKScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +231,7 @@
 		4A33E50D220ADE8900C180F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B12124B72212BC0500DBB57B /* UIGift */,
 				4A5EA39A2211482500DEAD49 /* UIAnswerBody */,
 				4A5EA3972211482500DEAD49 /* UIMessageDialog */,
 				4894D810220D2A9E007F34F5 /* UITextViewWithPlaceholder */,
@@ -265,6 +270,15 @@
 				4A5EA3AA2211567300DEAD49 /* DialogRule.swift */,
 			);
 			path = Dialog;
+			sourceTree = "<group>";
+		};
+		B12124B72212BC0500DBB57B /* UIGift */ = {
+			isa = PBXGroup;
+			children = (
+				B12124B82212BC2700DBB57B /* UIGift.xib */,
+				B12124BA2212BF9000DBB57B /* UIGiftView.swift */,
+			);
+			path = UIGift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +346,7 @@
 				4A5EA39F2211482500DEAD49 /* UIAnswerBody.xib in Resources */,
 				4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */,
 				4A33E508220ADA0300C180F9 /* Jaya.storyboard in Resources */,
+				B12124B92212BC2700DBB57B /* UIGift.xib in Resources */,
 				4A33E50B220ADA4000C180F9 /* Kukuh.storyboard in Resources */,
 				4894D7B0220BC3E8007F34F5 /* GroowyAsleep.atlas in Resources */,
 				4894D7AF220BC3E8007F34F5 /* GroowyWake.atlas in Resources */,
@@ -348,6 +363,7 @@
 			files = (
 				4894D7B5220BC5F9007F34F5 /* GroowyCharacter.swift in Sources */,
 				4A33E4FA220AD12700C180F9 /* Groowy.xcdatamodeld in Sources */,
+				B12124BB2212BF9000DBB57B /* UIGiftView.swift in Sources */,
 				B14F69E4220BF14300D82D5B /* EyeSKScene.swift in Sources */,
 				4A5EA3A22211488C00DEAD49 /* GiftViewController.swift in Sources */,
 				4894D7B2220BC564007F34F5 /* GroowyViewController.swift in Sources */,

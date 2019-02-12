@@ -58,11 +58,29 @@
                             <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fn-er-32y">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </skView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9g-c1-CtS">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handGrabGift" translatesAutoresizingMaskIntoConstraints="NO" id="mdq-EK-MW9">
+                                        <rect key="frame" x="59" y="110" width="257" height="60"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="mdq-EK-MW9" firstAttribute="centerX" secondItem="d9g-c1-CtS" secondAttribute="centerX" id="KmI-hC-XgL"/>
+                                    <constraint firstItem="mdq-EK-MW9" firstAttribute="centerY" secondItem="d9g-c1-CtS" secondAttribute="centerY" multiplier="1.4" id="MvR-c2-9QL"/>
+                                    <constraint firstItem="mdq-EK-MW9" firstAttribute="height" secondItem="d9g-c1-CtS" secondAttribute="height" multiplier="0.3" id="hWc-Dv-0wT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705882352937" green="0.68235294117647061" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0fn-er-32y" firstAttribute="trailing" secondItem="ByN-do-Gph" secondAttribute="trailing" id="RfN-aa-Y81"/>
                             <constraint firstItem="0fn-er-32y" firstAttribute="leading" secondItem="ByN-do-Gph" secondAttribute="leading" id="SwE-m2-GNt"/>
+                            <constraint firstItem="d9g-c1-CtS" firstAttribute="leading" secondItem="ByN-do-Gph" secondAttribute="leading" id="eAu-ge-X0X"/>
+                            <constraint firstItem="d9g-c1-CtS" firstAttribute="height" secondItem="U0O-ct-uYT" secondAttribute="height" multiplier="0.3" id="eg9-iE-fHm"/>
+                            <constraint firstAttribute="trailing" secondItem="d9g-c1-CtS" secondAttribute="trailing" id="hAx-11-egP"/>
+                            <constraint firstItem="d9g-c1-CtS" firstAttribute="bottom" secondItem="ByN-do-Gph" secondAttribute="bottom" id="oZm-5J-zhd"/>
                             <constraint firstItem="ByN-do-Gph" firstAttribute="bottom" secondItem="0fn-er-32y" secondAttribute="bottom" id="r9g-ke-eII"/>
                             <constraint firstItem="0fn-er-32y" firstAttribute="top" secondItem="U0O-ct-uYT" secondAttribute="top" id="sR7-qB-yIm"/>
                         </constraints>
@@ -74,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGC-n8-a0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644" y="-18"/>
+            <point key="canvasLocation" x="644" y="-18.440779610194905"/>
         </scene>
         <!--Kukuh-->
         <scene sceneID="uUk-Ap-XzQ">
@@ -85,4 +103,7 @@
             <point key="canvasLocation" x="1399" y="-18"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="handGrabGift" width="257" height="84"/>
+    </resources>
 </document>

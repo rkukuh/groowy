@@ -33,7 +33,7 @@ class GroowyViewController: UIViewController {
         spriteKitView.presentScene(scene)
         
         // Add Bubble Chat
-        textFieldInput = UICustomTextViewView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 0.3))
+        textFieldInput = UICustomTextViewView(view: view)
         if let myText = textFieldInput{
             self.view.addSubview(myText)
         }
@@ -47,22 +47,22 @@ class GroowyViewController: UIViewController {
     }
     
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {
-        scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
-        showKeyboardWithTextFieldAccessoryView()
+//        scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
+//        showKeyboardWithTextFieldAccessoryView()
+//        
+//        stayAwake()
+//        
+//        textFieldInput?.alpha = 0
+//        textFieldInput?.isHidden = false
+//        UIView.animate(withDuration: 0.5) {
+//            self.textFieldInput?.alpha = 1
+//        }
         
-        stayAwake()
-        
-        textFieldInput?.alpha = 0
-        textFieldInput?.isHidden = false
-        UIView.animate(withDuration: 0.5) {
-            self.textFieldInput?.alpha = 1
-        }
         
         
-        
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
-//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "question") as! QuestionViewController
-//        self.present(newViewController, animated: false, completion: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "question") as! QuestionViewController
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     
