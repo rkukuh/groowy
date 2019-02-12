@@ -49,9 +49,9 @@ class GroowyViewController: UIViewController {
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {
 //        scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
 //        showKeyboardWithTextFieldAccessoryView()
-//        
+//
 //        stayAwake()
-//        
+//
 //        textFieldInput?.alpha = 0
 //        textFieldInput?.isHidden = false
 //        UIView.animate(withDuration: 0.5) {
