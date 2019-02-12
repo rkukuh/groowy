@@ -19,7 +19,7 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textFieldInput = UICustomTextViewView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 0.3))
+        textFieldInput = UICustomTextViewView(view: self.view)
         if let myText = textFieldInput{
             self.view.addSubview(myText)
         }
