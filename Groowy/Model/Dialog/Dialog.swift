@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Dialog {
+class Dialog {
     var text: String?
     var answers: [DialogAnswer] = []
     
