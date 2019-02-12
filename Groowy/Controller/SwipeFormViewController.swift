@@ -15,7 +15,6 @@ class SwipeFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
     }
     
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
