@@ -15,6 +15,8 @@ class GroowyViewController: UIViewController {
     var scene: GameScene!
     var timer:Timer!
     
+    var textFieldInput:UICustomTextViewView?
+    
     // Textfield
     let textField = UITextField(frame: CGRect(x: 0, y: -50, width: 100, height: 50))
     
@@ -30,20 +32,39 @@ class GroowyViewController: UIViewController {
         spriteKitView.ignoresSiblingOrder = true
         spriteKitView.presentScene(scene)
         
+        // Add Bubble Chat
+        textFieldInput = UICustomTextViewView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 0.3))
+        if let myText = textFieldInput{
+            self.view.addSubview(myText)
+        }
+        textFieldInput?.isHidden = true
+        textFieldInput?.messageTextView.text = "Hi, I'm Groowy. What's your name ?"
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        textFieldInput?.startAnimationSelf()
     }
     
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {
-        /*scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
+        scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
         showKeyboardWithTextFieldAccessoryView()
         
-        stayAwake()*/
+        stayAwake()
+        
+        textFieldInput?.alpha = 0
+        textFieldInput?.isHidden = false
+        UIView.animate(withDuration: 0.5) {
+            self.textFieldInput?.alpha = 1
+        }
         
         
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "question") as! QuestionViewController
-        self.present(newViewController, animated: false, completion: nil)
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "question") as! QuestionViewController
+//        self.present(newViewController, animated: false, completion: nil)
     }
+    
     
     func stayAwake() {
         timer = Timer.scheduledTimer(withTimeInterval: Double.random(in: 1...3), repeats: false, block: { (timer) in
