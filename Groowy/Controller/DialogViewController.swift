@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+class DialogViewController: UIViewController {
     
     var currentDialog = DialogState()
     var textFieldInput: UICustomTextViewView?

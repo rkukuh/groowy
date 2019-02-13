@@ -34,7 +34,7 @@
 		4A33E50B220ADA4000C180F9 /* Kukuh.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E509220ADA4000C180F9 /* Kukuh.storyboard */; };
 		4A45203F2212C91D0049F95E /* Groowy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A45203D2212C91D0049F95E /* Groowy.xcdatamodeld */; };
 		4A4520422212C9D90049F95E /* ChallengeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4520412212C9D90049F95E /* ChallengeStatus.swift */; };
-		4A5EA3962211480C00DEAD49 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3952211480C00DEAD49 /* QuestionViewController.swift */; };
+		4A5EA3962211480C00DEAD49 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3952211480C00DEAD49 /* DialogViewController.swift */; };
 		4A5EA39D2211482500DEAD49 /* UICustomTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5EA3982211482500DEAD49 /* UICustomTextView.xib */; };
 		4A5EA39E2211482500DEAD49 /* UICustomTextViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3992211482500DEAD49 /* UICustomTextViewView.swift */; };
 		4A5EA39F2211482500DEAD49 /* UIAnswerBody.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5EA39B2211482500DEAD49 /* UIAnswerBody.xib */; };
@@ -86,7 +86,7 @@
 		4A33E50A220ADA4000C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Groowy/Groowy/Base.lproj/Kukuh.storyboard; sourceTree = "<group>"; };
 		4A45203E2212C91D0049F95E /* Groowy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Groowy.xcdatamodel; sourceTree = "<group>"; };
 		4A4520412212C9D90049F95E /* ChallengeStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeStatus.swift; sourceTree = "<group>"; };
-		4A5EA3952211480C00DEAD49 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		4A5EA3952211480C00DEAD49 /* DialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
 		4A5EA3982211482500DEAD49 /* UICustomTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UICustomTextView.xib; sourceTree = "<group>"; };
 		4A5EA3992211482500DEAD49 /* UICustomTextViewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomTextViewView.swift; sourceTree = "<group>"; };
 		4A5EA39B2211482500DEAD49 /* UIAnswerBody.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIAnswerBody.xib; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 				4A5EA3A12211488C00DEAD49 /* GiftViewController.swift */,
 				4894D7B1220BC564007F34F5 /* GroowyViewController.swift */,
 				B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */,
-				4A5EA3952211480C00DEAD49 /* QuestionViewController.swift */,
+				4A5EA3952211480C00DEAD49 /* DialogViewController.swift */,
 				4894D80B220D271D007F34F5 /* SwipeFormViewController.swift */,
 			);
 			path = Controller;
@@ -414,7 +414,7 @@
 				4AB3663A2213C01500AABD19 /* Reflections+CoreDataProperties.swift in Sources */,
 				4AB366392213C01500AABD19 /* Challenges+CoreDataProperties.swift in Sources */,
 				4A45203F2212C91D0049F95E /* Groowy.xcdatamodeld in Sources */,
-				4A5EA3962211480C00DEAD49 /* QuestionViewController.swift in Sources */,
+				4A5EA3962211480C00DEAD49 /* DialogViewController.swift in Sources */,
 				4A5EA3AB2211567300DEAD49 /* DialogRule.swift in Sources */,
 				B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */,
 				4894D812220D2AED007F34F5 /* UITextViewWithPlaceholder.swift in Sources */,

@@ -59,7 +59,7 @@ class GroowyViewController: UIViewController {
 //        }
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "question") as! QuestionViewController
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "question") as! DialogViewController
         self.present(newViewController, animated: false, completion: nil)
     }
     
