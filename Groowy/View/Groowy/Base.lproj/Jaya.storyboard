@@ -41,6 +41,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomView" destination="3NA-iS-Gc7" id="Uda-85-6ZG"/>
+                        <outlet property="spriteKitView" destination="GRW-Mi-l38" id="zkR-40-sWR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNU-mC-lP4" userLabel="First Responder" sceneMemberID="firstResponder"/>

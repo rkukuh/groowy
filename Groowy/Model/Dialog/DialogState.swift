@@ -12,17 +12,19 @@ struct DialogState {
     var current: Dialog?
     var history: [Dialog] = []
     
-    mutating func nextState(answerIndex: Int) {
+    mutating func nextState(answerIndex: Int) -> Bool {
         if let current = self.current {
             history.append(current)
             
             if answerIndex < current.answers.count {
                 self.current = current.answers[answerIndex].nextDialog
+                return self.current?.answers[0].text != "" ? true : false
             } else {
                 print("Invalid answer")
-            }
+                return false            }
         } else {
             print("Empty state")
+            return false
         }
     }
 }
