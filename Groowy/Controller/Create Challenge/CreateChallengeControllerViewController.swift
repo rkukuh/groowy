@@ -11,17 +11,14 @@ import UIKit
 class CreateChallengeController {
     
     var challenge:[String:String] = [:]
-    // To-Do : Connect to Core Data
+    
     func didAddField(field: String, value: String) {
         challenge[field] = value
     }
     
     func didPromiseTap() {
         let title = challenge["title"]
+        
         print(title)
     }
-    
-    
-    
-
 }
