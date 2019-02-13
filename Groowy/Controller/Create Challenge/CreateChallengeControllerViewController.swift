@@ -14,10 +14,14 @@ class CreateChallengeController {
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    var data: [String: String] = [:]
+    let dateFormatter = DateFormatter()
     var fetchedResults: NSFetchedResultsController<Challenge>!
     
     func didAddField(field: String, value: String) {
         // Get data from user input
+        
+        data[field] = value
     }
     
     func didPromiseTap() {
@@ -25,6 +29,15 @@ class CreateChallengeController {
         
         let challenge = Challenge(entity: Challenge.entity(), insertInto: context)
         
-        challenge.title = ""
+        challenge.title = data["title"]
+        challenge.body = data["body"]
+        challenge.body = data["goal"]
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
+        if let date = dateFormatter.date(from: data["reminder_at"]!) {
+            challenge.remind_at = date as NSDate
+        }
+        
+        appDelegate.saveContext()
     }
 }
