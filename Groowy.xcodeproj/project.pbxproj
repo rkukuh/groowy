@@ -38,7 +38,6 @@
 		4A5EA39E2211482500DEAD49 /* UICustomTextViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3992211482500DEAD49 /* UICustomTextViewView.swift */; };
 		4A5EA39F2211482500DEAD49 /* UIAnswerBody.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5EA39B2211482500DEAD49 /* UIAnswerBody.xib */; };
 		4A5EA3A02211482500DEAD49 /* UIAnswerBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA39C2211482500DEAD49 /* UIAnswerBodyView.swift */; };
-		4A5EA3A22211488C00DEAD49 /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A12211488C00DEAD49 /* GiftViewController.swift */; };
 		4A5EA3A52211552D00DEAD49 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A42211552D00DEAD49 /* Dialog.swift */; };
 		4A5EA3A72211555500DEAD49 /* DialogAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A62211555500DEAD49 /* DialogAnswer.swift */; };
 		4A5EA3A92211562E00DEAD49 /* DialogState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A82211562E00DEAD49 /* DialogState.swift */; };
@@ -58,6 +57,7 @@
 		B12124BB2212BF9000DBB57B /* UIGiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12124BA2212BF9000DBB57B /* UIGiftView.swift */; };
 		B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */; };
 		B14F69E4220BF14300D82D5B /* EyeSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E3220BF14300D82D5B /* EyeSKScene.swift */; };
+		B16F68602213D279008BA51D /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F685F2213D279008BA51D /* GiftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,7 +94,6 @@
 		4A5EA3992211482500DEAD49 /* UICustomTextViewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomTextViewView.swift; sourceTree = "<group>"; };
 		4A5EA39B2211482500DEAD49 /* UIAnswerBody.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIAnswerBody.xib; sourceTree = "<group>"; };
 		4A5EA39C2211482500DEAD49 /* UIAnswerBodyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAnswerBodyView.swift; sourceTree = "<group>"; };
-		4A5EA3A12211488C00DEAD49 /* GiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 		4A5EA3A42211552D00DEAD49 /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		4A5EA3A62211555500DEAD49 /* DialogAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogAnswer.swift; sourceTree = "<group>"; };
 		4A5EA3A82211562E00DEAD49 /* DialogState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogState.swift; sourceTree = "<group>"; };
@@ -114,6 +113,7 @@
 		B12124BA2212BF9000DBB57B /* UIGiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGiftView.swift; sourceTree = "<group>"; };
 		B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveAppleViewController.swift; sourceTree = "<group>"; };
 		B14F69E3220BF14300D82D5B /* EyeSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeSKScene.swift; sourceTree = "<group>"; };
+		B16F685F2213D279008BA51D /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,11 +157,11 @@
 				4894D813220D31C2007F34F5 /* CreateChallengeViewController.swift */,
 				B14F69E3220BF14300D82D5B /* EyeSKScene.swift */,
 				4894D7BC220BC97E007F34F5 /* GameScene.swift */,
-				4A5EA3A12211488C00DEAD49 /* GiftViewController.swift */,
 				4AB366702213D11700AABD19 /* DialogViewController.swift */,
 				4894D7B1220BC564007F34F5 /* HomeViewController.swift */,
 				B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */,
 				4894D80B220D271D007F34F5 /* SwipeFormViewController.swift */,
+				B16F685F2213D279008BA51D /* GiftViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -430,7 +430,6 @@
 				B12124BB2212BF9000DBB57B /* UIGiftView.swift in Sources */,
 				B14F69E4220BF14300D82D5B /* EyeSKScene.swift in Sources */,
 				4AB366612213D0D600AABD19 /* MotivationCategory.swift in Sources */,
-				4A5EA3A22211488C00DEAD49 /* GiftViewController.swift in Sources */,
 				4AB366662213D0D600AABD19 /* Groowy.xcdatamodeld in Sources */,
 				4894D7B2220BC564007F34F5 /* HomeViewController.swift in Sources */,
 				4AB3666A2213D0D600AABD19 /* Reflections+CoreDataProperties.swift in Sources */,
@@ -458,6 +457,7 @@
 				4AB366682213D0D600AABD19 /* Answers+CoreDataClass.swift in Sources */,
 				4894C2C92212625000E2AB6F /* User.swift in Sources */,
 				4894D7C6220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift in Sources */,
+				B16F68602213D279008BA51D /* GiftViewController.swift in Sources */,
 				4894D816220D32AD007F34F5 /* CreateChallengeSecondViewController.swift in Sources */,
 				4894D7A6220BC31F007F34F5 /* BaseModel.swift in Sources */,
 				4894C2CD221263B400E2AB6F /* UITextFieldInputAccessoryViewDelegate.swift in Sources */,
@@ -627,7 +627,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57VL32B9VS;
+				DEVELOPMENT_TEAM = 9MC3BZBH48;
 				INFOPLIST_FILE = Groowy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -645,7 +645,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57VL32B9VS;
+				DEVELOPMENT_TEAM = 9MC3BZBH48;
 				INFOPLIST_FILE = Groowy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -76,13 +76,13 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
 //            self.bubbleChat?.alpha = 1
 //        }
 //
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "question") as! DialogViewController
-        self.present(newViewController, animated: false, completion: nil)
-        
 //        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
-//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "gift") as! LoveAppleViewController
+//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "question") as! DialogViewController
 //        self.present(newViewController, animated: false, completion: nil)
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "gift") as! GiftViewController
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     
