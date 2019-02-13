@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class CreateChallengeController {
     
+    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     var challenge: [String: String] = [:]
+    
+    var fetchedResults: NSFetchedResultsController<Challenge>!
     
     func didAddField(field: String, value: String) {
         challenge[field] = value
