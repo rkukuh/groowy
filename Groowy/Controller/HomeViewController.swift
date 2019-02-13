@@ -65,17 +65,24 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     
     
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {
-        scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
-        showKeyboardWithTextFieldAccessoryView()
+//        scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
+//        showKeyboardWithTextFieldAccessoryView()
+//
+//        stayAwake()
+//
+//        bubbleChat?.alpha = 0
+//        bubbleChat?.isHidden = false
+//        UIView.animate(withDuration: 0.5) {
+//            self.bubbleChat?.alpha = 1
+//        }
+//
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "question") as! QuestionViewController
+//        self.present(newViewController, animated: false, completion: nil)
         
-        stayAwake()
-        
-        bubbleChat?.alpha = 0
-        bubbleChat?.isHidden = false
-        UIView.animate(withDuration: 0.5) {
-            self.bubbleChat?.alpha = 1
-        }
-        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "gift") as! LoveAppleViewController
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     

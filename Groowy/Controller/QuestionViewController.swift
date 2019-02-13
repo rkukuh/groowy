@@ -24,21 +24,12 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-<<<<<<< HEAD
         // Add Gamescene to View Controller
         scene = GameScene(size: view.bounds.size)
         scene.scaleMode = .resizeFill
         spriteKitView.ignoresSiblingOrder = true
         spriteKitView.presentScene(scene)
-        
-        
         textFieldInput = UICustomTextViewView(view: view)
-=======
-        textFieldInput = UICustomTextViewView(frame: CGRect(x: 0, y: 0,
-                                                            width: self.view.frame.width,
-                                                            height: self.view.frame.height * 0.3))
->>>>>>> david-2
-        
         loadDialogData()
         setupCurrentDialog()
         

@@ -51,7 +51,7 @@
         <!--Love Apple View Controller-->
         <scene sceneID="u6X-TT-dlV">
             <objects>
-                <viewController storyboardIdentifier="jaya" id="Isp-ie-SYX" customClass="LoveAppleViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gift" id="Isp-ie-SYX" customClass="LoveAppleViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0O-ct-uYT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
                             <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fn-er-32y">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </skView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9g-c1-CtS">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9g-c1-CtS" userLabel="HandView">
                                 <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handGrabGift" translatesAutoresizingMaskIntoConstraints="NO" id="mdq-EK-MW9">
@@ -89,6 +89,7 @@
                     </view>
                     <connections>
                         <outlet property="eyeSKView" destination="0fn-er-32y" id="lkW-ew-INE"/>
+                        <outlet property="mainView" destination="U0O-ct-uYT" id="k5G-NL-Jil"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGC-n8-a0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
