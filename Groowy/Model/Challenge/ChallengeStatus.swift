@@ -9,7 +9,7 @@
 import Foundation
 
 enum ChallengeStatus: String {
-    case Canceled = "Canceled"
-    case Completed = "Completed"
-    case Progress = "Progress"
+    case canceled = "Canceled"
+    case completed = "Completed"
+    case progress = "Progress"
 }
