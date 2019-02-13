@@ -54,6 +54,7 @@
 		4AB3666A2213D0D600AABD19 /* Reflections+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB366572213D0D600AABD19 /* Reflections+CoreDataProperties.swift */; };
 		4AB3666F2213D0D600AABD19 /* ChallengeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB3665E2213D0D600AABD19 /* ChallengeStatus.swift */; };
 		4AB366712213D11700AABD19 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB366702213D11700AABD19 /* DialogViewController.swift */; };
+		4AB366732213D69E00AABD19 /* MotivationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB366722213D69E00AABD19 /* MotivationViewController.swift */; };
 		B12124B92212BC2700DBB57B /* UIGift.xib in Resources */ = {isa = PBXBuildFile; fileRef = B12124B82212BC2700DBB57B /* UIGift.xib */; };
 		B12124BB2212BF9000DBB57B /* UIGiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12124BA2212BF9000DBB57B /* UIGiftView.swift */; };
 		B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */; };
@@ -110,6 +111,7 @@
 		4AB366572213D0D600AABD19 /* Reflections+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reflections+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4AB3665E2213D0D600AABD19 /* ChallengeStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeStatus.swift; sourceTree = "<group>"; };
 		4AB366702213D11700AABD19 /* DialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
+		4AB366722213D69E00AABD19 /* MotivationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationViewController.swift; sourceTree = "<group>"; };
 		B12124B82212BC2700DBB57B /* UIGift.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIGift.xib; sourceTree = "<group>"; };
 		B12124BA2212BF9000DBB57B /* UIGiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGiftView.swift; sourceTree = "<group>"; };
 		B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveAppleViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				4894D7B1220BC564007F34F5 /* HomeViewController.swift */,
 				B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */,
 				4894D80B220D271D007F34F5 /* SwipeFormViewController.swift */,
+				4AB366722213D69E00AABD19 /* MotivationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				4AB366652213D0D600AABD19 /* Challenges+CoreDataClass.swift in Sources */,
 				4A5EA3A92211562E00DEAD49 /* DialogState.swift in Sources */,
 				4A5EA3AB2211567300DEAD49 /* DialogRule.swift in Sources */,
+				4AB366732213D69E00AABD19 /* MotivationViewController.swift in Sources */,
 				B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */,
 				4894D812220D2AED007F34F5 /* UITextViewWithPlaceholder.swift in Sources */,
 				4A5EA39E2211482500DEAD49 /* UICustomTextViewView.swift in Sources */,
