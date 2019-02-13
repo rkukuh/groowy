@@ -10,7 +10,7 @@ import UIKit
 
 class CreateChallengeController {
     
-    var challenge:[String:String] = [:]
+    var challenge: [String: String] = [:]
     
     func didAddField(field: String, value: String) {
         challenge[field] = value

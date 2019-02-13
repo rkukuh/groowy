@@ -13,6 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -23,10 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupUserStateManage() {
-        let lastStateOfUser = UserState.deepUnderstanding //User.state
+        let lastStateOfUser = UserState.deepUnderstanding
         
         var storyBoardID = ""
         var storyBoardName = ""
+        
         switch lastStateOfUser {
             case .introduction:
                 storyBoardName = "Main"
@@ -37,17 +39,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 storyBoardID = "create-challenge"
                 break
             case .gift:
-                
                 break
             case .dashboard:
                 storyBoardName = "Main"
                 storyBoardID = "dashboard"
                 break
-            
         }
+        
         if storyBoardID != "" && storyBoardName != "" {
             let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: storyBoardID)
+            
             setInitialViewController(viewController: viewController)
             
         }
@@ -93,6 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          error conditions that could cause the creation of the store to fail.
         */
         let container = NSPersistentContainer(name: "Groowy")
+        
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
