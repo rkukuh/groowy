@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1230" y="-55"/>
+            <point key="canvasLocation" x="4049" y="-36"/>
         </scene>
         <!--Jaya-->
         <scene sceneID="gZn-6S-kw0">
@@ -48,7 +48,7 @@
                 <viewControllerPlaceholder storyboardName="Jaya" id="L8n-o4-4ZI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4i-U8-EBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1737" y="-53"/>
+            <point key="canvasLocation" x="4729" y="-4"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="yDI-Ul-oie">
@@ -95,52 +95,76 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1721" y="-55"/>
+            <point key="canvasLocation" x="-1926" y="-55"/>
         </scene>
-        <!--Create Challenge First View Controller-->
+        <!--Title Create Challenge View Controller-->
         <scene sceneID="Sbb-Hn-wYp">
             <objects>
-                <viewController storyboardIdentifier="dashboard" id="I2c-cj-fgX" customClass="CreateChallengeFirstViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="create-challenge" id="I2c-cj-fgX" customClass="TitleCreateChallengeViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qn4-qf-xuq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptj-yd-fKf">
-                                <rect key="frame" x="16" y="44" width="306" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <rect key="frame" x="16" y="44" width="266" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want to learn ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc6-a1-zEF">
-                                <rect key="frame" x="16" y="130" width="247" height="24"/>
+                                <rect key="frame" x="16" y="125.5" width="247" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Describe your challenge" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqB-oY-VXJ" customClass="UITextViewWithPlaceholder" customModule="Groowy" customModuleProvider="target">
-                                <rect key="frame" x="16" y="162" width="343" height="489"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="I want to learn about ..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqB-oY-VXJ" customClass="UITextViewWithPlaceholder" customModule="Groowy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="157.5" width="343" height="493.5"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IDe-lr-1ax" customClass="UITextViewWithPlaceholder" customModule="Groowy" customModuleProvider="target">
-                                <rect key="frame" x="16" y="162" width="343" height="489"/>
+                                <rect key="frame" x="16" y="157.5" width="343" height="493.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <outlet property="placeholderTextView" destination="RqB-oY-VXJ" id="niC-8p-pg4"/>
                                 </connections>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEF-2D-utr">
+                                <rect key="frame" x="172.5" y="536" width="30" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="⌃">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ROL-6B-PKD" kind="custom" customClass="SwipeUpStoryboardSegue" customModule="Groowy" customModuleProvider="target" id="CNr-Ni-jnf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAU-Fo-5Y5">
+                                <rect key="frame" x="329" y="44" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="✕">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapToBackWithSender:" destination="I2c-cj-fgX" eventType="touchUpInside" id="hhR-ZO-xyR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="GEF-2D-utr" firstAttribute="centerX" secondItem="qn4-qf-xuq" secondAttribute="centerX" id="5oG-2F-LX9"/>
                             <constraint firstItem="oc6-a1-zEF" firstAttribute="top" secondItem="Ptj-yd-fKf" secondAttribute="bottom" constant="50" id="FGh-zR-mhD"/>
                             <constraint firstItem="Ptj-yd-fKf" firstAttribute="top" secondItem="XB2-AK-Hkb" secondAttribute="top" constant="24" id="GqV-ed-dlD"/>
                             <constraint firstItem="oc6-a1-zEF" firstAttribute="leading" secondItem="XB2-AK-Hkb" secondAttribute="leading" constant="16" id="Jud-7f-0mz"/>
+                            <constraint firstItem="XB2-AK-Hkb" firstAttribute="bottom" secondItem="GEF-2D-utr" secondAttribute="bottom" constant="80" id="ODg-Eo-SSJ"/>
                             <constraint firstItem="RqB-oY-VXJ" firstAttribute="leading" secondItem="IDe-lr-1ax" secondAttribute="leading" id="Paz-Ch-ypl"/>
                             <constraint firstItem="IDe-lr-1ax" firstAttribute="leading" secondItem="XB2-AK-Hkb" secondAttribute="leading" constant="16" id="Pfh-hf-2hf"/>
                             <constraint firstItem="XB2-AK-Hkb" firstAttribute="bottom" secondItem="IDe-lr-1ax" secondAttribute="bottom" constant="16" id="WE2-Bs-ieE"/>
+                            <constraint firstItem="OAU-Fo-5Y5" firstAttribute="top" secondItem="XB2-AK-Hkb" secondAttribute="top" constant="24" id="bTm-p8-g5B"/>
+                            <constraint firstItem="XB2-AK-Hkb" firstAttribute="trailing" secondItem="OAU-Fo-5Y5" secondAttribute="trailing" constant="16" id="bag-F1-EiC"/>
                             <constraint firstItem="RqB-oY-VXJ" firstAttribute="height" secondItem="IDe-lr-1ax" secondAttribute="height" id="is6-Df-HqY"/>
                             <constraint firstItem="RqB-oY-VXJ" firstAttribute="top" secondItem="IDe-lr-1ax" secondAttribute="top" id="rkZ-hc-3e3"/>
                             <constraint firstItem="RqB-oY-VXJ" firstAttribute="width" secondItem="IDe-lr-1ax" secondAttribute="width" id="xdH-KG-ERY"/>
@@ -153,20 +177,23 @@
                             <outletCollection property="gestureRecognizers" destination="ZMe-Br-sWN" appends="YES" id="E4R-Xn-4x9"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="titleTextView" destination="IDe-lr-1ax" id="gjB-ZZ-Oxh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jpf-Vs-Ohy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="up" id="ZMe-Br-sWN">
                     <connections>
-                        <segue destination="ROL-6B-PKD" kind="custom" customClass="SwipeUpStoryboardSegue" customModule="Groowy" customModuleProvider="target" id="4dy-A1-fzf"/>
+                        <segue destination="ROL-6B-PKD" kind="custom" identifier="bodySegue" customClass="SwipeUpStoryboardSegue" customModule="Groowy" customModuleProvider="target" id="4dy-A1-fzf"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-317" y="-55"/>
         </scene>
-        <!--Create Challenge Second View Controller-->
+        <!--Body Create Challenge View Controller-->
         <scene sceneID="ptl-hK-dJh">
             <objects>
-                <viewController id="ROL-6B-PKD" customClass="CreateChallengeSecondViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ROL-6B-PKD" customClass="BodyCreateChallengeViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D1d-9W-HXD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,7 +204,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Describe your activities" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypd-6h-dg1" customClass="UITextViewWithPlaceholder" customModule="Groowy" customModuleProvider="target">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Here are my activities ..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypd-6h-dg1" customClass="UITextViewWithPlaceholder" customModule="Groowy" customModuleProvider="target">
                                 <rect key="frame" x="16" y="162" width="343" height="489"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -191,11 +218,34 @@
                                     <outlet property="placeholderTextView" destination="Ypd-6h-dg1" id="jlR-OR-kTc"/>
                                 </connections>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4l-7f-tZy">
+                                <rect key="frame" x="172.5" y="536" width="30" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="⌃">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gyb-IT-CbB" kind="custom" identifier="goalSegue" customClass="SwipeUpStoryboardSegue" customModule="Groowy" customModuleProvider="target" id="fCQ-qe-MMr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aU-jZ-LL3">
+                                <rect key="frame" x="329" y="44" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="✕">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapToBackWithSender:" destination="ROL-6B-PKD" eventType="touchUpInside" id="pO2-F5-QiB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="u4l-7f-tZy" firstAttribute="centerX" secondItem="D1d-9W-HXD" secondAttribute="centerX" id="57g-hW-frT"/>
                             <constraint firstItem="Ypd-6h-dg1" firstAttribute="leading" secondItem="8sp-W3-ZXS" secondAttribute="leading" id="EvF-IL-rYB"/>
+                            <constraint firstItem="2bh-bX-WFW" firstAttribute="bottom" secondItem="u4l-7f-tZy" secondAttribute="bottom" constant="80" id="Jc3-Pw-b9W"/>
+                            <constraint firstItem="5aU-jZ-LL3" firstAttribute="top" secondItem="2bh-bX-WFW" secondAttribute="top" constant="24" id="K0m-q7-oxx"/>
                             <constraint firstItem="2bh-bX-WFW" firstAttribute="bottom" secondItem="8sp-W3-ZXS" secondAttribute="bottom" constant="16" id="NgM-Mq-2iJ"/>
                             <constraint firstItem="axd-kI-6UX" firstAttribute="leading" secondItem="2bh-bX-WFW" secondAttribute="leading" constant="16" id="NkQ-L1-YOa"/>
                             <constraint firstItem="2bh-bX-WFW" firstAttribute="trailing" secondItem="8sp-W3-ZXS" secondAttribute="trailing" constant="16" id="QHC-0g-3A6"/>
@@ -203,23 +253,278 @@
                             <constraint firstItem="axd-kI-6UX" firstAttribute="top" secondItem="2bh-bX-WFW" secondAttribute="top" constant="110" id="aUq-3T-Kd4"/>
                             <constraint firstItem="Ypd-6h-dg1" firstAttribute="top" secondItem="8sp-W3-ZXS" secondAttribute="top" id="btL-24-GDV"/>
                             <constraint firstItem="Ypd-6h-dg1" firstAttribute="height" secondItem="8sp-W3-ZXS" secondAttribute="height" id="g9x-lr-ZGP"/>
+                            <constraint firstItem="2bh-bX-WFW" firstAttribute="trailing" secondItem="5aU-jZ-LL3" secondAttribute="trailing" constant="16" id="lry-iv-ASU"/>
                             <constraint firstItem="8sp-W3-ZXS" firstAttribute="leading" secondItem="2bh-bX-WFW" secondAttribute="leading" constant="16" id="y6D-jT-dt9"/>
                             <constraint firstItem="8sp-W3-ZXS" firstAttribute="top" secondItem="axd-kI-6UX" secondAttribute="bottom" constant="8" id="zj1-RI-uui"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2bh-bX-WFW"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="dP7-Km-DsZ" appends="YES" id="4xL-fV-QYX"/>
+                            <outletCollection property="gestureRecognizers" destination="79S-Rr-E5d" appends="YES" id="JRV-i2-T5P"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="bodyTextView" destination="8sp-W3-ZXS" id="Hqg-vt-MQd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Lg-9O-eAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="down" id="dP7-Km-DsZ">
+                <swipeGestureRecognizer direction="up" id="dP7-Km-DsZ">
                     <connections>
-                        <action selector="swipeBackWithSender:" destination="ROL-6B-PKD" id="QUK-ZZ-xXg"/>
+                        <segue destination="gyb-IT-CbB" kind="custom" customClass="SwipeUpStoryboardSegue" customModule="Groowy" customModuleProvider="target" id="5sT-dz-Szw"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="79S-Rr-E5d">
+                    <connections>
+                        <action selector="swipeDownToBackWithSender:" destination="ROL-6B-PKD" id="hVJ-Sp-Rzq"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="457" y="-55"/>
         </scene>
+        <!--Reminder Create Challenge View Controller-->
+        <scene sceneID="P8V-k0-g15">
+            <objects>
+                <viewController id="ywC-gv-hxf" customClass="ReminderCreateChallengeViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AWI-oj-aFZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What time do you want me to remind ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJo-NE-bUL">
+                                <rect key="frame" x="16" y="130" width="340.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pu-cY-VUX">
+                                <rect key="frame" x="172.5" y="536" width="30" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="⌃">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nC7-GU-Hwo" kind="custom" customClass="SwipeUpStoryboardSegue" customModule="Groowy" customModuleProvider="target" id="VTY-ST-ony"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQ8-SN-Dpa">
+                                <rect key="frame" x="329" y="44" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="✕">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapToBackWithSender:" destination="ywC-gv-hxf" eventType="touchUpInside" id="Ty9-uU-UG6"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EpW-nX-DJd">
+                                <rect key="frame" x="27.5" y="225.5" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="571721316.14057899">
+                                    <!--2019-02-13 03:28:36 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="bxS-FN-4ZT" firstAttribute="bottom" secondItem="4Pu-cY-VUX" secondAttribute="bottom" constant="80" id="1J6-06-E32"/>
+                            <constraint firstItem="EpW-nX-DJd" firstAttribute="centerY" secondItem="AWI-oj-aFZ" secondAttribute="centerY" id="64p-Rt-pcB"/>
+                            <constraint firstItem="sJo-NE-bUL" firstAttribute="top" secondItem="bxS-FN-4ZT" secondAttribute="top" constant="110" id="BxL-dJ-ho0"/>
+                            <constraint firstItem="EpW-nX-DJd" firstAttribute="centerX" secondItem="AWI-oj-aFZ" secondAttribute="centerX" id="Z08-Ke-KGd"/>
+                            <constraint firstItem="4Pu-cY-VUX" firstAttribute="centerX" secondItem="AWI-oj-aFZ" secondAttribute="centerX" id="j3z-RY-vxJ"/>
+                            <constraint firstItem="sJo-NE-bUL" firstAttribute="leading" secondItem="bxS-FN-4ZT" secondAttribute="leading" constant="16" id="lzb-H6-W8s"/>
+                            <constraint firstItem="bxS-FN-4ZT" firstAttribute="trailing" secondItem="VQ8-SN-Dpa" secondAttribute="trailing" constant="16" id="muP-Ly-gaB"/>
+                            <constraint firstItem="VQ8-SN-Dpa" firstAttribute="top" secondItem="bxS-FN-4ZT" secondAttribute="top" constant="24" id="rMh-G8-BNl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bxS-FN-4ZT"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="nXW-vS-fXa" appends="YES" id="gLK-9n-EFD"/>
+                            <outletCollection property="gestureRecognizers" destination="6Ac-SE-zmL" appends="YES" id="8Ha-Vc-1kW"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="reminderPickerView" destination="EpW-nX-DJd" id="nOn-WQ-ebn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZl-xi-NNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="nXW-vS-fXa">
+                    <connections>
+                        <segue destination="nC7-GU-Hwo" kind="custom" customClass="SwipeUpStoryboardSegue" customModule="Groowy" customModuleProvider="target" id="93T-nV-6zk"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="6Ac-SE-zmL">
+                    <connections>
+                        <action selector="swipeDownToBackWithSender:" destination="ywC-gv-hxf" id="5dw-IF-yBV"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2284" y="-55"/>
+        </scene>
+        <!--Promise Create Challenge View Controller-->
+        <scene sceneID="R6I-HI-IQu">
+            <objects>
+                <viewController id="nC7-GU-Hwo" customClass="PromiseCreateChallengeViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B9Y-o1-07g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great! Let's do it together. Promise ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26j-O6-CPq">
+                                <rect key="frame" x="16" y="130" width="323" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5v-UU-D3E">
+                                <rect key="frame" x="172.5" y="536" width="30" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="⌃">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hew-dm-TVU">
+                                <rect key="frame" x="329" y="44" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="✕">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapToBackWithSender:" destination="nC7-GU-Hwo" eventType="touchUpInside" id="9Oq-Pz-u2J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lh6-Rq-a2S">
+                                <rect key="frame" x="124" y="318.5" width="127" height="30"/>
+                                <state key="normal" title="Tap me to promise">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapPromiseButtonWithSender:" destination="nC7-GU-Hwo" eventType="touchUpInside" id="Uoy-SJ-Aqg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Hew-dm-TVU" firstAttribute="top" secondItem="PtZ-jV-VJb" secondAttribute="top" constant="24" id="Ey5-eM-qnP"/>
+                            <constraint firstItem="Lh6-Rq-a2S" firstAttribute="centerY" secondItem="B9Y-o1-07g" secondAttribute="centerY" id="Kw6-Au-uJp"/>
+                            <constraint firstItem="G5v-UU-D3E" firstAttribute="centerX" secondItem="B9Y-o1-07g" secondAttribute="centerX" id="QzL-wg-3Fj"/>
+                            <constraint firstItem="PtZ-jV-VJb" firstAttribute="bottom" secondItem="G5v-UU-D3E" secondAttribute="bottom" constant="80" id="ecH-DO-0ep"/>
+                            <constraint firstItem="Lh6-Rq-a2S" firstAttribute="centerX" secondItem="B9Y-o1-07g" secondAttribute="centerX" id="keW-83-tQ5"/>
+                            <constraint firstItem="26j-O6-CPq" firstAttribute="top" secondItem="PtZ-jV-VJb" secondAttribute="top" constant="110" id="klu-gc-pSA"/>
+                            <constraint firstItem="PtZ-jV-VJb" firstAttribute="trailing" secondItem="Hew-dm-TVU" secondAttribute="trailing" constant="16" id="sej-3u-5Ob"/>
+                            <constraint firstItem="26j-O6-CPq" firstAttribute="leading" secondItem="PtZ-jV-VJb" secondAttribute="leading" constant="16" id="tea-4Z-FUv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PtZ-jV-VJb"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9Dr-WK-Tdm" appends="YES" id="zHy-vq-1zr"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="promiseButton" destination="Lh6-Rq-a2S" id="B0S-Eh-bXG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xQ-IU-wvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="9Dr-WK-Tdm">
+                    <connections>
+                        <action selector="swipeDownToBackWithSender:" destination="nC7-GU-Hwo" id="WUB-cc-POG"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3121" y="-55"/>
+        </scene>
+        <!--Goal Create Challenge View Controller-->
+        <scene sceneID="RDY-dA-bf9">
+            <objects>
+                <viewController id="gyb-IT-CbB" customClass="GoalCreateChallengeViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CsK-ao-1hq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Your Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avj-k3-fqo">
+                                <rect key="frame" x="16" y="130" width="121" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="My goal is ..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDA-na-nHU" customClass="UITextViewWithPlaceholder" customModule="Groowy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="162" width="343" height="489"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2kD-0z-Eov" customClass="UITextViewWithPlaceholder" customModule="Groowy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="162" width="343" height="489"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="placeholderTextView" destination="mDA-na-nHU" id="DoT-ld-Wx7"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcZ-ZX-Sub">
+                                <rect key="frame" x="172.5" y="536" width="30" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="⌃">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ywC-gv-hxf" kind="custom" customClass="SwipeUpStoryboardSegue" customModule="Groowy" customModuleProvider="target" id="OW0-zh-OJg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nZ-CN-y2G">
+                                <rect key="frame" x="329" y="44" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="✕">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapToBackWithSender:" destination="gyb-IT-CbB" eventType="touchUpInside" id="01c-FY-npA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="RGT-oA-YSX" firstAttribute="trailing" secondItem="2kD-0z-Eov" secondAttribute="trailing" constant="16" id="2YF-x3-UiS"/>
+                            <constraint firstItem="mDA-na-nHU" firstAttribute="height" secondItem="2kD-0z-Eov" secondAttribute="height" id="INa-Q7-3bg"/>
+                            <constraint firstItem="RGT-oA-YSX" firstAttribute="bottom" secondItem="VcZ-ZX-Sub" secondAttribute="bottom" constant="80" id="IoQ-h6-fhx"/>
+                            <constraint firstItem="mDA-na-nHU" firstAttribute="leading" secondItem="2kD-0z-Eov" secondAttribute="leading" id="S7p-BQ-cfn"/>
+                            <constraint firstItem="RGT-oA-YSX" firstAttribute="bottom" secondItem="2kD-0z-Eov" secondAttribute="bottom" constant="16" id="Tol-iD-Hkl"/>
+                            <constraint firstItem="9nZ-CN-y2G" firstAttribute="top" secondItem="RGT-oA-YSX" secondAttribute="top" constant="24" id="XPs-6W-DJa"/>
+                            <constraint firstItem="2kD-0z-Eov" firstAttribute="top" secondItem="Avj-k3-fqo" secondAttribute="bottom" constant="8" id="Xdv-UI-bIc"/>
+                            <constraint firstItem="2kD-0z-Eov" firstAttribute="leading" secondItem="RGT-oA-YSX" secondAttribute="leading" constant="16" id="cdM-sd-gO0"/>
+                            <constraint firstItem="RGT-oA-YSX" firstAttribute="trailing" secondItem="9nZ-CN-y2G" secondAttribute="trailing" constant="16" id="dDO-uM-He5"/>
+                            <constraint firstItem="mDA-na-nHU" firstAttribute="width" secondItem="2kD-0z-Eov" secondAttribute="width" id="h1F-kc-XLl"/>
+                            <constraint firstItem="mDA-na-nHU" firstAttribute="top" secondItem="2kD-0z-Eov" secondAttribute="top" id="lxF-a3-ypC"/>
+                            <constraint firstItem="Avj-k3-fqo" firstAttribute="top" secondItem="RGT-oA-YSX" secondAttribute="top" constant="110" id="wN9-OQ-TwX"/>
+                            <constraint firstItem="VcZ-ZX-Sub" firstAttribute="centerX" secondItem="CsK-ao-1hq" secondAttribute="centerX" id="yT5-X5-S38"/>
+                            <constraint firstItem="Avj-k3-fqo" firstAttribute="leading" secondItem="RGT-oA-YSX" secondAttribute="leading" constant="16" id="zZM-C9-ROo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RGT-oA-YSX"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ds6-gU-1Po" appends="YES" id="118-Rz-hxn"/>
+                            <outletCollection property="gestureRecognizers" destination="9jh-Ae-VHz" appends="YES" id="XIV-zW-hwh"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="goalTextView" destination="2kD-0z-Eov" id="oBJ-m1-K38"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CjM-0p-gd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="ds6-gU-1Po">
+                    <connections>
+                        <segue destination="ywC-gv-hxf" kind="custom" identifier="reminderSegue" customClass="SwipeUpStoryboardSegue" customModule="Groowy" customModuleProvider="target" id="P90-pO-dBK"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="9jh-Ae-VHz">
+                    <connections>
+                        <action selector="swipeDownToBackWithSender:" destination="gyb-IT-CbB" id="HkI-sw-k1V"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1348" y="-55"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fCQ-qe-MMr"/>
+        <segue reference="VTY-ST-ony"/>
+        <segue reference="P90-pO-dBK"/>
+        <segue reference="4dy-A1-fzf"/>
+    </inferredMetricsTieBreakers>
 </document>

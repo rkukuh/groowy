@@ -40,4 +40,12 @@ class SwipeFormViewController: UIViewController {
         }
     }
     
+    @IBAction func tapToBack(sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func swipeDownToBack(sender: UITapGestureRecognizer) {
+        self.dismiss(animated: true)
+    }
+    
 }

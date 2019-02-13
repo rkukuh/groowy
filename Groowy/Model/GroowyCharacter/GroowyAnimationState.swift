@@ -7,9 +7,10 @@
 //
 
 import Foundation
-
+ 
 enum GroowyAnimationState: String {
     case sleep = "GroowySleep"
     case wake = "GroowyWake"
     case asleep = "GroowyAsleep"
+    case awake = "GroowyAwake"
 }

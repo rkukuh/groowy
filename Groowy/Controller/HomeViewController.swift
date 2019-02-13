@@ -81,7 +81,7 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     
     func stayAwake() {
         timer = Timer.scheduledTimer(withTimeInterval: Double.random(in: 1...3), repeats: false, block: { (timer) in
-            self.scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
+            self.scene.groowyCharacter.changeGroowyAnimateState(nextState: .awake)
             self.stayAwake()
             
         })
