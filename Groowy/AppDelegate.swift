@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupUserStateManage() {
-        let lastStateOfUser = User.state
+        let lastStateOfUser = UserState.deepUnderstanding //User.state
+        
         var storyBoardID = ""
         var storyBoardName = ""
         switch lastStateOfUser {
@@ -32,7 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 storyBoardID = "home"
                 break
             case .deepUnderstanding:
-                
+                storyBoardName = "Main"
+                storyBoardID = "create-challenge"
                 break
             case .gift:
                 

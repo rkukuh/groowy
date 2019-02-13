@@ -8,8 +8,7 @@
 
 import Foundation
 import SpriteKit
-
-
+ 
 class GroowyCharacter {
     // MARK: Groowy properties
     var size:CGSize!
@@ -26,6 +25,7 @@ class GroowyCharacter {
         currentAnimationState = initState
         buildGroowySleep()
         buildGroowyWake()
+        buildGroowyAwake()
         buildGroowyAsleep()
         addToView(scene: scene)
     }
@@ -71,7 +71,15 @@ class GroowyCharacter {
         if currentAnimationState == .wake {
             initSpriteNode(texture: wakeFrames[0])
         }
-        actions[.wake] = SKAction.animate(with: wakeFrames, timePerFrame: 1.0/8.0)
+        actions[.wake] = SKAction.animate(with: wakeFrames, timePerFrame: 1.5)
+    }
+    
+    private func buildGroowyAwake() {
+        let wakeFrames = groowySprite.loadTextureAtlas(atlasFilename: GroowyAnimationState.wake.rawValue, namingSeries: "")
+        if currentAnimationState == .wake {
+            initSpriteNode(texture: wakeFrames[0])
+        }
+        actions[.awake] = SKAction.animate(with: wakeFrames, timePerFrame: 1.0/8.0)
     }
     
     // Function to generate groowy asleep animation using SKTextureAtlas
@@ -93,6 +101,10 @@ class GroowyCharacter {
             groowySprite.removeAllActions()
             groowySprite.run(wakeAnimation)
             print("wake")
+        } else if currentAnimationState == .awake, let awakeAnimation = actions[.awake] {
+            groowySprite.removeAllActions()
+            groowySprite.run(awakeAnimation)
+            print("awake")
         } else if currentAnimationState == .asleep, let asleepAnimation = actions[.asleep], let sleepAnimation = actions[.sleep]  {
             groowySprite.removeAllActions()
             groowySprite.run(asleepAnimation) {

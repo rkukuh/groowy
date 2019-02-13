@@ -30,7 +30,6 @@ class UICustomTextViewView: UIView {
         
         let snapBehaviour: UISnapBehavior = UISnapBehavior(item: self, snapTo: CGPoint(x: parentView.frame.midX, y: parentView.frame.minY + frame.height/2))
         snapBehaviour.damping = 1.0
-        print("NIlai y \(parentView.frame.minY)")
         animator.addBehavior(snapBehaviour)
         
         

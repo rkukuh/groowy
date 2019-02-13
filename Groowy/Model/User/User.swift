@@ -39,13 +39,20 @@ class User {
             userDefault.set(newValue, forKey: "role")
         }
     }
-    
     static var state: UserState {
         get {
             return userDefault.value(forKey: "userState") as? UserState ?? .introduction
         }
         set {
             userDefault.set(newValue, forKey: "userState")
+        }
+    }
+    static var email: String {
+        get {
+            return userDefault.value(forKey: "email") as? String ?? ""
+        }
+        set {
+            userDefault.set(newValue, forKey: "email")
         }
     }
 }
