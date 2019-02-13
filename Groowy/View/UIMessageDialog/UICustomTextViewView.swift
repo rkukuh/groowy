@@ -20,15 +20,12 @@ class UICustomTextViewView: UIView {
     }
     
     func startAnimationSelf(){
-        
         animator.removeAllBehaviors()
-        
         // Animate in the overlay
         UIView.animate(withDuration: 0.4, animations: {
             self.alpha = 1.0
         })
-        
-        // Animate the alert view using UIKit Dynamics.
+        // Animate the view using UIKit Dynamics.
         alpha = 1.0
         
         let snapBehaviour: UISnapBehavior = UISnapBehavior(item: self, snapTo: CGPoint(x: parentView.frame.midX, y: parentView.frame.minY + frame.height/2))

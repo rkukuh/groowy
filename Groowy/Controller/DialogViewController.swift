@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SpriteKit
+import MessageUI
 
 class DialogViewController: UIViewController {
     
@@ -15,12 +17,19 @@ class DialogViewController: UIViewController {
     var deepUnderstandingDialog = DialogRule()
     
     @IBOutlet weak var bottomView: UIAnswerBodyView!
+    @IBOutlet weak var spriteKitView: SKView!
     
+    var scene: GameScene!
+    var timer:Timer!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Add Gamescene to View Controller
+        scene = GameScene(size: view.bounds.size)
+        scene.scaleMode = .resizeFill
+        spriteKitView.ignoresSiblingOrder = true
+        spriteKitView.presentScene(scene)
         textFieldInput = UICustomTextViewView(view: view)
-        
         loadDialogData()
         setupCurrentDialog()
         
@@ -30,30 +39,40 @@ class DialogViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         textFieldInput!.startAnimationSelf()
+        scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
+        stayAwake()
     }
-    
     // MARK: - Action buttons
-    
     @objc func actionButtonTop(_sender: UIButton){
-        currentDialog.nextState(answerIndex: 0)
-        
-        if currentDialog.current?.answers == nil {
+        if currentDialog.nextState(answerIndex: 0) == true{
+            updateDialog()
+        }else{
             bottomView.bottomButton.isHidden = true
             bottomView.topButton.isHidden = true
+            updateDialog()
+            bottomView.removeFromSuperview()
+            bottomView = nil
         }
-
-        updateDialog()
     }
     
     @objc func actionButtonBottom(_sender: UIButton){
-        currentDialog.nextState(answerIndex: 1)
-        
-        if currentDialog.current?.answers == nil {
+        if currentDialog.nextState(answerIndex: 1) == true{
+            updateDialog()
+        }else{
             bottomView.bottomButton.isHidden = true
             bottomView.topButton.isHidden = true
+            updateDialog()
+            bottomView.removeFromSuperview()
+            bottomView = nil
         }
-
-        updateDialog()
+    }
+    
+    func stayAwake() {
+        timer = Timer.scheduledTimer(withTimeInterval: Double.random(in: 1...3), repeats: false, block: { (timer) in
+            self.scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
+            self.stayAwake()
+            
+        })
     }
     
     // MARK: - Private functions
@@ -108,7 +127,6 @@ class DialogViewController: UIViewController {
     
     private func setupCurrentDialog() {
         currentDialog.current = deepUnderstandingDialog.dialogs[0]
-        
         updateDialog()
     }
     

@@ -9,39 +9,29 @@
 import UIKit
 import SpriteKit
 
-class LoveAppleViewController: UIViewController , UIDynamicAnimatorDelegate{
-    var scene: EyeSKScene!
+class LoveAppleViewController: UIViewController{
+    var scene: GameScene!
     @IBOutlet weak var eyeSKView: SKView!
-    @IBOutlet weak var messageDialogView: UIView!
-    @IBOutlet weak var cobaText: UITextView!
-    var animator: UIDynamicAnimator!
+    @IBOutlet var mainView: UIView!
+    
+    var textFieldInput: UICustomTextViewView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scene = EyeSKScene(size: eyeSKView.bounds.size)
+        // Add Gamescene to View Controller
+        scene = GameScene(size: view.bounds.size)
         scene.scaleMode = .resizeFill
         eyeSKView.ignoresSiblingOrder = true
         eyeSKView.presentScene(scene)
-        
-        
-        let instantaneousPush: UIPushBehavior = UIPushBehavior(items: [messageDialogView], mode: UIPushBehavior.Mode.continuous)
-        
-        instantaneousPush.setAngle( CGFloat(Double.pi / 2) , magnitude: 0.3)
-        self.animator = UIDynamicAnimator(referenceView: self.view)
-        self.animator.addBehavior(instantaneousPush)
-        animator.delegate = self
-        //UIView.animate(withDuration: 2.0, delay: 0, options: [.repeat, .autoreverse], animations: {
-            
-            
-            
-        //}, completion: nil)
-        
-        // Do any additional setup after loading the view.
+        scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
+        textFieldInput = UICustomTextViewView(view: mainView)
     }
     
-    func dynamicAnimatorDidPause(_ animator: UIDynamicAnimator) {
-        
+    override func viewDidAppear(_ animated: Bool) {
+        textFieldInput!.startAnimationSelf()
     }
+    
+
     
     
     

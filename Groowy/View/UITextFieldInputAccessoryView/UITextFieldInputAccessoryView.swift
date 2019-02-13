@@ -10,11 +10,22 @@ import UIKit
 
 class UITextFieldInputAccessoryView: UIView {
 
+    var delegate:UITextFieldInputAccessoryViewDelegate?
     @IBOutlet weak var textField:UITextField!
     
     override func didMoveToSuperview() {
         textField.autocorrectionType = .no
         textField.becomeFirstResponder()
+    }
+    
+    @IBAction func didTapSendButton(sender:UIButton) {
+        if let delegate = delegate {
+            delegate.didTapSendButton()
+        }
+    }
+    
+    override func resignFirstResponder() -> Bool {
+        return textField.resignFirstResponder()
     }
 
 }
