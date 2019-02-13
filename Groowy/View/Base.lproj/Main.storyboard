@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="1737" y="-53"/>
         </scene>
-        <!--Groowy View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="yDI-Ul-oie">
             <objects>
-                <viewController id="bWv-EH-UgV" customClass="GroowyViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="bWv-EH-UgV" customClass="HomeViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9VW-39-fKL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,17 +65,26 @@
                                     <outletCollection property="gestureRecognizers" destination="0v7-No-NCS" appends="YES" id="sqa-pL-3Cc"/>
                                 </connections>
                             </skView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5j-cC-LC1" customClass="UIAnswerBodyView" customModule="Groowy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="U5j-cC-LC1" firstAttribute="height" secondItem="9VW-39-fKL" secondAttribute="height" multiplier="0.3" id="1Mo-1G-Kgc"/>
                             <constraint firstItem="eI7-Z8-7rL" firstAttribute="bottom" secondItem="467-Z2-hC7" secondAttribute="bottom" id="5OA-8D-HrF"/>
                             <constraint firstItem="eI7-Z8-7rL" firstAttribute="top" secondItem="9VW-39-fKL" secondAttribute="top" id="ISD-kk-KrY"/>
+                            <constraint firstAttribute="trailing" secondItem="U5j-cC-LC1" secondAttribute="trailing" id="aqv-LU-taQ"/>
+                            <constraint firstItem="U5j-cC-LC1" firstAttribute="leading" secondItem="467-Z2-hC7" secondAttribute="leading" id="fm8-49-tJp"/>
                             <constraint firstItem="eI7-Z8-7rL" firstAttribute="trailing" secondItem="467-Z2-hC7" secondAttribute="trailing" id="g8Y-8Z-61C"/>
+                            <constraint firstItem="467-Z2-hC7" firstAttribute="bottom" secondItem="U5j-cC-LC1" secondAttribute="bottom" id="lEk-hw-zhq"/>
                             <constraint firstItem="eI7-Z8-7rL" firstAttribute="leading" secondItem="467-Z2-hC7" secondAttribute="leading" id="yPu-6i-4Ey"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="467-Z2-hC7"/>
                     </view>
                     <connections>
+                        <outlet property="bottomView" destination="U5j-cC-LC1" id="I59-Vm-lEi"/>
                         <outlet property="spriteKitView" destination="eI7-Z8-7rL" id="mcv-1R-gYq"/>
                     </connections>
                 </viewController>
@@ -86,12 +95,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1214" y="-52"/>
+            <point key="canvasLocation" x="-1721" y="-55"/>
         </scene>
         <!--Create Challenge First View Controller-->
         <scene sceneID="Sbb-Hn-wYp">
             <objects>
-                <viewController id="I2c-cj-fgX" customClass="CreateChallengeFirstViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dashboard" id="I2c-cj-fgX" customClass="CreateChallengeFirstViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qn4-qf-xuq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
