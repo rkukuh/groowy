@@ -14,17 +14,17 @@ class CreateChallengeController {
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var challenge: [String: String] = [:]
-    
     var fetchedResults: NSFetchedResultsController<Challenge>!
     
     func didAddField(field: String, value: String) {
-        challenge[field] = value
+        // Get data from user input
     }
     
     func didPromiseTap() {
-        let title = challenge["title"]
+        // Persist to Core Data
         
-        print(title)
+        let challenge = Challenge(entity: Challenge.entity(), insertInto: context)
+        
+        challenge.title = ""
     }
 }
