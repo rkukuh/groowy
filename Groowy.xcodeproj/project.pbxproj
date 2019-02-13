@@ -41,12 +41,6 @@
 		4A5EA3AB2211567300DEAD49 /* DialogRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3AA2211567300DEAD49 /* DialogRule.swift */; };
 		4AB366612213D0D600AABD19 /* MotivationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB3664B2213D0D600AABD19 /* MotivationCategory.swift */; };
 		4AB366622213D0D600AABD19 /* Motivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB3664C2213D0D600AABD19 /* Motivation.swift */; };
-		4AB366642213D0D600AABD19 /* Reflections+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB366502213D0D600AABD19 /* Reflections+CoreDataClass.swift */; };
-		4AB366652213D0D600AABD19 /* Challenges+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB366512213D0D600AABD19 /* Challenges+CoreDataClass.swift */; };
-		4AB366672213D0D600AABD19 /* Challenges+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB366542213D0D600AABD19 /* Challenges+CoreDataProperties.swift */; };
-		4AB366682213D0D600AABD19 /* Answers+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB366552213D0D600AABD19 /* Answers+CoreDataClass.swift */; };
-		4AB366692213D0D600AABD19 /* Answers+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB366562213D0D600AABD19 /* Answers+CoreDataProperties.swift */; };
-		4AB3666A2213D0D600AABD19 /* Reflections+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB366572213D0D600AABD19 /* Reflections+CoreDataProperties.swift */; };
 		4AB3666F2213D0D600AABD19 /* ChallengeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB3665E2213D0D600AABD19 /* ChallengeStatus.swift */; };
 		4AB366712213D11700AABD19 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB366702213D11700AABD19 /* DialogViewController.swift */; };
 		4AE3622F2213F18E00209A4F /* TitleCreateChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE362262213F18E00209A4F /* TitleCreateChallengeViewController.swift */; };
@@ -61,6 +55,12 @@
 		4AE3623E2213F23500209A4F /* MessageDialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE3623A2213F23500209A4F /* MessageDialogView.xib */; };
 		4AE3623F2213F23500209A4F /* UIViewNextQuestion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE3623C2213F23500209A4F /* UIViewNextQuestion.xib */; };
 		4AE362402213F23500209A4F /* UIViewNextQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3623D2213F23500209A4F /* UIViewNextQuestion.swift */; };
+		4AE362532213FA3700209A4F /* Challenge+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3624D2213FA3700209A4F /* Challenge+CoreDataClass.swift */; };
+		4AE362542213FA3700209A4F /* Challenge+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3624E2213FA3700209A4F /* Challenge+CoreDataProperties.swift */; };
+		4AE362552213FA3700209A4F /* Reflection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3624F2213FA3700209A4F /* Reflection+CoreDataClass.swift */; };
+		4AE362562213FA3700209A4F /* Reflection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE362502213FA3700209A4F /* Reflection+CoreDataProperties.swift */; };
+		4AE362572213FA3700209A4F /* Answer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE362512213FA3700209A4F /* Answer+CoreDataClass.swift */; };
+		4AE362582213FA3700209A4F /* Answer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE362522213FA3700209A4F /* Answer+CoreDataProperties.swift */; };
 		B12124B92212BC2700DBB57B /* UIGift.xib in Resources */ = {isa = PBXBuildFile; fileRef = B12124B82212BC2700DBB57B /* UIGift.xib */; };
 		B12124BB2212BF9000DBB57B /* UIGiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12124BA2212BF9000DBB57B /* UIGiftView.swift */; };
 		B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */; };
@@ -105,12 +105,6 @@
 		4A5EA3AA2211567300DEAD49 /* DialogRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogRule.swift; sourceTree = "<group>"; };
 		4AB3664B2213D0D600AABD19 /* MotivationCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotivationCategory.swift; sourceTree = "<group>"; };
 		4AB3664C2213D0D600AABD19 /* Motivation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Motivation.swift; sourceTree = "<group>"; };
-		4AB366502213D0D600AABD19 /* Reflections+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reflections+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4AB366512213D0D600AABD19 /* Challenges+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Challenges+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4AB366542213D0D600AABD19 /* Challenges+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Challenges+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4AB366552213D0D600AABD19 /* Answers+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Answers+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4AB366562213D0D600AABD19 /* Answers+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Answers+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4AB366572213D0D600AABD19 /* Reflections+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reflections+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4AB3665E2213D0D600AABD19 /* ChallengeStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeStatus.swift; sourceTree = "<group>"; };
 		4AB366702213D11700AABD19 /* DialogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
 		4AE362262213F18E00209A4F /* TitleCreateChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCreateChallengeViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +119,12 @@
 		4AE3623A2213F23500209A4F /* MessageDialogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageDialogView.xib; sourceTree = "<group>"; };
 		4AE3623C2213F23500209A4F /* UIViewNextQuestion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIViewNextQuestion.xib; sourceTree = "<group>"; };
 		4AE3623D2213F23500209A4F /* UIViewNextQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewNextQuestion.swift; sourceTree = "<group>"; };
+		4AE3624D2213FA3700209A4F /* Challenge+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Challenge+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4AE3624E2213FA3700209A4F /* Challenge+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Challenge+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4AE3624F2213FA3700209A4F /* Reflection+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reflection+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4AE362502213FA3700209A4F /* Reflection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reflection+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4AE362512213FA3700209A4F /* Answer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4AE362522213FA3700209A4F /* Answer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B12124B82212BC2700DBB57B /* UIGift.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIGift.xib; sourceTree = "<group>"; };
 		B12124BA2212BF9000DBB57B /* UIGiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGiftView.swift; sourceTree = "<group>"; };
 		B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveAppleViewController.swift; sourceTree = "<group>"; };
@@ -337,12 +337,12 @@
 			isa = PBXGroup;
 			children = (
 				4AE362372213F1EA00209A4F /* Groowy.xcdatamodeld */,
-				4AB366512213D0D600AABD19 /* Challenges+CoreDataClass.swift */,
-				4AB366552213D0D600AABD19 /* Answers+CoreDataClass.swift */,
-				4AB366502213D0D600AABD19 /* Reflections+CoreDataClass.swift */,
-				4AB366542213D0D600AABD19 /* Challenges+CoreDataProperties.swift */,
-				4AB366562213D0D600AABD19 /* Answers+CoreDataProperties.swift */,
-				4AB366572213D0D600AABD19 /* Reflections+CoreDataProperties.swift */,
+				4AE3624D2213FA3700209A4F /* Challenge+CoreDataClass.swift */,
+				4AE3624E2213FA3700209A4F /* Challenge+CoreDataProperties.swift */,
+				4AE3624F2213FA3700209A4F /* Reflection+CoreDataClass.swift */,
+				4AE362502213FA3700209A4F /* Reflection+CoreDataProperties.swift */,
+				4AE362512213FA3700209A4F /* Answer+CoreDataClass.swift */,
+				4AE362522213FA3700209A4F /* Answer+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -483,8 +483,8 @@
 				4AB366612213D0D600AABD19 /* MotivationCategory.swift in Sources */,
 				4AE362362213F18E00209A4F /* MotivationViewController.swift in Sources */,
 				4894D7B2220BC564007F34F5 /* HomeViewController.swift in Sources */,
-				4AB3666A2213D0D600AABD19 /* Reflections+CoreDataProperties.swift in Sources */,
 				4AB366712213D11700AABD19 /* DialogViewController.swift in Sources */,
+				4AE362582213FA3700209A4F /* Answer+CoreDataProperties.swift in Sources */,
 				4AE362302213F18E00209A4F /* PromiseCreateChallengeViewController.swift in Sources */,
 				4894D7C3220BCB46007F34F5 /* UIViewController.swift in Sources */,
 				4894D7C0220BC9BC007F34F5 /* ColorTheme.swift in Sources */,
@@ -492,25 +492,24 @@
 				4AE362352213F18E00209A4F /* SwipeFormViewController.swift in Sources */,
 				4AE362392213F1EA00209A4F /* Groowy.xcdatamodeld in Sources */,
 				4AB3666F2213D0D600AABD19 /* ChallengeStatus.swift in Sources */,
+				4AE362532213FA3700209A4F /* Challenge+CoreDataClass.swift in Sources */,
 				4A5EA3A72211555500DEAD49 /* DialogAnswer.swift in Sources */,
-				4AB366692213D0D600AABD19 /* Answers+CoreDataProperties.swift in Sources */,
 				4A5EA3A02211482500DEAD49 /* UIAnswerBodyView.swift in Sources */,
-				4AB366652213D0D600AABD19 /* Challenges+CoreDataClass.swift in Sources */,
 				4AE362402213F23500209A4F /* UIViewNextQuestion.swift in Sources */,
 				4A5EA3A92211562E00DEAD49 /* DialogState.swift in Sources */,
 				4A5EA3AB2211567300DEAD49 /* DialogRule.swift in Sources */,
+				4AE362572213FA3700209A4F /* Answer+CoreDataClass.swift in Sources */,
 				B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */,
 				4894D812220D2AED007F34F5 /* UITextViewWithPlaceholder.swift in Sources */,
 				4A5EA39E2211482500DEAD49 /* UICustomTextViewView.swift in Sources */,
+				4AE362552213FA3700209A4F /* Reflection+CoreDataClass.swift in Sources */,
 				4AE362342213F18E00209A4F /* GoalCreateChallengeViewController.swift in Sources */,
 				4894D7BD220BC97E007F34F5 /* GameScene.swift in Sources */,
 				4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */,
 				4894D818220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift in Sources */,
+				4AE362542213FA3700209A4F /* Challenge+CoreDataProperties.swift in Sources */,
 				4A5EA3A52211552D00DEAD49 /* Dialog.swift in Sources */,
-				4AB366642213D0D600AABD19 /* Reflections+CoreDataClass.swift in Sources */,
 				4AB366622213D0D600AABD19 /* Motivation.swift in Sources */,
-				4AB366672213D0D600AABD19 /* Challenges+CoreDataProperties.swift in Sources */,
-				4AB366682213D0D600AABD19 /* Answers+CoreDataClass.swift in Sources */,
 				4894C2C92212625000E2AB6F /* User.swift in Sources */,
 				4894D7C6220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift in Sources */,
 				B16F68602213D279008BA51D /* GiftViewController.swift in Sources */,
@@ -518,6 +517,7 @@
 				4894D7A6220BC31F007F34F5 /* BaseModel.swift in Sources */,
 				4894C2CD221263B400E2AB6F /* UITextFieldInputAccessoryViewDelegate.swift in Sources */,
 				4894D80F220D2929007F34F5 /* SwipeUpStoryboardSegue.swift in Sources */,
+				4AE362562213FA3700209A4F /* Reflection+CoreDataProperties.swift in Sources */,
 				4894D7B7220BC623007F34F5 /* GroowyAnimationState.swift in Sources */,
 				4AE362322213F18E00209A4F /* BodyCreateChallengeViewController.swift in Sources */,
 				4894D7BA220BC661007F34F5 /* SpriteKitExtension.swift in Sources */,

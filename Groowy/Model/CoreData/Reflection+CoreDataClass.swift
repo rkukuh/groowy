@@ -1,5 +1,5 @@
 //
-//  Challenges+CoreDataClass.swift
+//  Reflection+CoreDataClass.swift
 //  Groowy
 //
 //  Created by R. Kukuh on 13/02/19.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Challenges)
-public class Challenges: NSManagedObject {
+
+public class Reflection: NSManagedObject {
 
 }

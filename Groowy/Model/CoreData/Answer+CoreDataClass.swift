@@ -1,5 +1,5 @@
 //
-//  Reflections+CoreDataClass.swift
+//  Answer+CoreDataClass.swift
 //  Groowy
 //
 //  Created by R. Kukuh on 13/02/19.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Reflections)
-public class Reflections: NSManagedObject {
+
+public class Answer: NSManagedObject {
 
 }

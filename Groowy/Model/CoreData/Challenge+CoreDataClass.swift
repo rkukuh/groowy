@@ -1,5 +1,5 @@
 //
-//  Answers+CoreDataClass.swift
+//  Challenge+CoreDataClass.swift
 //  Groowy
 //
 //  Created by R. Kukuh on 13/02/19.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Answers)
-public class Answers: NSManagedObject {
+
+public class Challenge: NSManagedObject {
 
 }
