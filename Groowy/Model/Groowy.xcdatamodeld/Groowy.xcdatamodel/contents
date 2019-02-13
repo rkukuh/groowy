@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Answers" representedClassName="Answers" syncable="YES" codeGenerationType="class">
-        <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userAnswer" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Answers" representedClassName=".Answers" syncable="YES">
+        <attribute name="question" attributeType="String" syncable="YES"/>
+        <attribute name="userAnswer" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Challenges" representedClassName="Challenges" syncable="YES" codeGenerationType="class">
-        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Challenges" representedClassName=".Challenges" syncable="YES">
+        <attribute name="body" attributeType="String" syncable="YES"/>
         <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="finished_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="goal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="goal" attributeType="String" syncable="YES"/>
         <attribute name="remind_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="reflections" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Reflections" inverseName="challenge" inverseEntity="Reflections" syncable="YES"/>
+        <attribute name="status" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="reflections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reflections" inverseName="challenge" inverseEntity="Reflections" syncable="YES"/>
     </entity>
-    <entity name="Reflections" representedClassName="Reflections" syncable="YES" codeGenerationType="class">
-        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Reflections" representedClassName=".Reflections" syncable="YES">
+        <attribute name="body" attributeType="String" syncable="YES"/>
         <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="picture" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="challenge" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Challenges" inverseName="reflections" inverseEntity="Challenges" syncable="YES"/>

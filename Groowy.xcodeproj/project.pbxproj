@@ -28,7 +28,6 @@
 		4894D818220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D817220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift */; };
 		4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F1220AD12700C180F9 /* AppDelegate.swift */; };
 		4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4F5220AD12700C180F9 /* Main.storyboard */; };
-		4A33E4FA220AD12700C180F9 /* Groowy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F8220AD12700C180F9 /* Groowy.xcdatamodeld */; };
 		4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4FB220AD12800C180F9 /* Assets.xcassets */; };
 		4A33E4FF220AD12800C180F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4FD220AD12800C180F9 /* LaunchScreen.storyboard */; };
 		4A33E508220ADA0300C180F9 /* Jaya.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E506220ADA0300C180F9 /* Jaya.storyboard */; };
@@ -45,6 +44,12 @@
 		4A5EA3A72211555500DEAD49 /* DialogAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A62211555500DEAD49 /* DialogAnswer.swift */; };
 		4A5EA3A92211562E00DEAD49 /* DialogState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A82211562E00DEAD49 /* DialogState.swift */; };
 		4A5EA3AB2211567300DEAD49 /* DialogRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3AA2211567300DEAD49 /* DialogRule.swift */; };
+		4AB366382213C01500AABD19 /* Answers+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB366352213C01500AABD19 /* Answers+CoreDataProperties.swift */; };
+		4AB366392213C01500AABD19 /* Challenges+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB366362213C01500AABD19 /* Challenges+CoreDataProperties.swift */; };
+		4AB3663A2213C01500AABD19 /* Reflections+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB366372213C01500AABD19 /* Reflections+CoreDataProperties.swift */; };
+		4AB3663E2213C04400AABD19 /* Challenges+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB3663B2213C04400AABD19 /* Challenges+CoreDataClass.swift */; };
+		4AB3663F2213C04400AABD19 /* Answers+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB3663C2213C04400AABD19 /* Answers+CoreDataClass.swift */; };
+		4AB366402213C04400AABD19 /* Reflections+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB3663D2213C04400AABD19 /* Reflections+CoreDataClass.swift */; };
 		B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */; };
 		B14F69E4220BF14300D82D5B /* EyeSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E3220BF14300D82D5B /* EyeSKScene.swift */; };
 /* End PBXBuildFile section */
@@ -72,7 +77,6 @@
 		4A33E4EE220AD12700C180F9 /* Groowy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groowy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A33E4F1220AD12700C180F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A33E4F6220AD12700C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4A33E4F9220AD12700C180F9 /* Groowy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Groowy.xcdatamodel; sourceTree = "<group>"; };
 		4A33E4FB220AD12800C180F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A33E4FE220AD12800C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A33E500220AD12800C180F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +94,12 @@
 		4A5EA3A62211555500DEAD49 /* DialogAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogAnswer.swift; sourceTree = "<group>"; };
 		4A5EA3A82211562E00DEAD49 /* DialogState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogState.swift; sourceTree = "<group>"; };
 		4A5EA3AA2211567300DEAD49 /* DialogRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogRule.swift; sourceTree = "<group>"; };
+		4AB366352213C01500AABD19 /* Answers+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answers+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4AB366362213C01500AABD19 /* Challenges+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Challenges+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4AB366372213C01500AABD19 /* Reflections+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reflections+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4AB3663B2213C04400AABD19 /* Challenges+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Challenges+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4AB3663C2213C04400AABD19 /* Answers+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Answers+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4AB3663D2213C04400AABD19 /* Reflections+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reflections+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveAppleViewController.swift; sourceTree = "<group>"; };
 		B14F69E3220BF14300D82D5B /* EyeSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeSKScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +118,7 @@
 		4894D7A3220BC30F007F34F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4AB366222213B24500AABD19 /* Data */,
 				4A4520402212C9CC0049F95E /* Challenge */,
 				4A5EA3A32211551A00DEAD49 /* Dialog */,
 				4894D7B3220BC5BB007F34F5 /* GroowyCharacter */,
@@ -225,7 +236,6 @@
 				4A33E4FD220AD12800C180F9 /* LaunchScreen.storyboard */,
 				4A33E4F1220AD12700C180F9 /* AppDelegate.swift */,
 				4A33E500220AD12800C180F9 /* Info.plist */,
-				4A33E4F8220AD12700C180F9 /* Groowy.xcdatamodeld */,
 			);
 			path = Groowy;
 			sourceTree = "<group>";
@@ -279,6 +289,19 @@
 				4A5EA3AA2211567300DEAD49 /* DialogRule.swift */,
 			);
 			path = Dialog;
+			sourceTree = "<group>";
+		};
+		4AB366222213B24500AABD19 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4AB3663C2213C04400AABD19 /* Answers+CoreDataClass.swift */,
+				4AB3663B2213C04400AABD19 /* Challenges+CoreDataClass.swift */,
+				4AB3663D2213C04400AABD19 /* Reflections+CoreDataClass.swift */,
+				4AB366352213C01500AABD19 /* Answers+CoreDataProperties.swift */,
+				4AB366362213C01500AABD19 /* Challenges+CoreDataProperties.swift */,
+				4AB366372213C01500AABD19 /* Reflections+CoreDataProperties.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,9 +384,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4894D7B5220BC5F9007F34F5 /* GroowyCharacter.swift in Sources */,
-				4A33E4FA220AD12700C180F9 /* Groowy.xcdatamodeld in Sources */,
+				4AB3663F2213C04400AABD19 /* Answers+CoreDataClass.swift in Sources */,
 				B14F69E4220BF14300D82D5B /* EyeSKScene.swift in Sources */,
 				4A5EA3A22211488C00DEAD49 /* GiftViewController.swift in Sources */,
+				4AB366382213C01500AABD19 /* Answers+CoreDataProperties.swift in Sources */,
 				4894D7B2220BC564007F34F5 /* GroowyViewController.swift in Sources */,
 				4A4520422212C9D90049F95E /* ChallengeStatus.swift in Sources */,
 				4894D7C3220BCB46007F34F5 /* UIViewController.swift in Sources */,
@@ -371,12 +395,16 @@
 				4A5EA3A72211555500DEAD49 /* DialogAnswer.swift in Sources */,
 				4A5EA3A02211482500DEAD49 /* UIAnswerBodyView.swift in Sources */,
 				4A5EA3A92211562E00DEAD49 /* DialogState.swift in Sources */,
+				4AB3663A2213C01500AABD19 /* Reflections+CoreDataProperties.swift in Sources */,
+				4AB366392213C01500AABD19 /* Challenges+CoreDataProperties.swift in Sources */,
 				4A45203F2212C91D0049F95E /* Groowy.xcdatamodeld in Sources */,
 				4A5EA3962211480C00DEAD49 /* QuestionViewController.swift in Sources */,
 				4A5EA3AB2211567300DEAD49 /* DialogRule.swift in Sources */,
 				B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */,
 				4894D812220D2AED007F34F5 /* UITextViewWithPlaceholder.swift in Sources */,
 				4A5EA39E2211482500DEAD49 /* UICustomTextViewView.swift in Sources */,
+				4AB366402213C04400AABD19 /* Reflections+CoreDataClass.swift in Sources */,
+				4AB3663E2213C04400AABD19 /* Challenges+CoreDataClass.swift in Sources */,
 				4894D7BD220BC97E007F34F5 /* GameScene.swift in Sources */,
 				4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */,
 				4894D818220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift in Sources */,
@@ -606,16 +634,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4A33E4F8220AD12700C180F9 /* Groowy.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4A33E4F9220AD12700C180F9 /* Groowy.xcdatamodel */,
-			);
-			currentVersion = 4A33E4F9220AD12700C180F9 /* Groowy.xcdatamodel */;
-			path = Groowy.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		4A45203D2212C91D0049F95E /* Groowy.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
