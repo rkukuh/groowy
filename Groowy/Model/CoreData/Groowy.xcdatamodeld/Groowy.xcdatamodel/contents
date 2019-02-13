@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Answers" representedClassName=".Answers" syncable="YES">
+    <entity name="Answer" representedClassName=".Answer" syncable="YES">
         <attribute name="question" attributeType="String" syncable="YES"/>
         <attribute name="userAnswer" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Challenges" representedClassName=".Challenges" syncable="YES">
+    <entity name="Challenge" representedClassName=".Challenge" syncable="YES">
         <attribute name="body" attributeType="String" syncable="YES"/>
         <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="finished_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -12,17 +12,17 @@
         <attribute name="remind_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="status" attributeType="String" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
-        <relationship name="reflections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reflections" inverseName="challenge" inverseEntity="Reflections" syncable="YES"/>
+        <relationship name="reflections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reflection" inverseName="challenge" inverseEntity="Reflection" syncable="YES"/>
     </entity>
-    <entity name="Reflections" representedClassName=".Reflections" syncable="YES">
+    <entity name="Reflection" representedClassName=".Reflection" syncable="YES">
         <attribute name="body" attributeType="String" syncable="YES"/>
         <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="picture" optional="YES" attributeType="Binary" syncable="YES"/>
-        <relationship name="challenge" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Challenges" inverseName="reflections" inverseEntity="Challenges" syncable="YES"/>
+        <relationship name="challenge" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Challenge" inverseName="reflections" inverseEntity="Challenge" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Answers" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="Challenges" positionX="-54" positionY="9" width="128" height="165"/>
-        <element name="Reflections" positionX="-36" positionY="63" width="128" height="105"/>
+        <element name="Answer" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Challenge" positionX="-54" positionY="9" width="128" height="165"/>
+        <element name="Reflection" positionX="-36" positionY="63" width="128" height="105"/>
     </elements>
 </model>
