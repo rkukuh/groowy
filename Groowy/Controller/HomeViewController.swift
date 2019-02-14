@@ -37,6 +37,7 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     override func viewDidAppear(_ animated: Bool) {
         bubbleChat?.startAnimationSelf()
         GroowieSound.changeSoundEffectRepeat(sound: .snooring)
+        GroowieSound.stopBackSound()
         animateHand()
     }
     

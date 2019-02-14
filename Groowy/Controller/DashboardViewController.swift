@@ -13,12 +13,14 @@ class DashboardViewController: UIViewController {
 
     @IBOutlet weak var spriteKitView:SKView!
     
+    
     var scene: GameScene!
+    var timer:Timer!
     var bubbleChat:UICustomTextViewView?
     
 
     override func viewDidLoad() {
-        
+        view.backgroundColor = COLOR_THEME_PRIMARY
         setupGameScene()
         setupBubbleChat()
     }
@@ -37,6 +39,7 @@ class DashboardViewController: UIViewController {
         spriteKitView.presentScene(scene)
         
         scene.groowyCharacter.changeGroowyAnimateState(nextState: .awake)
+        stayAwake()
     }
     
     func setupBubbleChat() {
@@ -46,6 +49,33 @@ class DashboardViewController: UIViewController {
             self.view.addSubview(myText)
         }
         bubbleChat?.isHidden = true
+        
+    }
+    
+    
+    func stayAwake() {
+        timer = Timer.scheduledTimer(withTimeInterval: Double.random(in: 1...3), repeats: false, block: { (timer) in
+            GroowieSound.changeSoundEffect(sound: .blink)
+            self.scene.groowyCharacter.changeGroowyAnimateState(nextState: .awake)
+            self.stayAwake()
+            
+        })
+    }
+    
+    // MARK: - Action Buttons
+    @IBAction func didTapTalkToGroowy(sender: UIButton) {
+        
+    }
+    @IBAction func didTapTakeChallenge(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "create-challenge") as? TitleCreateChallengeViewController {
+            show(viewController, sender: nil)
+        }
+    }
+    @IBAction func didTapTheJournal(sender: UIButton) {
+        
+    }
+    @IBAction func didTapSetting(sender: UIButton) {
         
     }
 }

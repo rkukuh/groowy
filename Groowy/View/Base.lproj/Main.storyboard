@@ -555,6 +555,9 @@
                                                 <state key="normal" title="TALK TO GROOWY">
                                                     <color key="titleColor" red="0.87450980392156863" green="0.75686274509803919" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapTalkToGroowyWithSender:" destination="rls-Om-zRZ" eventType="touchUpInside" id="Gd3-2G-ZHC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eq-pW-6mf">
                                                 <rect key="frame" x="0.0" y="44" width="375" height="36"/>
@@ -562,6 +565,9 @@
                                                 <state key="normal" title="TAKE CHALLENGE">
                                                     <color key="titleColor" red="0.87450980392156863" green="0.75686274509803919" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapTakeChallengeWithSender:" destination="rls-Om-zRZ" eventType="touchUpInside" id="URf-od-VcE"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vp8-Pl-HRb">
                                                 <rect key="frame" x="0.0" y="88" width="375" height="36"/>
@@ -569,6 +575,9 @@
                                                 <state key="normal" title="THE JOURNAL">
                                                     <color key="titleColor" red="0.87450980392156863" green="0.75686274509803919" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapTheJournalWithSender:" destination="rls-Om-zRZ" eventType="touchUpInside" id="kJO-Y3-8sU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJh-B5-pnp">
                                                 <rect key="frame" x="0.0" y="132" width="375" height="36"/>
@@ -576,6 +585,9 @@
                                                 <state key="normal" title="SETTINGS">
                                                     <color key="titleColor" red="0.87450980392156863" green="0.75686274509803919" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapSettingWithSender:" destination="rls-Om-zRZ" eventType="touchUpInside" id="e6n-P9-AH4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
