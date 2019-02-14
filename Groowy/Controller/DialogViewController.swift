@@ -12,6 +12,7 @@ import MessageUI
 
 class DialogViewController: UIViewController {
     
+    var isFinalState = false
     var currentDialog = DialogState()
     var textFieldInput: UICustomTextViewView?
     var deepUnderstandingDialog = DialogRule()
@@ -89,7 +90,7 @@ class DialogViewController: UIViewController {
             Dialog("Tidakkah kamu ingin berhasil dan sukses? Bukankah itu memerlukan usaha?"),
             Dialog("Kalo ga berusaha gimana bisa sukses?"),
             Dialog("Aku kasih masukan buat kebaikanmu sih... Belajarlah menerima kritik itu seperti jamu"),
-            Dialog("Great! It's the right mind that you have"),
+            Dialog("Great! It's the right mindset that you have"),
         ]
         
         deepUnderstandingDialog.dialogs.append(contentsOf: dialogs)
@@ -146,6 +147,20 @@ class DialogViewController: UIViewController {
             if currentDialog.answers.count > 1 {
                 bottomView.bottomButton.setTitle(currentDialog.answers[1].text, for: .normal)
             }
+            
+            if currentDialog.text == "Great! It's the right mindset that you have" {
+                isFinalState = true
+            }
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if isFinalState {
+            User.state = UserState.dashboard.rawValue
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "gift") as! GiftViewController
+            self.present(newViewController, animated: false, completion: nil)
+            self.dismiss(animated: false, completion: nil)
         }
     }
 }

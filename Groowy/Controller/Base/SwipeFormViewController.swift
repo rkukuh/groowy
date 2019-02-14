@@ -17,6 +17,10 @@ class SwipeFormViewController: UIViewController {
         
     }
     
+    func parentDismiss(animated flag: Bool, completion: (() -> Void)?) {
+        super.dismiss(animated: true, completion: nil)
+    }
+    
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
         if flag {
             let firstView = self.view

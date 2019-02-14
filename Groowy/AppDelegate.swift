@@ -25,33 +25,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupUserStateManage() {
-        let lastStateOfUser = User.state
+        if let lastStateOfUser = UserState(rawValue: User.state) {
         
-        var storyBoardID = ""
-        var storyBoardName = ""
-        
-        switch lastStateOfUser {
-            case .introduction:
-                storyBoardName = "Main"
-                storyBoardID = "home"
-                break
-            case .deepUnderstanding:
-                storyBoardName = "Main"
-                storyBoardID = "create-challenge"
-                break
-            case .gift:
-                break
-            case .dashboard:
-                storyBoardName = "Main"
-                storyBoardID = "dashboard"
-                break
-        }
-        
-        if storyBoardID != "" && storyBoardName != "" {
-            let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
-            let viewController = storyboard.instantiateViewController(withIdentifier: storyBoardID)
+            var storyBoardID = ""
+            var storyBoardName = ""
             
-            setInitialViewController(viewController: viewController)
+            switch lastStateOfUser {
+                case .introduction:
+                    storyBoardName = "Main"
+                    storyBoardID = "home"
+                    break
+                case .deepUnderstanding:
+                    storyBoardName = "Jaya"
+                    storyBoardID = "deepUnderstanding"
+                    break
+                case .gift:
+                    break
+                case .dashboard:
+                    storyBoardName = "Main"
+                    storyBoardID = "dashboard"
+                    break
+            }
+            
+            if storyBoardID != "" && storyBoardName != "" {
+                let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: storyBoardID)
+                
+                setInitialViewController(viewController: viewController)
+            }
         }
     }
     

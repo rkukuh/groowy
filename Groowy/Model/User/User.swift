@@ -13,11 +13,11 @@ enum UserRole: String {
     case mentee = "Mentee"
 }
 
-enum UserState {
-    case introduction
-    case deepUnderstanding
-    case gift
-    case dashboard
+enum UserState: String {
+    case introduction = "introduction"
+    case deepUnderstanding = "deepUnderstanding"
+    case gift = "gift"
+    case dashboard = "dashboard"
 }
 
 class User {
@@ -39,9 +39,9 @@ class User {
             userDefault.set(newValue, forKey: "role")
         }
     }
-    static var state: UserState {
+    static var state: String {
         get {
-            return userDefault.value(forKey: "userState") as? UserState ?? .introduction
+            return userDefault.value(forKey: "userState") as? String ?? UserState.introduction.rawValue
         }
         set {
             userDefault.set(newValue, forKey: "userState")

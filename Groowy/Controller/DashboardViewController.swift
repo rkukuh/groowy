@@ -27,6 +27,9 @@ class DashboardViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         bubbleChat?.startAnimationSelf()
+        GroowieSound.changeBackSound(sound: .smile)
+        GroowieSound.startBackSound()
+        GroowieSound.startSoundEffect()
     }
     
     // MARK: - Setup
@@ -67,10 +70,9 @@ class DashboardViewController: UIViewController {
         
     }
     @IBAction func didTapTakeChallenge(sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: "create-challenge") as? TitleCreateChallengeViewController {
-            show(viewController, sender: nil)
-        }
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "create-challenge") as! TitleCreateChallengeViewController
+        self.present(newViewController, animated: true, completion: nil)
     }
     @IBAction func didTapTheJournal(sender: UIButton) {
         

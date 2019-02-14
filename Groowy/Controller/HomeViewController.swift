@@ -102,10 +102,20 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     
     @objc func actionButtonTop(_sender: UIButton){
         User.role = UserRole.mentor.rawValue
+        startToTalkToGroowy()
     }
     
     @objc func actionButtonBottom(_sender: UIButton){
         User.role = UserRole.mentee.rawValue
+        startToTalkToGroowy()
+    }
+    
+    func startToTalkToGroowy() {
+        User.state = UserState.deepUnderstanding.rawValue
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "deepUnderstanding") as! DialogViewController
+        self.present(newViewController, animated: false, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {
@@ -121,12 +131,6 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
                     self.bubbleChat?.alpha = 1
                 }
             }
-            
-            // - START: Skip from WakeUp to Challenge -
-            // let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            // let newViewController = storyBoard.instantiateViewController(withIdentifier: "create-challenge") as! TitleCreateChallengeViewController
-            // self.present(newViewController, animated: false, completion: nil)
-            // - FINISH: Skip from WakeUp to Challenge -
             
         } else if scene.groowyCharacter.currentAnimationState == .halfAwake {
             scene.groowyCharacter.changeGroowyAnimateState(nextState: .fullyAwake)
