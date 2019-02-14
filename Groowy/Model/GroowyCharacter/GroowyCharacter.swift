@@ -24,6 +24,8 @@ class GroowyCharacter {
         self.position = position
         currentAnimationState = initState
         buildGroowySleep()
+        buildGroowyFullyAwake()
+        buildGroowyHalfAwake()
         buildGroowyWake()
         buildGroowyAwake()
         buildGroowyAsleep()
@@ -66,12 +68,28 @@ class GroowyCharacter {
     }
     
     // Function to generate groowy wake animation using SKTextureAtlas
+    private func buildGroowyFullyAwake() {
+        let fullyAwakeFrames = groowySprite.loadTextureAtlas(atlasFilename: GroowyAnimationState.fullyAwake.rawValue, namingSeries: "")
+        if currentAnimationState == .wake {
+            initSpriteNode(texture: fullyAwakeFrames[0])
+        }
+        actions[.fullyAwake] = SKAction.animate(with: fullyAwakeFrames, timePerFrame: 0.5)
+    }
+    
+    private func buildGroowyHalfAwake() {
+        let halfAwakeFrames = groowySprite.loadTextureAtlas(atlasFilename: GroowyAnimationState.halfAwake.rawValue, namingSeries: "")
+        if currentAnimationState == .wake {
+            initSpriteNode(texture: halfAwakeFrames[0])
+        }
+        actions[.halfAwake] = SKAction.animate(with: halfAwakeFrames, timePerFrame: 1.5)
+    }
+    
     private func buildGroowyWake() {
         let wakeFrames = groowySprite.loadTextureAtlas(atlasFilename: GroowyAnimationState.wake.rawValue, namingSeries: "")
         if currentAnimationState == .wake {
             initSpriteNode(texture: wakeFrames[0])
         }
-        actions[.wake] = SKAction.animate(with: wakeFrames, timePerFrame: 1.5)
+        actions[.wake] = SKAction.animate(with: wakeFrames, timePerFrame: 1.0/8.0)
     }
     
     private func buildGroowyAwake() {
@@ -97,6 +115,14 @@ class GroowyCharacter {
             groowySprite.removeAllActions()
             groowySprite.run(sleepAnimation)
             print("sleep")
+        } else if currentAnimationState == .fullyAwake, let fullyAwakeAnimation = actions[.fullyAwake] {
+            groowySprite.removeAllActions()
+            groowySprite.run(fullyAwakeAnimation)
+            print("fully awake")
+        } else if currentAnimationState == .halfAwake, let halfAwakeAnimation = actions[.halfAwake] {
+            groowySprite.removeAllActions()
+            groowySprite.run(halfAwakeAnimation)
+            print("half awake")
         } else if currentAnimationState == .wake, let wakeAnimation = actions[.wake] {
             groowySprite.removeAllActions()
             groowySprite.run(wakeAnimation)

@@ -34,6 +34,8 @@
 		48A5F6292213CF4000A6BE2A /* CreateChallengeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A5F6282213CF4000A6BE2A /* CreateChallengeControllerViewController.swift */; };
 		48A5F62B2213D1AE00A6BE2A /* UIViewNextQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A5F62A2213D1AE00A6BE2A /* UIViewNextQuestion.swift */; };
 		48A5F62E2213D1F600A6BE2A /* UIViewNextQuestion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A5F62D2213D1F600A6BE2A /* UIViewNextQuestion.xib */; };
+		48A5F6302214078A00A6BE2A /* GroowyHalfAwake.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 48A5F62F2214078A00A6BE2A /* GroowyHalfAwake.atlas */; };
+		48A5F63322140B3600A6BE2A /* GroowyFullyAwake.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 48A5F63222140B3600A6BE2A /* GroowyFullyAwake.atlas */; };
 		4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F1220AD12700C180F9 /* AppDelegate.swift */; };
 		4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4F5220AD12700C180F9 /* Main.storyboard */; };
 		4A33E4FA220AD12700C180F9 /* Groowy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F8220AD12700C180F9 /* Groowy.xcdatamodeld */; };
@@ -83,6 +85,8 @@
 		48A5F6282213CF4000A6BE2A /* CreateChallengeControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeControllerViewController.swift; sourceTree = "<group>"; };
 		48A5F62A2213D1AE00A6BE2A /* UIViewNextQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewNextQuestion.swift; sourceTree = "<group>"; };
 		48A5F62D2213D1F600A6BE2A /* UIViewNextQuestion.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIViewNextQuestion.xib; sourceTree = "<group>"; };
+		48A5F62F2214078A00A6BE2A /* GroowyHalfAwake.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyHalfAwake.atlas; sourceTree = "<group>"; };
+		48A5F63222140B3600A6BE2A /* GroowyFullyAwake.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyFullyAwake.atlas; sourceTree = "<group>"; };
 		4A33E4EE220AD12700C180F9 /* Groowy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groowy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A33E4F1220AD12700C180F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A33E4F6220AD12700C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 		4894D7AA220BC3C8007F34F5 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
+				48A5F63222140B3600A6BE2A /* GroowyFullyAwake.atlas */,
+				48A5F62F2214078A00A6BE2A /* GroowyHalfAwake.atlas */,
 				4894D7AD220BC3E8007F34F5 /* GroowyAsleep.atlas */,
 				4894D7AB220BC3E8007F34F5 /* GroowySleep.atlas */,
 				4894D7AC220BC3E8007F34F5 /* GroowyWake.atlas */,
@@ -213,13 +219,6 @@
 				4894D817220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift */,
 			);
 			path = UITextViewWithPlaceholder;
-			sourceTree = "<group>";
-		};
-		48A5F61F2213C3C800A6BE2A /* UISwipeUpAnimation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UISwipeUpAnimation;
 			sourceTree = "<group>";
 		};
 		48A5F6202213C5F400A6BE2A /* Create Challenge */ = {
@@ -290,7 +289,6 @@
 			isa = PBXGroup;
 			children = (
 				48A5F62C2213D1DB00A6BE2A /* UIViewNextQuestion */,
-				48A5F61F2213C3C800A6BE2A /* UISwipeUpAnimation */,
 				4A5EA39A2211482500DEAD49 /* UIAnswerBody */,
 				4A5EA3972211482500DEAD49 /* UIMessageDialog */,
 				4894D810220D2A9E007F34F5 /* UITextViewWithPlaceholder */,
@@ -391,12 +389,14 @@
 			files = (
 				4A5EA39D2211482500DEAD49 /* UICustomTextView.xib in Resources */,
 				4894D7AE220BC3E8007F34F5 /* GroowySleep.atlas in Resources */,
+				48A5F6302214078A00A6BE2A /* GroowyHalfAwake.atlas in Resources */,
 				4A33E4FF220AD12800C180F9 /* LaunchScreen.storyboard in Resources */,
 				4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */,
 				48A5F62E2213D1F600A6BE2A /* UIViewNextQuestion.xib in Resources */,
 				4A5EA39F2211482500DEAD49 /* UIAnswerBody.xib in Resources */,
 				4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */,
 				4A33E508220ADA0300C180F9 /* Jaya.storyboard in Resources */,
+				48A5F63322140B3600A6BE2A /* GroowyFullyAwake.atlas in Resources */,
 				4A33E50B220ADA4000C180F9 /* Kukuh.storyboard in Resources */,
 				4894D7B0220BC3E8007F34F5 /* GroowyAsleep.atlas in Resources */,
 				4894D7AF220BC3E8007F34F5 /* GroowyWake.atlas in Resources */,
@@ -609,6 +609,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57VL32B9VS;
 				INFOPLIST_FILE = Groowy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,6 +628,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57VL32B9VS;
 				INFOPLIST_FILE = Groowy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
