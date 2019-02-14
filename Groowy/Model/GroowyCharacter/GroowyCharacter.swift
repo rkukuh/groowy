@@ -64,7 +64,7 @@ class GroowyCharacter {
             initSpriteNode(texture: sleepFrames[0])
         }
         
-        actions[.sleep] = SKAction.repeatForever(SKAction.animate(with: sleepFrames, timePerFrame: 1.0/8.0, resize: false, restore: true))
+        actions[.sleep] = SKAction.repeatForever(SKAction.animate(with: sleepFrames, timePerFrame: 1.0/5.5, resize: false, restore: true))
     }
     
     // Function to generate groowy wake animation using SKTextureAtlas

@@ -87,7 +87,7 @@ class GroowieSound {
             GroowieSound.backSound = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundBack!))
             GroowieSound.backSound.prepareToPlay()
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
-            GroowieSound.backSound.play()
+            //GroowieSound.backSound.play()
             GroowieSound.soundEffect = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundEffect!))
             GroowieSound.soundEffect.prepareToPlay()
         }catch{

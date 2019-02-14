@@ -11,7 +11,6 @@
 		4894C2C92212625000E2AB6F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894C2C82212625000E2AB6F /* User.swift */; };
 		4894C2CD221263B400E2AB6F /* UITextFieldInputAccessoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894C2CC221263B400E2AB6F /* UITextFieldInputAccessoryViewDelegate.swift */; };
 		4894D7A6220BC31F007F34F5 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7A5220BC31F007F34F5 /* BaseModel.swift */; };
-		4894D7AE220BC3E8007F34F5 /* GroowySleep.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7AB220BC3E8007F34F5 /* GroowySleep.atlas */; };
 		4894D7AF220BC3E8007F34F5 /* GroowyWake.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7AC220BC3E8007F34F5 /* GroowyWake.atlas */; };
 		4894D7B0220BC3E8007F34F5 /* GroowyAsleep.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4894D7AD220BC3E8007F34F5 /* GroowyAsleep.atlas */; };
 		4894D7B2220BC564007F34F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7B1220BC564007F34F5 /* HomeViewController.swift */; };
@@ -35,6 +34,12 @@
 		48A5F6292213CF4000A6BE2A /* CreateChallengeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A5F6282213CF4000A6BE2A /* CreateChallengeControllerViewController.swift */; };
 		48A5F62B2213D1AE00A6BE2A /* UIViewNextQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A5F62A2213D1AE00A6BE2A /* UIViewNextQuestion.swift */; };
 		48A5F62E2213D1F600A6BE2A /* UIViewNextQuestion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A5F62D2213D1F600A6BE2A /* UIViewNextQuestion.xib */; };
+		48C3E1212215154C00DA1E7F /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3E11E2215154C00DA1E7F /* Gift.swift */; };
+		48C3E1222215154C00DA1E7F /* GiftCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3E11F2215154C00DA1E7F /* GiftCategory.swift */; };
+		48C3E1232215154C00DA1E7F /* GiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3E1202215154C00DA1E7F /* GiftData.swift */; };
+		48C3E1242215169600DA1E7F /* blink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1A52C632214F1F600365D2A /* blink.mp3 */; };
+		48C3E1252215169E00DA1E7F /* sound-smile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B16F686B221423B5008BA51D /* sound-smile.mp3 */; };
+		48C3E12722151A4000DA1E7F /* GroowySleep.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 48C3E12622151A1100DA1E7F /* GroowySleep.atlas */; };
 		4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F1220AD12700C180F9 /* AppDelegate.swift */; };
 		4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4F5220AD12700C180F9 /* Main.storyboard */; };
 		4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4FB220AD12800C180F9 /* Assets.xcassets */; };
@@ -68,14 +73,7 @@
 		4A5EA3AB2211567300DEAD49 /* DialogRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3AA2211567300DEAD49 /* DialogRule.swift */; };
 		B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */; };
 		B14F69E4220BF14300D82D5B /* EyeSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E3220BF14300D82D5B /* EyeSKScene.swift */; };
-		B16F68602213D279008BA51D /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F685F2213D279008BA51D /* GiftViewController.swift */; };
-		B16F686322140284008BA51D /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F686222140284008BA51D /* Gift.swift */; };
-		B16F6865221402FB008BA51D /* GiftCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F6864221402FB008BA51D /* GiftCategory.swift */; };
-		B16F6867221403A9008BA51D /* GiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F6866221403A9008BA51D /* GiftData.swift */; };
-		B16F686C221423B5008BA51D /* bensound-goinghigher.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B16F6869221423B4008BA51D /* bensound-goinghigher.mp3 */; };
 		B16F686D221423B5008BA51D /* sound-hey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B16F686A221423B4008BA51D /* sound-hey.mp3 */; };
-		B16F686E221423B5008BA51D /* sound-smile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B16F686B221423B5008BA51D /* sound-smile.mp3 */; };
-		B1A52C642214F1F600365D2A /* blink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1A52C632214F1F600365D2A /* blink.mp3 */; };
 		B1A52C662214F3FC00365D2A /* GroowieSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C652214F3FC00365D2A /* GroowieSound.swift */; };
 		B1A52C6822150E8600365D2A /* snooring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1A52C6722150E8600365D2A /* snooring.mp3 */; };
 /* End PBXBuildFile section */
@@ -85,7 +83,6 @@
 		4894C2C82212625000E2AB6F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4894C2CC221263B400E2AB6F /* UITextFieldInputAccessoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldInputAccessoryViewDelegate.swift; sourceTree = "<group>"; };
 		4894D7A5220BC31F007F34F5 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		4894D7AB220BC3E8007F34F5 /* GroowySleep.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowySleep.atlas; sourceTree = "<group>"; };
 		4894D7AC220BC3E8007F34F5 /* GroowyWake.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyWake.atlas; sourceTree = "<group>"; };
 		4894D7AD220BC3E8007F34F5 /* GroowyAsleep.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyAsleep.atlas; sourceTree = "<group>"; };
 		4894D7B1220BC564007F34F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +106,10 @@
 		48A5F6282213CF4000A6BE2A /* CreateChallengeControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeControllerViewController.swift; sourceTree = "<group>"; };
 		48A5F62A2213D1AE00A6BE2A /* UIViewNextQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewNextQuestion.swift; sourceTree = "<group>"; };
 		48A5F62D2213D1F600A6BE2A /* UIViewNextQuestion.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIViewNextQuestion.xib; sourceTree = "<group>"; };
+		48C3E11E2215154C00DA1E7F /* Gift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
+		48C3E11F2215154C00DA1E7F /* GiftCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftCategory.swift; sourceTree = "<group>"; };
+		48C3E1202215154C00DA1E7F /* GiftData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftData.swift; sourceTree = "<group>"; };
+		48C3E12622151A1100DA1E7F /* GroowySleep.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowySleep.atlas; sourceTree = "<group>"; };
 		4A33E4EE220AD12700C180F9 /* Groowy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groowy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A33E4F1220AD12700C180F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A33E4F6220AD12700C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,10 +145,6 @@
 		4A5EA3AA2211567300DEAD49 /* DialogRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogRule.swift; sourceTree = "<group>"; };
 		B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveAppleViewController.swift; sourceTree = "<group>"; };
 		B14F69E3220BF14300D82D5B /* EyeSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeSKScene.swift; sourceTree = "<group>"; };
-		B16F685F2213D279008BA51D /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
-		B16F686222140284008BA51D /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
-		B16F6864221402FB008BA51D /* GiftCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCategory.swift; sourceTree = "<group>"; };
-		B16F6866221403A9008BA51D /* GiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftData.swift; sourceTree = "<group>"; };
 		B16F6869221423B4008BA51D /* bensound-goinghigher.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-goinghigher.mp3"; sourceTree = "<group>"; };
 		B16F686A221423B4008BA51D /* sound-hey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-hey.mp3"; sourceTree = "<group>"; };
 		B16F686B221423B5008BA51D /* sound-smile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-smile.mp3"; sourceTree = "<group>"; };
@@ -178,6 +175,7 @@
 		4894D7A3220BC30F007F34F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				48C3E11D2215154C00DA1E7F /* Gift */,
 				4A3D97462214FE260011D25D /* Challenge */,
 				4A3D973A2214FE250011D25D /* CoreData */,
 				4A3D97432214FE260011D25D /* Motivation */,
@@ -197,7 +195,6 @@
 				4894D80D220D290B007F34F5 /* Segue */,
 				B14F69E3220BF14300D82D5B /* EyeSKScene.swift */,
 				4894D7BC220BC97E007F34F5 /* GameScene.swift */,
-				4A5EA3A12211488C00DEAD49 /* GiftViewController.swift */,
 				4894D7B1220BC564007F34F5 /* HomeViewController.swift */,
 				4A3D97372214FE020011D25D /* DialogViewController.swift */,
 				4A3D97362214FE020011D25D /* MotivationViewController.swift */,
@@ -210,10 +207,10 @@
 		4894D7AA220BC3C8007F34F5 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
+				48C3E12622151A1100DA1E7F /* GroowySleep.atlas */,
 				4A3D97592214FF2D0011D25D /* GroowyFullyAwake.atlas */,
 				4A3D975A2214FF2D0011D25D /* GroowyHalfAwake.atlas */,
 				4894D7AD220BC3E8007F34F5 /* GroowyAsleep.atlas */,
-				4894D7AB220BC3E8007F34F5 /* GroowySleep.atlas */,
 				4894D7AC220BC3E8007F34F5 /* GroowyWake.atlas */,
 			);
 			path = Atlas;
@@ -302,11 +299,29 @@
 			path = UIViewNextQuestion;
 			sourceTree = "<group>";
 		};
+		48C3E118221514B700DA1E7F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		48C3E11D2215154C00DA1E7F /* Gift */ = {
+			isa = PBXGroup;
+			children = (
+				48C3E11E2215154C00DA1E7F /* Gift.swift */,
+				48C3E11F2215154C00DA1E7F /* GiftCategory.swift */,
+				48C3E1202215154C00DA1E7F /* GiftData.swift */,
+			);
+			path = Gift;
+			sourceTree = "<group>";
+		};
 		4A33E4E5220AD12700C180F9 = {
 			isa = PBXGroup;
 			children = (
 				4A33E4F0220AD12700C180F9 /* Groowy */,
 				4A33E4EF220AD12700C180F9 /* Products */,
+				48C3E118221514B700DA1E7F /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -423,16 +438,6 @@
 			path = Dialog;
 			sourceTree = "<group>";
 		};
-		B16F686122140252008BA51D /* Gift */ = {
-			isa = PBXGroup;
-			children = (
-				B16F686222140284008BA51D /* Gift.swift */,
-				B16F6864221402FB008BA51D /* GiftCategory.swift */,
-				B16F6866221403A9008BA51D /* GiftData.swift */,
-			);
-			path = Gift;
-			sourceTree = "<group>";
-		};
 		B16F68682214239F008BA51D /* Sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,10 +513,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C3E12722151A4000DA1E7F /* GroowySleep.atlas in Resources */,
+				48C3E1252215169E00DA1E7F /* sound-smile.mp3 in Resources */,
+				48C3E1242215169600DA1E7F /* blink.mp3 in Resources */,
 				4A5EA39D2211482500DEAD49 /* UICustomTextView.xib in Resources */,
 				B1A52C6822150E8600365D2A /* snooring.mp3 in Resources */,
 				B16F686D221423B5008BA51D /* sound-hey.mp3 in Resources */,
-				4894D7AE220BC3E8007F34F5 /* GroowySleep.atlas in Resources */,
 				4A33E4FF220AD12800C180F9 /* LaunchScreen.storyboard in Resources */,
 				4A3D975C2214FF2D0011D25D /* GroowyHalfAwake.atlas in Resources */,
 				4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */,
@@ -539,7 +546,6 @@
 				4894D7B5220BC5F9007F34F5 /* GroowyCharacter.swift in Sources */,
 				4845900E22150BD800508FCB /* DashboardViewController.swift in Sources */,
 				B14F69E4220BF14300D82D5B /* EyeSKScene.swift in Sources */,
-				4A5EA3A22211488C00DEAD49 /* GiftViewController.swift in Sources */,
 				4894D7B2220BC564007F34F5 /* HomeViewController.swift in Sources */,
 				4894D7C3220BCB46007F34F5 /* UIViewController.swift in Sources */,
 				4894D7C0220BC9BC007F34F5 /* ColorTheme.swift in Sources */,
@@ -552,6 +558,7 @@
 				48A5F62B2213D1AE00A6BE2A /* UIViewNextQuestion.swift in Sources */,
 				48A5F6252213C98C00A6BE2A /* ReminderCreateChallengeViewController.swift in Sources */,
 				4A3D974A2214FE260011D25D /* Groowy.xcdatamodeld in Sources */,
+				48C3E1212215154C00DA1E7F /* Gift.swift in Sources */,
 				4894D812220D2AED007F34F5 /* UITextViewWithPlaceholder.swift in Sources */,
 				4A3D974D2214FE260011D25D /* Challenge+CoreDataClass.swift in Sources */,
 				4A3D974C2214FE260011D25D /* Reflection+CoreDataClass.swift in Sources */,
@@ -566,14 +573,15 @@
 				4A3D97492214FE260011D25D /* Answer+CoreDataClass.swift in Sources */,
 				4894D80C220D271D007F34F5 /* SwipeFormViewController.swift in Sources */,
 				4894C2C92212625000E2AB6F /* User.swift in Sources */,
+				48C3E1222215154C00DA1E7F /* GiftCategory.swift in Sources */,
 				4894D7C6220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift in Sources */,
 				4A3D974E2214FE260011D25D /* Challenge+CoreDataProperties.swift in Sources */,
 				4894D816220D32AD007F34F5 /* BodyCreateChallengeViewController.swift in Sources */,
 				4894D7A6220BC31F007F34F5 /* BaseModel.swift in Sources */,
-				B16F6865221402FB008BA51D /* GiftCategory.swift in Sources */,
 				B1A52C662214F3FC00365D2A /* GroowieSound.swift in Sources */,
 				4894C2CD221263B400E2AB6F /* UITextFieldInputAccessoryViewDelegate.swift in Sources */,
 				48A5F6272213C9AD00A6BE2A /* PromiseCreateChallengeViewController.swift in Sources */,
+				48C3E1232215154C00DA1E7F /* GiftData.swift in Sources */,
 				4894D80F220D2929007F34F5 /* SwipeUpStoryboardSegue.swift in Sources */,
 				4A3D97512214FE260011D25D /* ChallengeStatus.swift in Sources */,
 				4894D7B7220BC623007F34F5 /* GroowyAnimationState.swift in Sources */,
@@ -746,7 +754,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9MC3BZBH48;
+				DEVELOPMENT_TEAM = 57VL32B9VS;
 				INFOPLIST_FILE = Groowy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -765,7 +773,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9MC3BZBH48;
+				DEVELOPMENT_TEAM = 57VL32B9VS;
 				INFOPLIST_FILE = Groowy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

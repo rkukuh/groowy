@@ -27,19 +27,16 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        view.backgroundColor = COLOR_THEME_PRIMARY
         setupHiddenTextField()
         setupGameScene()
         setupBubbleChat()
         setupBottomView()
-        
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         bubbleChat?.startAnimationSelf()
+        GroowieSound.changeSoundEffectRepeat(sound: .snooring)
         animateHand()
     }
     
@@ -110,6 +107,7 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {
         if scene.groowyCharacter.currentAnimationState == .sleep {
+            GroowieSound.stopSoundEffect()
             scene.groowyCharacter.changeGroowyAnimateState(nextState: .halfAwake)
             bubbleChat?.messageTextView.text = "Hmm, who's there ?"
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
@@ -123,6 +121,8 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
         } else if scene.groowyCharacter.currentAnimationState == .halfAwake {
             scene.groowyCharacter.changeGroowyAnimateState(nextState: .fullyAwake)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                GroowieSound.changeBackSound(sound: .smile)
+                self.handLabel.isHidden = true
                 self.bubbleChat?.messageTextView.text = "Oh Hi, My name is Groowy. What's your name ?"
                 self.stayAwake()
                 self.showKeyboardWithTextFieldAccessoryView()
@@ -139,6 +139,7 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     
     func stayAwake() {
         timer = Timer.scheduledTimer(withTimeInterval: Double.random(in: 1...3), repeats: false, block: { (timer) in
+            GroowieSound.changeSoundEffect(sound: .blink)
             self.scene.groowyCharacter.changeGroowyAnimateState(nextState: .awake)
             self.stayAwake()
             
