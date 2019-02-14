@@ -8,15 +8,20 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 
 class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegate {
 
-    var timer: Timer!
-    var scene: GameScene!
+    @IBOutlet weak var handLabel: UILabel!
+    @IBOutlet weak var bottomHandLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var spriteKitView:SKView!
+    @IBOutlet weak var bottomView:UIAnswerBodyView!
+    
     var handStateDown = true
-    var currentDialog = DialogState()
-    var bubbleChat:UICustomTextViewView?
+    var scene: GameScene!
+    var timer: Timer!
+    var bubbleChat: UICustomTextViewView?
     var textFieldInput: UITextFieldInputAccessoryView?
     let textField = UITextField(frame: CGRect(x: 0, y: -50, width: 100, height: 50))
     
@@ -26,7 +31,7 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = COLOR_THEME_PRIMARY
         setupHiddenTextField()
         setupGameScene()
         setupBubbleChat()
@@ -36,6 +41,8 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     
     override func viewDidAppear(_ animated: Bool) {
         bubbleChat?.startAnimationSelf()
+        GroowieSound.changeSoundEffectRepeat(sound: .snooring)
+        animateHand()
     }
     
     // MARK: - Setup
@@ -74,10 +81,6 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
         bottomView.bottomButton.setTitle("Mentee", for: .normal)
     }
     
-    func setupHand() {
-        animateHand()
-    }
-    
     func animateHand() {
         if handStateDown {
             self.bottomHandLayoutConstraint.constant = 125
@@ -110,6 +113,7 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {
         if scene.groowyCharacter.currentAnimationState == .sleep {
+            GroowieSound.stopSoundEffect()
             scene.groowyCharacter.changeGroowyAnimateState(nextState: .halfAwake)
             bubbleChat?.messageTextView.text = "Hmm, who's there ?"
 
@@ -131,6 +135,8 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
             scene.groowyCharacter.changeGroowyAnimateState(nextState: .fullyAwake)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                GroowieSound.changeBackSound(sound: .smile)
+                self.handLabel.isHidden = true
                 self.bubbleChat?.messageTextView.text = "Oh Hi, My name is Groowy. What's your name ?"
                 self.stayAwake()
                 self.showKeyboardWithTextFieldAccessoryView()
@@ -140,6 +146,7 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     
     func stayAwake() {
         timer = Timer.scheduledTimer(withTimeInterval: Double.random(in: 1...3), repeats: false, block: { (timer) in
+            GroowieSound.changeSoundEffect(sound: .blink)
             self.scene.groowyCharacter.changeGroowyAnimateState(nextState: .awake)
             self.stayAwake()
         })

@@ -22,6 +22,8 @@ class UICustomTextViewView: UIView {
     func startAnimationSelf(){
         animator.removeAllBehaviors()
         // Animate in the overlay
+        frame = CGRect(x: 0, y: parentView.frame.midY - parentView.frame.height / 3, width: frame.width, height: frame.height)
+        self.alpha = 0.1
         UIView.animate(withDuration: 0.4, animations: {
             self.alpha = 1.0
         })
