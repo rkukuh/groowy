@@ -34,8 +34,6 @@
 		48A5F6292213CF4000A6BE2A /* CreateChallengeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A5F6282213CF4000A6BE2A /* CreateChallengeControllerViewController.swift */; };
 		48A5F62B2213D1AE00A6BE2A /* UIViewNextQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A5F62A2213D1AE00A6BE2A /* UIViewNextQuestion.swift */; };
 		48A5F62E2213D1F600A6BE2A /* UIViewNextQuestion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A5F62D2213D1F600A6BE2A /* UIViewNextQuestion.xib */; };
-		48A5F6302214078A00A6BE2A /* GroowyHalfAwake.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 48A5F62F2214078A00A6BE2A /* GroowyHalfAwake.atlas */; };
-		48A5F63322140B3600A6BE2A /* GroowyFullyAwake.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 48A5F63222140B3600A6BE2A /* GroowyFullyAwake.atlas */; };
 		4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F1220AD12700C180F9 /* AppDelegate.swift */; };
 		4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4F5220AD12700C180F9 /* Main.storyboard */; };
 		4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4FB220AD12800C180F9 /* Assets.xcassets */; };
@@ -57,6 +55,8 @@
 		4A3D97562214FE450011D25D /* UIGiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D97532214FE450011D25D /* UIGiftView.swift */; };
 		4A3D97572214FE450011D25D /* UIGift.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3D97542214FE450011D25D /* UIGift.xib */; };
 		4A3D97582214FE450011D25D /* MessageDialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A3D97552214FE450011D25D /* MessageDialogView.xib */; };
+		4A3D975B2214FF2D0011D25D /* GroowyFullyAwake.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4A3D97592214FF2D0011D25D /* GroowyFullyAwake.atlas */; };
+		4A3D975C2214FF2D0011D25D /* GroowyHalfAwake.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4A3D975A2214FF2D0011D25D /* GroowyHalfAwake.atlas */; };
 		4A5EA39D2211482500DEAD49 /* UICustomTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5EA3982211482500DEAD49 /* UICustomTextView.xib */; };
 		4A5EA39E2211482500DEAD49 /* UICustomTextViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3992211482500DEAD49 /* UICustomTextViewView.swift */; };
 		4A5EA39F2211482500DEAD49 /* UIAnswerBody.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A5EA39B2211482500DEAD49 /* UIAnswerBody.xib */; };
@@ -98,8 +98,6 @@
 		48A5F6282213CF4000A6BE2A /* CreateChallengeControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeControllerViewController.swift; sourceTree = "<group>"; };
 		48A5F62A2213D1AE00A6BE2A /* UIViewNextQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewNextQuestion.swift; sourceTree = "<group>"; };
 		48A5F62D2213D1F600A6BE2A /* UIViewNextQuestion.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIViewNextQuestion.xib; sourceTree = "<group>"; };
-		48A5F62F2214078A00A6BE2A /* GroowyHalfAwake.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyHalfAwake.atlas; sourceTree = "<group>"; };
-		48A5F63222140B3600A6BE2A /* GroowyFullyAwake.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyFullyAwake.atlas; sourceTree = "<group>"; };
 		4A33E4EE220AD12700C180F9 /* Groowy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groowy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A33E4F1220AD12700C180F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A33E4F6220AD12700C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +121,8 @@
 		4A3D97532214FE450011D25D /* UIGiftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGiftView.swift; sourceTree = "<group>"; };
 		4A3D97542214FE450011D25D /* UIGift.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIGift.xib; sourceTree = "<group>"; };
 		4A3D97552214FE450011D25D /* MessageDialogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageDialogView.xib; sourceTree = "<group>"; };
+		4A3D97592214FF2D0011D25D /* GroowyFullyAwake.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyFullyAwake.atlas; sourceTree = "<group>"; };
+		4A3D975A2214FF2D0011D25D /* GroowyHalfAwake.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyHalfAwake.atlas; sourceTree = "<group>"; };
 		4A5EA3982211482500DEAD49 /* UICustomTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UICustomTextView.xib; sourceTree = "<group>"; };
 		4A5EA3992211482500DEAD49 /* UICustomTextViewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomTextViewView.swift; sourceTree = "<group>"; };
 		4A5EA39B2211482500DEAD49 /* UIAnswerBody.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIAnswerBody.xib; sourceTree = "<group>"; };
@@ -189,8 +189,8 @@
 		4894D7AA220BC3C8007F34F5 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
-				48A5F63222140B3600A6BE2A /* GroowyFullyAwake.atlas */,
-				48A5F62F2214078A00A6BE2A /* GroowyHalfAwake.atlas */,
+				4A3D97592214FF2D0011D25D /* GroowyFullyAwake.atlas */,
+				4A3D975A2214FF2D0011D25D /* GroowyHalfAwake.atlas */,
 				4894D7AD220BC3E8007F34F5 /* GroowyAsleep.atlas */,
 				4894D7AB220BC3E8007F34F5 /* GroowySleep.atlas */,
 				4894D7AC220BC3E8007F34F5 /* GroowyWake.atlas */,
@@ -460,16 +460,16 @@
 			files = (
 				4A5EA39D2211482500DEAD49 /* UICustomTextView.xib in Resources */,
 				4894D7AE220BC3E8007F34F5 /* GroowySleep.atlas in Resources */,
-				48A5F6302214078A00A6BE2A /* GroowyHalfAwake.atlas in Resources */,
 				4A33E4FF220AD12800C180F9 /* LaunchScreen.storyboard in Resources */,
+				4A3D975C2214FF2D0011D25D /* GroowyHalfAwake.atlas in Resources */,
 				4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */,
 				48A5F62E2213D1F600A6BE2A /* UIViewNextQuestion.xib in Resources */,
 				4A3D97582214FE450011D25D /* MessageDialogView.xib in Resources */,
 				4A5EA39F2211482500DEAD49 /* UIAnswerBody.xib in Resources */,
 				4A3D97572214FE450011D25D /* UIGift.xib in Resources */,
 				4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */,
+				4A3D975B2214FF2D0011D25D /* GroowyFullyAwake.atlas in Resources */,
 				4A33E508220ADA0300C180F9 /* Jaya.storyboard in Resources */,
-				48A5F63322140B3600A6BE2A /* GroowyFullyAwake.atlas in Resources */,
 				4A33E50B220ADA4000C180F9 /* Kukuh.storyboard in Resources */,
 				4894D7B0220BC3E8007F34F5 /* GroowyAsleep.atlas in Resources */,
 				4894D7AF220BC3E8007F34F5 /* GroowyWake.atlas in Resources */,
