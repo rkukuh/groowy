@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PnH-ox-6aC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,14 +15,14 @@
             <objects>
                 <viewController storyboardIdentifier="question" id="PnH-ox-6aC" customClass="DialogViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5XK-lk-lzg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRW-Mi-l38">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </skView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3NA-iS-Gc7" customClass="UIAnswerBodyView" customModule="Groowy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="420" width="600" height="180"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -44,16 +48,97 @@
             </objects>
             <point key="canvasLocation" x="-613.60000000000002" y="-18.440779610194905"/>
         </scene>
+        <!--Gift View Controller-->
+        <scene sceneID="uX5-fd-gt2">
+            <objects>
+                <viewController storyboardIdentifier="gift" id="yGe-0u-4FO" customClass="GiftViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q4H-5z-G99">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xt0-va-g7D">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </skView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dae-qf-CQQ" userLabel="HandView">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handGrabGift" translatesAutoresizingMaskIntoConstraints="NO" id="t41-fd-ty4">
+                                        <rect key="frame" x="59" y="183.5" width="257" height="100"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="t41-fd-ty4" firstAttribute="centerX" secondItem="dae-qf-CQQ" secondAttribute="centerX" id="Fx3-3d-mmh"/>
+                                    <constraint firstItem="t41-fd-ty4" firstAttribute="height" secondItem="dae-qf-CQQ" secondAttribute="height" multiplier="0.3" id="X0E-6h-D3r"/>
+                                    <constraint firstItem="t41-fd-ty4" firstAttribute="centerY" secondItem="dae-qf-CQQ" secondAttribute="centerY" multiplier="1.4" id="mll-84-YgC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mHj-oS-0pu" firstAttribute="trailing" secondItem="dae-qf-CQQ" secondAttribute="trailing" id="5Lg-BS-azx"/>
+                            <constraint firstItem="mHj-oS-0pu" firstAttribute="bottom" secondItem="dae-qf-CQQ" secondAttribute="bottom" id="DTt-3U-uPL"/>
+                            <constraint firstItem="xt0-va-g7D" firstAttribute="top" secondItem="Q4H-5z-G99" secondAttribute="top" id="Hlz-dN-7iA"/>
+                            <constraint firstItem="xt0-va-g7D" firstAttribute="trailing" secondItem="mHj-oS-0pu" secondAttribute="trailing" id="KDp-df-t83"/>
+                            <constraint firstItem="xt0-va-g7D" firstAttribute="bottom" secondItem="mHj-oS-0pu" secondAttribute="bottom" id="cPr-bE-odk"/>
+                            <constraint firstItem="dae-qf-CQQ" firstAttribute="height" secondItem="Q4H-5z-G99" secondAttribute="height" multiplier="0.5" id="dXz-GH-6Eg"/>
+                            <constraint firstItem="dae-qf-CQQ" firstAttribute="leading" secondItem="mHj-oS-0pu" secondAttribute="leading" id="shf-6b-9u5"/>
+                            <constraint firstItem="xt0-va-g7D" firstAttribute="leading" secondItem="mHj-oS-0pu" secondAttribute="leading" id="y5D-YC-MaQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mHj-oS-0pu"/>
+                    </view>
+                    <connections>
+                        <outlet property="handBottomView" destination="dae-qf-CQQ" id="uXi-jZ-bwa"/>
+                        <outlet property="spriteKit" destination="xt0-va-g7D" id="VYk-U9-jKr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gsO-wV-Dsb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-615.20000000000005" y="714.69265367316348"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="j3t-uy-3sx">
+            <objects>
+                <viewController id="fVh-Ue-LXZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wui-nZ-VYU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hM-0w-NBI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </skView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handjournal" translatesAutoresizingMaskIntoConstraints="NO" id="3QU-bP-QhO">
+                                <rect key="frame" x="0.0" y="107" width="375" height="116"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3QU-bP-QhO" firstAttribute="trailing" secondItem="wkO-P9-Edm" secondAttribute="trailing" id="3i1-Qs-Gz5"/>
+                            <constraint firstItem="6hM-0w-NBI" firstAttribute="bottom" secondItem="wkO-P9-Edm" secondAttribute="bottom" id="Ymn-v9-cAM"/>
+                            <constraint firstItem="6hM-0w-NBI" firstAttribute="top" secondItem="Wui-nZ-VYU" secondAttribute="top" id="aXX-RU-lnf"/>
+                            <constraint firstItem="3QU-bP-QhO" firstAttribute="height" secondItem="6hM-0w-NBI" secondAttribute="height" multiplier="0.174" id="blh-i6-7aO"/>
+                            <constraint firstItem="3QU-bP-QhO" firstAttribute="leading" secondItem="wkO-P9-Edm" secondAttribute="leading" id="qJ7-rd-A0X"/>
+                            <constraint firstItem="6hM-0w-NBI" firstAttribute="leading" secondItem="wkO-P9-Edm" secondAttribute="leading" id="vHk-JI-K9l"/>
+                            <constraint firstItem="6hM-0w-NBI" firstAttribute="trailing" secondItem="wkO-P9-Edm" secondAttribute="trailing" id="xWq-CW-nDA"/>
+                            <constraint firstItem="3QU-bP-QhO" firstAttribute="top" secondItem="wkO-P9-Edm" secondAttribute="top" constant="87" id="xmY-VM-yYA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wkO-P9-Edm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PK4-GZ-QTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-615.20000000000005" y="1441.529235382309"/>
+        </scene>
         <!--Love Apple View Controller-->
         <scene sceneID="u6X-TT-dlV">
             <objects>
-                <viewController storyboardIdentifier="gift" id="Isp-ie-SYX" customClass="LoveAppleViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Isp-ie-SYX" customClass="LoveAppleViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0O-ct-uYT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fn-er-32y">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </skView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9g-c1-CtS" userLabel="HandView">
                                 <rect key="frame" x="0.0" y="467" width="375" height="200"/>
@@ -68,6 +153,17 @@
                                     <constraint firstItem="mdq-EK-MW9" firstAttribute="centerY" secondItem="d9g-c1-CtS" secondAttribute="centerY" multiplier="1.4" id="MvR-c2-9QL"/>
                                     <constraint firstItem="mdq-EK-MW9" firstAttribute="height" secondItem="d9g-c1-CtS" secondAttribute="height" multiplier="0.3" id="hWc-Dv-0wT"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BMS-pe-fAM">
+                                <rect key="frame" x="0.0" y="119" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="giftRed" translatesAutoresizingMaskIntoConstraints="NO" id="LdH-uv-zrd">
+                                        <rect key="frame" x="67" y="36" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705882352937" green="0.68235294117647061" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
@@ -90,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGC-n8-a0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644" y="-18.440779610194905"/>
+            <point key="canvasLocation" x="826" y="-30"/>
         </scene>
         <!--Kukuh-->
         <scene sceneID="uUk-Ap-XzQ">
@@ -102,6 +198,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="giftRed" width="167" height="199"/>
         <image name="handGrabGift" width="257" height="84"/>
+        <image name="handjournal" width="375" height="84"/>
     </resources>
 </document>
