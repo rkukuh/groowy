@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4845900E22150BD800508FCB /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4845900D22150BD800508FCB /* DashboardViewController.swift */; };
 		4894C2C92212625000E2AB6F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894C2C82212625000E2AB6F /* User.swift */; };
 		4894C2CD221263B400E2AB6F /* UITextFieldInputAccessoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894C2CC221263B400E2AB6F /* UITextFieldInputAccessoryViewDelegate.swift */; };
 		4894D7A6220BC31F007F34F5 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D7A5220BC31F007F34F5 /* BaseModel.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4845900D22150BD800508FCB /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		4894C2C82212625000E2AB6F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4894C2CC221263B400E2AB6F /* UITextFieldInputAccessoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldInputAccessoryViewDelegate.swift; sourceTree = "<group>"; };
 		4894D7A5220BC31F007F34F5 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				4A3D97372214FE020011D25D /* DialogViewController.swift */,
 				4A3D97362214FE020011D25D /* MotivationViewController.swift */,
 				B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */,
+				4845900D22150BD800508FCB /* DashboardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4894D7B5220BC5F9007F34F5 /* GroowyCharacter.swift in Sources */,
+				4845900E22150BD800508FCB /* DashboardViewController.swift in Sources */,
 				B14F69E4220BF14300D82D5B /* EyeSKScene.swift in Sources */,
 				4A5EA3A22211488C00DEAD49 /* GiftViewController.swift in Sources */,
 				4894D7B2220BC564007F34F5 /* HomeViewController.swift in Sources */,

@@ -12,14 +12,13 @@ import SpriteKit
 
 class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegate {
 
-    var handStateDown = true
+    @IBOutlet weak var handLabel: UILabel!
     @IBOutlet weak var bottomHandLayoutConstraint: NSLayoutConstraint!
     @IBOutlet weak var spriteKitView:SKView!
+    @IBOutlet weak var bottomView:UIAnswerBodyView!
+    var handStateDown = true
     var scene: GameScene!
     var timer:Timer!
-    @IBOutlet weak var bottomView:UIAnswerBodyView!
-    
-    var currentDialog = DialogState()
     var bubbleChat:UICustomTextViewView?
     
     // Textfield
@@ -33,7 +32,6 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
         setupGameScene()
         setupBubbleChat()
         setupBottomView()
-        setupHand()
         
         
         
@@ -41,6 +39,7 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     
     override func viewDidAppear(_ animated: Bool) {
         bubbleChat?.startAnimationSelf()
+        animateHand()
     }
     
     // MARK: - Setup
@@ -74,10 +73,6 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
         
         bottomView.topButton.setTitle("Mentor", for: .normal)
         bottomView.bottomButton.setTitle("Mentee", for: .normal)
-    }
-    
-    func setupHand() {
-        animateHand()
     }
     
     func animateHand() {
