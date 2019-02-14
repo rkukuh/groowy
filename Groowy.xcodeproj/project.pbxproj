@@ -76,6 +76,8 @@
 		B16F686D221423B5008BA51D /* sound-hey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B16F686A221423B4008BA51D /* sound-hey.mp3 */; };
 		B1A52C662214F3FC00365D2A /* GroowieSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C652214F3FC00365D2A /* GroowieSound.swift */; };
 		B1A52C6822150E8600365D2A /* snooring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1A52C6722150E8600365D2A /* snooring.mp3 */; };
+		B1A52C6A221527F300365D2A /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C69221527F300365D2A /* JournalViewController.swift */; };
+		B1A52C6C22152CB100365D2A /* ContohTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C6B22152CB100365D2A /* ContohTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +153,8 @@
 		B1A52C632214F1F600365D2A /* blink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blink.mp3; sourceTree = "<group>"; };
 		B1A52C652214F3FC00365D2A /* GroowieSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroowieSound.swift; sourceTree = "<group>"; };
 		B1A52C6722150E8600365D2A /* snooring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snooring.mp3; sourceTree = "<group>"; };
+		B1A52C69221527F300365D2A /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		B1A52C6B22152CB100365D2A /* ContohTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContohTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,8 @@
 				4A3D97362214FE020011D25D /* MotivationViewController.swift */,
 				B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */,
 				4845900D22150BD800508FCB /* DashboardViewController.swift */,
+				B1A52C69221527F300365D2A /* JournalViewController.swift */,
+				B1A52C6B22152CB100365D2A /* ContohTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -551,12 +557,14 @@
 				4894D7C0220BC9BC007F34F5 /* ColorTheme.swift in Sources */,
 				4A5EA3A72211555500DEAD49 /* DialogAnswer.swift in Sources */,
 				4A5EA3A02211482500DEAD49 /* UIAnswerBodyView.swift in Sources */,
+				B1A52C6C22152CB100365D2A /* ContohTableViewController.swift in Sources */,
 				4A3D97562214FE450011D25D /* UIGiftView.swift in Sources */,
 				4A5EA3A92211562E00DEAD49 /* DialogState.swift in Sources */,
 				4A5EA3AB2211567300DEAD49 /* DialogRule.swift in Sources */,
 				B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */,
 				48A5F62B2213D1AE00A6BE2A /* UIViewNextQuestion.swift in Sources */,
 				48A5F6252213C98C00A6BE2A /* ReminderCreateChallengeViewController.swift in Sources */,
+				B1A52C6A221527F300365D2A /* JournalViewController.swift in Sources */,
 				4A3D974A2214FE260011D25D /* Groowy.xcdatamodeld in Sources */,
 				48C3E1212215154C00DA1E7F /* Gift.swift in Sources */,
 				4894D812220D2AED007F34F5 /* UITextViewWithPlaceholder.swift in Sources */,
