@@ -58,6 +58,15 @@
 		B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */; };
 		B14F69E4220BF14300D82D5B /* EyeSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E3220BF14300D82D5B /* EyeSKScene.swift */; };
 		B16F68602213D279008BA51D /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F685F2213D279008BA51D /* GiftViewController.swift */; };
+		B16F686322140284008BA51D /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F686222140284008BA51D /* Gift.swift */; };
+		B16F6865221402FB008BA51D /* GiftCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F6864221402FB008BA51D /* GiftCategory.swift */; };
+		B16F6867221403A9008BA51D /* GiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F6866221403A9008BA51D /* GiftData.swift */; };
+		B16F686C221423B5008BA51D /* bensound-goinghigher.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B16F6869221423B4008BA51D /* bensound-goinghigher.mp3 */; };
+		B16F686D221423B5008BA51D /* sound-hey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B16F686A221423B4008BA51D /* sound-hey.mp3 */; };
+		B16F686E221423B5008BA51D /* sound-smile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B16F686B221423B5008BA51D /* sound-smile.mp3 */; };
+		B1A52C642214F1F600365D2A /* blink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1A52C632214F1F600365D2A /* blink.mp3 */; };
+		B1A52C662214F3FC00365D2A /* GroowieSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C652214F3FC00365D2A /* GroowieSound.swift */; };
+		B1A52C6822150E8600365D2A /* snooring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1A52C6722150E8600365D2A /* snooring.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +123,15 @@
 		B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveAppleViewController.swift; sourceTree = "<group>"; };
 		B14F69E3220BF14300D82D5B /* EyeSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeSKScene.swift; sourceTree = "<group>"; };
 		B16F685F2213D279008BA51D /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
+		B16F686222140284008BA51D /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
+		B16F6864221402FB008BA51D /* GiftCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCategory.swift; sourceTree = "<group>"; };
+		B16F6866221403A9008BA51D /* GiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftData.swift; sourceTree = "<group>"; };
+		B16F6869221423B4008BA51D /* bensound-goinghigher.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-goinghigher.mp3"; sourceTree = "<group>"; };
+		B16F686A221423B4008BA51D /* sound-hey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-hey.mp3"; sourceTree = "<group>"; };
+		B16F686B221423B5008BA51D /* sound-smile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-smile.mp3"; sourceTree = "<group>"; };
+		B1A52C632214F1F600365D2A /* blink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blink.mp3; sourceTree = "<group>"; };
+		B1A52C652214F3FC00365D2A /* GroowieSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroowieSound.swift; sourceTree = "<group>"; };
+		B1A52C6722150E8600365D2A /* snooring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snooring.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +156,7 @@
 		4894D7A3220BC30F007F34F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B16F686122140252008BA51D /* Gift */,
 				4894C2C72212624300E2AB6F /* User */,
 				4A5EA3A32211551A00DEAD49 /* Dialog */,
 				4AB3665D2213D0D600AABD19 /* Challenge */,
@@ -248,6 +267,7 @@
 		4A33E4F0220AD12700C180F9 /* Groowy */ = {
 			isa = PBXGroup;
 			children = (
+				B16F68682214239F008BA51D /* Sound */,
 				4894D7BE220BC9B0007F34F5 /* Constant */,
 				4894D7B8220BC652007F34F5 /* Extension */,
 				4894D7AA220BC3C8007F34F5 /* Atlas */,
@@ -258,6 +278,7 @@
 				4A33E4FD220AD12800C180F9 /* LaunchScreen.storyboard */,
 				4A33E4F1220AD12700C180F9 /* AppDelegate.swift */,
 				4A33E500220AD12800C180F9 /* Info.plist */,
+				B1A52C652214F3FC00365D2A /* GroowieSound.swift */,
 			);
 			path = Groowy;
 			sourceTree = "<group>";
@@ -346,6 +367,28 @@
 			path = UIGift;
 			sourceTree = "<group>";
 		};
+		B16F686122140252008BA51D /* Gift */ = {
+			isa = PBXGroup;
+			children = (
+				B16F686222140284008BA51D /* Gift.swift */,
+				B16F6864221402FB008BA51D /* GiftCategory.swift */,
+				B16F6866221403A9008BA51D /* GiftData.swift */,
+			);
+			path = Gift;
+			sourceTree = "<group>";
+		};
+		B16F68682214239F008BA51D /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				B1A52C6722150E8600365D2A /* snooring.mp3 */,
+				B1A52C632214F1F600365D2A /* blink.mp3 */,
+				B16F6869221423B4008BA51D /* bensound-goinghigher.mp3 */,
+				B16F686A221423B4008BA51D /* sound-hey.mp3 */,
+				B16F686B221423B5008BA51D /* sound-smile.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -378,6 +421,11 @@
 				TargetAttributes = {
 					4A33E4ED220AD12700C180F9 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -405,11 +453,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A5EA39D2211482500DEAD49 /* UICustomTextView.xib in Resources */,
+				B1A52C6822150E8600365D2A /* snooring.mp3 in Resources */,
+				B16F686D221423B5008BA51D /* sound-hey.mp3 in Resources */,
 				4894D7AE220BC3E8007F34F5 /* GroowySleep.atlas in Resources */,
 				4A33E4FF220AD12800C180F9 /* LaunchScreen.storyboard in Resources */,
+				B16F686C221423B5008BA51D /* bensound-goinghigher.mp3 in Resources */,
 				4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */,
 				4A5EA39F2211482500DEAD49 /* UIAnswerBody.xib in Resources */,
+				B1A52C642214F1F600365D2A /* blink.mp3 in Resources */,
 				4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */,
+				B16F686E221423B5008BA51D /* sound-smile.mp3 in Resources */,
 				4A33E508220ADA0300C180F9 /* Jaya.storyboard in Resources */,
 				B12124B92212BC2700DBB57B /* UIGift.xib in Resources */,
 				4A33E50B220ADA4000C180F9 /* Kukuh.storyboard in Resources */,
@@ -455,11 +508,15 @@
 				4AB366622213D0D600AABD19 /* Motivation.swift in Sources */,
 				4AB366672213D0D600AABD19 /* Challenges+CoreDataProperties.swift in Sources */,
 				4AB366682213D0D600AABD19 /* Answers+CoreDataClass.swift in Sources */,
+				B16F6867221403A9008BA51D /* GiftData.swift in Sources */,
 				4894C2C92212625000E2AB6F /* User.swift in Sources */,
 				4894D7C6220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift in Sources */,
+				B16F686322140284008BA51D /* Gift.swift in Sources */,
 				B16F68602213D279008BA51D /* GiftViewController.swift in Sources */,
 				4894D816220D32AD007F34F5 /* CreateChallengeSecondViewController.swift in Sources */,
 				4894D7A6220BC31F007F34F5 /* BaseModel.swift in Sources */,
+				B16F6865221402FB008BA51D /* GiftCategory.swift in Sources */,
+				B1A52C662214F3FC00365D2A /* GroowieSound.swift in Sources */,
 				4894C2CD221263B400E2AB6F /* UITextFieldInputAccessoryViewDelegate.swift in Sources */,
 				4894D80F220D2929007F34F5 /* SwipeUpStoryboardSegue.swift in Sources */,
 				4894D7B7220BC623007F34F5 /* GroowyAnimationState.swift in Sources */,

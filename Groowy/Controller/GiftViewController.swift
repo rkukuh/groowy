@@ -13,18 +13,15 @@ import MessageUI
 class GiftViewController: UIViewController, MFMailComposeViewControllerDelegate, UIGiftViewDelegate{
     
     func clickedBoxGift(text: String) {
-        
         print("halo")
+        let mail = MFMailComposeViewController()
+        mail.mailComposeDelegate = self
+        mail.setToRecipients(["you@yoursite.com"])
+        mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
         if MFMailComposeViewController.canSendMail() {
-            let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self
-            mail.setToRecipients(["you@yoursite.com"])
-            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
-            
-            //present(mail,animated: true, completion: nil)
+            present(mail,animated: true, completion: nil)
             //present(mail, animated: true)
         } else {
-            // show failure alert
         }
     }
     

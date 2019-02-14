@@ -96,6 +96,39 @@
             </objects>
             <point key="canvasLocation" x="-615.20000000000005" y="714.69265367316348"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="j3t-uy-3sx">
+            <objects>
+                <viewController id="fVh-Ue-LXZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wui-nZ-VYU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hM-0w-NBI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </skView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handjournal" translatesAutoresizingMaskIntoConstraints="NO" id="3QU-bP-QhO">
+                                <rect key="frame" x="0.0" y="107" width="375" height="116"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3QU-bP-QhO" firstAttribute="trailing" secondItem="wkO-P9-Edm" secondAttribute="trailing" id="3i1-Qs-Gz5"/>
+                            <constraint firstItem="6hM-0w-NBI" firstAttribute="bottom" secondItem="wkO-P9-Edm" secondAttribute="bottom" id="Ymn-v9-cAM"/>
+                            <constraint firstItem="6hM-0w-NBI" firstAttribute="top" secondItem="Wui-nZ-VYU" secondAttribute="top" id="aXX-RU-lnf"/>
+                            <constraint firstItem="3QU-bP-QhO" firstAttribute="height" secondItem="6hM-0w-NBI" secondAttribute="height" multiplier="0.174" id="blh-i6-7aO"/>
+                            <constraint firstItem="3QU-bP-QhO" firstAttribute="leading" secondItem="wkO-P9-Edm" secondAttribute="leading" id="qJ7-rd-A0X"/>
+                            <constraint firstItem="6hM-0w-NBI" firstAttribute="leading" secondItem="wkO-P9-Edm" secondAttribute="leading" id="vHk-JI-K9l"/>
+                            <constraint firstItem="6hM-0w-NBI" firstAttribute="trailing" secondItem="wkO-P9-Edm" secondAttribute="trailing" id="xWq-CW-nDA"/>
+                            <constraint firstItem="3QU-bP-QhO" firstAttribute="top" secondItem="wkO-P9-Edm" secondAttribute="top" constant="87" id="xmY-VM-yYA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wkO-P9-Edm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PK4-GZ-QTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-615.20000000000005" y="1441.529235382309"/>
+        </scene>
         <!--Love Apple View Controller-->
         <scene sceneID="u6X-TT-dlV">
             <objects>
@@ -167,5 +200,6 @@
     <resources>
         <image name="giftRed" width="167" height="199"/>
         <image name="handGrabGift" width="257" height="84"/>
+        <image name="handjournal" width="375" height="84"/>
     </resources>
 </document>

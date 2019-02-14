@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegate {
 
@@ -47,9 +48,14 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
         bottomView.topButton.setTitle("Mentor", for: .normal)
         bottomView.bottomButton.setTitle("Mentee", for: .normal)
         bottomView.isHidden = true
+        
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        GroowieSound.stopBackSound()
+        GroowieSound.changeSoundEffectRepeat(sound: .snooring)
         bubbleChat?.startAnimationSelf()
     }
     
@@ -83,6 +89,7 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
         let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "gift") as! GiftViewController
         self.present(newViewController, animated: false, completion: nil)
+        GroowieSound.stopSoundEffect()
     }
     
     
