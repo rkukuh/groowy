@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum UserRole {
-    case mentor
-    case mentee
+enum UserRole: String {
+    case mentor = "Mentor"
+    case mentee = "Mentee"
 }
 
 enum UserState {
@@ -31,9 +31,9 @@ class User {
         }
     }
     
-    static var role: UserRole {
+    static var role: String {
         get {
-            return userDefault.value(forKey: "role") as? UserRole ?? .mentee
+            return userDefault.value(forKey: "role") as? String ?? UserRole.mentee.rawValue
         }
         set {
             userDefault.set(newValue, forKey: "role")

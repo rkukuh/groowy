@@ -10,6 +10,8 @@ import Foundation
  
 enum GroowyAnimationState: String {
     case sleep = "GroowySleep"
+    case halfAwake = "GroowyHalfAwake"
+    case fullyAwake = "GroowyFullyAwake"
     case wake = "GroowyWake"
     case asleep = "GroowyAsleep"
     case awake = "GroowyAwake"

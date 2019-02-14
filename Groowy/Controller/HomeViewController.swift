@@ -9,13 +9,17 @@
 import UIKit
 import SpriteKit
 
+
 class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegate {
 
+    var handStateDown = true
+    @IBOutlet weak var bottomHandLayoutConstraint: NSLayoutConstraint!
     @IBOutlet weak var spriteKitView:SKView!
     var scene: GameScene!
     var timer:Timer!
     @IBOutlet weak var bottomView:UIAnswerBodyView!
     
+    var currentDialog = DialogState()
     var bubbleChat:UICustomTextViewView?
     
     // Textfield
@@ -24,65 +28,116 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Add textfield outside of view
-        view.addSubview(textField)
         
-        // Add Gamescene to View Controller
-        scene = GameScene(size: view.bounds.size)
-        scene.scaleMode = .resizeFill
-        spriteKitView.ignoresSiblingOrder = true
-        spriteKitView.presentScene(scene)
+        setupHiddenTextField()
+        setupGameScene()
+        setupBubbleChat()
+        setupBottomView()
+        setupHand()
         
-        // Add Bubble Chat
-        bubbleChat = UICustomTextViewView(view: view)
-        if let myText = bubbleChat{
-            self.view.addSubview(myText)
-        }
-        bubbleChat?.isHidden = true
-        bubbleChat?.messageTextView.text = "Hi, I'm Groowy. What's your name ?"
         
-        bottomView.topButton.addTarget(self, action: #selector(actionButtonTop), for: .touchUpInside)
-        bottomView.bottomButton.addTarget(self, action: #selector(actionButtonBottom), for: .touchUpInside)
         
-        bottomView.topButton.setTitle("Mentor", for: .normal)
-        bottomView.bottomButton.setTitle("Mentee", for: .normal)
-        bottomView.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         bubbleChat?.startAnimationSelf()
     }
     
+    // MARK: - Setup
+    func setupHiddenTextField() {
+        // Add textfield outside of view
+        view.addSubview(textField)
+    }
+    
+    func setupGameScene() {
+        // Add Gamescene to View Controller
+        scene = GameScene(size: view.bounds.size)
+        scene.scaleMode = .resizeFill
+        spriteKitView.ignoresSiblingOrder = true
+        spriteKitView.presentScene(scene)
+    }
+    
+    func setupBubbleChat() {
+        // Add Bubble Chat
+        bubbleChat = UICustomTextViewView(view: view)
+        if let myText = bubbleChat{
+            self.view.addSubview(myText)
+        }
+        bubbleChat?.isHidden = true
+        
+    }
+    
+    func setupBottomView() {
+        bottomView.topButton.addTarget(self, action: #selector(actionButtonTop), for: .touchUpInside)
+        bottomView.bottomButton.addTarget(self, action: #selector(actionButtonBottom), for: .touchUpInside)
+        bottomView.isHidden = true
+        
+        bottomView.topButton.setTitle("Mentor", for: .normal)
+        bottomView.bottomButton.setTitle("Mentee", for: .normal)
+    }
+    
+    func setupHand() {
+        animateHand()
+    }
+    
+    func animateHand() {
+        if handStateDown {
+            self.bottomHandLayoutConstraint.constant = 125
+            UIView.animate(withDuration: 2, animations: {
+                self.view.layoutIfNeeded()
+            }) { (complete) in
+                self.handStateDown = !self.handStateDown
+                self.animateHand()
+            }
+        } else {
+            self.bottomHandLayoutConstraint.constant = 150
+            UIView.animate(withDuration: 2, animations: {
+                self.view.layoutIfNeeded()
+            }) { (complete) in
+                self.handStateDown = !self.handStateDown
+                self.animateHand()
+            }
+        }
+    }
+    
+    
     // MARK: - Action buttons
     
     @objc func actionButtonTop(_sender: UIButton){
-        User.role = .mentor
+        User.role = UserRole.mentor.rawValue
     }
     
     @objc func actionButtonBottom(_sender: UIButton){
-        User.role = .mentee
+        User.role = UserRole.mentee.rawValue
     }
     
     
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {
-//        scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
-//        showKeyboardWithTextFieldAccessoryView()
-//
-//        stayAwake()
-//
-//        bubbleChat?.alpha = 0
-//        bubbleChat?.isHidden = false
-//        UIView.animate(withDuration: 0.5) {
-//            self.bubbleChat?.alpha = 1
-//        }
-//
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "question") as! DialogViewController
-        self.present(newViewController, animated: false, completion: nil)
+        if scene.groowyCharacter.currentAnimationState == .sleep {
+            scene.groowyCharacter.changeGroowyAnimateState(nextState: .halfAwake)
+            bubbleChat?.messageTextView.text = "Hmm, who's there ?"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                self.bubbleChat?.alpha = 0
+                self.bubbleChat?.isHidden = false
+                UIView.animate(withDuration: 0.5) {
+                    self.bubbleChat?.alpha = 1
+                }
+            }
+            
+        } else if scene.groowyCharacter.currentAnimationState == .halfAwake {
+            scene.groowyCharacter.changeGroowyAnimateState(nextState: .fullyAwake)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.bubbleChat?.messageTextView.text = "Oh Hi, My name is Groowy. What's your name ?"
+                self.stayAwake()
+                self.showKeyboardWithTextFieldAccessoryView()
+            }
+        }
         
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
-//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "gift") as! LoveAppleViewController
-//        self.present(newViewController, animated: false, completion: nil)
+        
+        
+        
+        
+        
     }
     
     
@@ -119,8 +174,4 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
         
     }
 
-}
-
-extension HomeViewController: UITextFieldDelegate {
-    
 }
