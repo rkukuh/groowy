@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupUserStateManage() {
-        let lastStateOfUser = UserState.deepUnderstanding //User.state
+        let lastStateOfUser = User.state
         
         var storyBoardID = ""
         var storyBoardName = ""

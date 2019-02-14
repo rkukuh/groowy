@@ -69,12 +69,20 @@
                                 <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKV-cB-Nbf">
+                                <rect key="frame" x="167.5" y="475" width="40" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="U5j-cC-LC1" firstAttribute="height" secondItem="9VW-39-fKL" secondAttribute="height" multiplier="0.3" id="1Mo-1G-Kgc"/>
                             <constraint firstItem="eI7-Z8-7rL" firstAttribute="bottom" secondItem="467-Z2-hC7" secondAttribute="bottom" id="5OA-8D-HrF"/>
+                            <constraint firstItem="zKV-cB-Nbf" firstAttribute="centerX" secondItem="9VW-39-fKL" secondAttribute="centerX" id="FXF-1Q-7Lg"/>
                             <constraint firstItem="eI7-Z8-7rL" firstAttribute="top" secondItem="9VW-39-fKL" secondAttribute="top" id="ISD-kk-KrY"/>
+                            <constraint firstItem="467-Z2-hC7" firstAttribute="bottom" secondItem="zKV-cB-Nbf" secondAttribute="bottom" constant="150" id="TML-NG-nwX"/>
                             <constraint firstAttribute="trailing" secondItem="U5j-cC-LC1" secondAttribute="trailing" id="aqv-LU-taQ"/>
                             <constraint firstItem="U5j-cC-LC1" firstAttribute="leading" secondItem="467-Z2-hC7" secondAttribute="leading" id="fm8-49-tJp"/>
                             <constraint firstItem="eI7-Z8-7rL" firstAttribute="trailing" secondItem="467-Z2-hC7" secondAttribute="trailing" id="g8Y-8Z-61C"/>
@@ -84,6 +92,7 @@
                         <viewLayoutGuide key="safeArea" id="467-Z2-hC7"/>
                     </view>
                     <connections>
+                        <outlet property="bottomHandLayoutConstraint" destination="TML-NG-nwX" id="D8P-yK-SQo"/>
                         <outlet property="bottomView" destination="U5j-cC-LC1" id="I59-Vm-lEi"/>
                         <outlet property="spriteKitView" destination="eI7-Z8-7rL" id="mcv-1R-gYq"/>
                     </connections>
