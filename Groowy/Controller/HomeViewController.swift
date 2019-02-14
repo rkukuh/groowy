@@ -13,20 +13,21 @@ import AVFoundation
 
 class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegate {
 
-    @IBOutlet weak var handLabel: UILabel!
-    @IBOutlet weak var bottomHandLayoutConstraint: NSLayoutConstraint!
-    @IBOutlet weak var spriteKitView:SKView!
-    @IBOutlet weak var bottomView:UIAnswerBodyView!
     var handStateDown = true
     var scene: GameScene!
-    var timer:Timer!
-    var bubbleChat:UICustomTextViewView?
-    
-    // Textfield
+    var timer: Timer!
+    var bubbleChat: UICustomTextViewView?
+    var textFieldInput: UITextFieldInputAccessoryView?
     let textField = UITextField(frame: CGRect(x: 0, y: -50, width: 100, height: 50))
+    
+    @IBOutlet weak var handLabel: UILabel!
+    @IBOutlet weak var spriteKitView: SKView!
+    @IBOutlet weak var bottomView: UIAnswerBodyView!
+    @IBOutlet weak var bottomHandLayoutConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = COLOR_THEME_PRIMARY
         setupHiddenTextField()
         setupGameScene()
@@ -42,6 +43,7 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     }
     
     // MARK: - Setup
+    
     func setupHiddenTextField() {
         // Add textfield outside of view
         view.addSubview(textField)
@@ -58,16 +60,18 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     func setupBubbleChat() {
         // Add Bubble Chat
         bubbleChat = UICustomTextViewView(view: view)
+        
         if let myText = bubbleChat{
             self.view.addSubview(myText)
         }
-        bubbleChat?.isHidden = true
         
+        bubbleChat?.isHidden = true
     }
     
     func setupBottomView() {
         bottomView.topButton.addTarget(self, action: #selector(actionButtonTop), for: .touchUpInside)
         bottomView.bottomButton.addTarget(self, action: #selector(actionButtonBottom), for: .touchUpInside)
+        
         bottomView.isHidden = true
         
         bottomView.topButton.setTitle("Mentor", for: .normal)
@@ -94,7 +98,6 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
         }
     }
     
-    
     // MARK: - Action buttons
     
     @objc func actionButtonTop(_sender: UIButton){
@@ -105,12 +108,12 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
         User.role = UserRole.mentee.rawValue
     }
     
-    
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {
         if scene.groowyCharacter.currentAnimationState == .sleep {
             GroowieSound.stopSoundEffect()
             scene.groowyCharacter.changeGroowyAnimateState(nextState: .halfAwake)
             bubbleChat?.messageTextView.text = "Hmm, who's there ?"
+
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 self.bubbleChat?.alpha = 0
                 self.bubbleChat?.isHidden = false
@@ -119,8 +122,15 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
                 }
             }
             
+            // - START: Skip from WakeUp to Challenge -
+            // let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            // let newViewController = storyBoard.instantiateViewController(withIdentifier: "create-challenge") as! TitleCreateChallengeViewController
+            // self.present(newViewController, animated: false, completion: nil)
+            // - FINISH: Skip from WakeUp to Challenge -
+            
         } else if scene.groowyCharacter.currentAnimationState == .halfAwake {
             scene.groowyCharacter.changeGroowyAnimateState(nextState: .fullyAwake)
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 GroowieSound.changeBackSound(sound: .smile)
                 self.handLabel.isHidden = true
@@ -129,35 +139,28 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
                 self.showKeyboardWithTextFieldAccessoryView()
             }
         }
-        
-        
-        
-        
-        
-        
     }
-    
     
     func stayAwake() {
         timer = Timer.scheduledTimer(withTimeInterval: Double.random(in: 1...3), repeats: false, block: { (timer) in
             GroowieSound.changeSoundEffect(sound: .blink)
             self.scene.groowyCharacter.changeGroowyAnimateState(nextState: .awake)
             self.stayAwake()
-            
         })
     }
     
-    var textFieldInput: UITextFieldInputAccessoryView?
     func showKeyboardWithTextFieldAccessoryView() {
         if let textFieldInput = loadViewFromNib(nibName: "UITextFieldInputAccessory") as? UITextFieldInputAccessoryView {
             self.textFieldInput = textFieldInput
+            
             textField.autocorrectionType = .no
             textFieldInput.textField.autocapitalizationType = .words
             textField.inputAccessoryView = textFieldInput
+            
             textField.becomeFirstResponder()
+            
             textFieldInput.delegate = self
         }
-        
     }
     
     func didTapSendButton() {
@@ -167,9 +170,9 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
             textFieldInput.resignFirstResponder()
             view.endEditing(true)
         }
-        bottomView.isHidden = false
-        bubbleChat?.messageTextView.text = "Hi \(User.name) ! Are you a mentor / mentee ?"
         
+        bottomView.isHidden = false
+        
+        bubbleChat?.messageTextView.text = "Hi \(User.name) ! Are you a mentor / mentee ?"
     }
-
 }

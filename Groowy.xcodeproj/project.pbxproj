@@ -372,9 +372,9 @@
 		4A3D973A2214FE250011D25D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				4A3D973D2214FE250011D25D /* Groowy.xcdatamodeld */,
 				4A3D973B2214FE250011D25D /* Answer+CoreDataProperties.swift */,
 				4A3D973C2214FE250011D25D /* Answer+CoreDataClass.swift */,
-				4A3D973D2214FE250011D25D /* Groowy.xcdatamodeld */,
 				4A3D973F2214FE260011D25D /* Reflection+CoreDataProperties.swift */,
 				4A3D97402214FE260011D25D /* Reflection+CoreDataClass.swift */,
 				4A3D97412214FE260011D25D /* Challenge+CoreDataClass.swift */,

@@ -31,7 +31,8 @@ class CreateChallengeController {
         
         challenge.title = data["title"]
         challenge.body = data["body"]
-        challenge.body = data["goal"]
+        challenge.goal = data["goal"]
+        challenge.status = ChallengeStatus.progress.rawValue
         
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
         if let date = dateFormatter.date(from: data["reminder_at"]!) {
