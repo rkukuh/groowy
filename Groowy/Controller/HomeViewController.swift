@@ -13,11 +13,6 @@ import AVFoundation
 
 class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegate {
 
-    @IBOutlet weak var handLabel: UILabel!
-    @IBOutlet weak var bottomHandLayoutConstraint: NSLayoutConstraint!
-    @IBOutlet weak var spriteKitView:SKView!
-    @IBOutlet weak var bottomView:UIAnswerBodyView!
-    
     var handStateDown = true
     var scene: GameScene!
     var timer: Timer!
@@ -25,18 +20,19 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     var textFieldInput: UITextFieldInputAccessoryView?
     let textField = UITextField(frame: CGRect(x: 0, y: -50, width: 100, height: 50))
     
-    @IBOutlet weak var spriteKitView:SKView!
-    @IBOutlet weak var bottomView:UIAnswerBodyView!
+    @IBOutlet weak var handLabel: UILabel!
+    @IBOutlet weak var spriteKitView: SKView!
+    @IBOutlet weak var bottomView: UIAnswerBodyView!
     @IBOutlet weak var bottomHandLayoutConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = COLOR_THEME_PRIMARY
         setupHiddenTextField()
         setupGameScene()
         setupBubbleChat()
         setupBottomView()
-        setupHand()
     }
     
     override func viewDidAppear(_ animated: Bool) {
