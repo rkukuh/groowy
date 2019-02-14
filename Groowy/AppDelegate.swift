@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var storyBoardID = ""
         var storyBoardName = ""
+        
         switch lastStateOfUser {
             case .introduction:
                 storyBoardName = "Main"
@@ -37,19 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 storyBoardID = "create-challenge"
                 break
             case .gift:
-                
                 break
             case .dashboard:
                 storyBoardName = "Main"
                 storyBoardID = "dashboard"
                 break
-            
         }
+        
         if storyBoardID != "" && storyBoardName != "" {
             let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: storyBoardID)
-            setInitialViewController(viewController: viewController)
             
+            setInitialViewController(viewController: viewController)
         }
     }
     
