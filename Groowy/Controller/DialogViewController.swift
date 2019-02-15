@@ -81,39 +81,39 @@ class DialogViewController: UIViewController {
         deepUnderstandingDialog.category = "Deep Understanding dialog"
         
         let dialogs = [
-            Dialog("Apakah kamu siap menerima tantangan di Akademi ini?"),
-            Dialog("Kenapa? Apakah kamu bermaksud menghindari tantangan?"),
-            Dialog("Tapi kamu mau mencoba kan?"),
-            Dialog("Great! Memang seharusnya kita hadapi tantangan dan tidak mudah menyerah kan?"),
+            Dialog("Are you ready to take challenges in this Academy?"),
+            Dialog("Why? Are you going to avoid a challenge?"),
+            Dialog("Don't you want to even try?"),
+            Dialog("Great! We should face the challenge and not giving up easily, aren't we?"),
             Dialog("Why? How do you see an effort as?"),
-            Dialog("Tidakkah kamu ingin berhasil dan sukses? Bukankah itu memerlukan usaha?"),
-            Dialog("Kalo ga berusaha gimana bisa sukses?"),
-            Dialog("Aku kasih masukan buat kebaikanmu sih... Belajarlah menerima kritik itu seperti jamu"),
-            Dialog("Great! It's the right mind that you have"),
+            Dialog("Don't you want to be successful? Don't you know it takes an effort?"),
+            Dialog("How you can be successful if you never give a try?"),
+            Dialog("Well, that's for your sake. Try to accept a critic as an improvement"),
+            Dialog("Great! That's the right mindset that you have"),
         ]
         
         deepUnderstandingDialog.dialogs.append(contentsOf: dialogs)
         
-        deepUnderstandingDialog.dialogs[0].answers.append(DialogAnswer("Tentu", then: deepUnderstandingDialog.dialogs[2]))
-        deepUnderstandingDialog.dialogs[0].answers.append(DialogAnswer("Kurang yakin", then: deepUnderstandingDialog.dialogs[1]))
+        deepUnderstandingDialog.dialogs[0].answers.append(DialogAnswer("Sure!", then: deepUnderstandingDialog.dialogs[2]))
+        deepUnderstandingDialog.dialogs[0].answers.append(DialogAnswer("Not Sure", then: deepUnderstandingDialog.dialogs[1]))
         
-        deepUnderstandingDialog.dialogs[1].answers.append(DialogAnswer("Tidak", then: deepUnderstandingDialog.dialogs[3]))
-        deepUnderstandingDialog.dialogs[1].answers.append(DialogAnswer("Ya", then: deepUnderstandingDialog.dialogs[2]))
+        deepUnderstandingDialog.dialogs[1].answers.append(DialogAnswer("No", then: deepUnderstandingDialog.dialogs[3]))
+        deepUnderstandingDialog.dialogs[1].answers.append(DialogAnswer("Yes", then: deepUnderstandingDialog.dialogs[2]))
         
-        deepUnderstandingDialog.dialogs[2].answers.append(DialogAnswer("Ya", then: deepUnderstandingDialog.dialogs[3]))
+        deepUnderstandingDialog.dialogs[2].answers.append(DialogAnswer("Yes", then: deepUnderstandingDialog.dialogs[3]))
         deepUnderstandingDialog.dialogs[2].answers.append(DialogAnswer("I'll Try", then: deepUnderstandingDialog.dialogs[3]))
         
         deepUnderstandingDialog.dialogs[3].answers.append(DialogAnswer("Sure", then: deepUnderstandingDialog.dialogs[8]))
         deepUnderstandingDialog.dialogs[3].answers.append(DialogAnswer("Not sure", then: deepUnderstandingDialog.dialogs[4]))
         
-        deepUnderstandingDialog.dialogs[4].answers.append(DialogAnswer("The path to mastery", then: deepUnderstandingDialog.dialogs[8]))
+        deepUnderstandingDialog.dialogs[4].answers.append(DialogAnswer("The Path to Mastery", then: deepUnderstandingDialog.dialogs[8]))
         deepUnderstandingDialog.dialogs[4].answers.append(DialogAnswer("Fruitless", then: deepUnderstandingDialog.dialogs[5]))
         
-        deepUnderstandingDialog.dialogs[5].answers.append(DialogAnswer("Ok, sure", then: deepUnderstandingDialog.dialogs[8]))
-        deepUnderstandingDialog.dialogs[5].answers.append(DialogAnswer("Not really", then: deepUnderstandingDialog.dialogs[6]))
+        deepUnderstandingDialog.dialogs[5].answers.append(DialogAnswer("OK, Sure", then: deepUnderstandingDialog.dialogs[8]))
+        deepUnderstandingDialog.dialogs[5].answers.append(DialogAnswer("Not Really", then: deepUnderstandingDialog.dialogs[6]))
         
         deepUnderstandingDialog.dialogs[6].answers.append(DialogAnswer("You are right. I got it", then: deepUnderstandingDialog.dialogs[8]))
-        deepUnderstandingDialog.dialogs[6].answers.append(DialogAnswer("Still no...", then: deepUnderstandingDialog.dialogs[7]))
+        deepUnderstandingDialog.dialogs[6].answers.append(DialogAnswer("Still No...", then: deepUnderstandingDialog.dialogs[7]))
         
         deepUnderstandingDialog.dialogs[7].answers.append(DialogAnswer("You are right. I got it", then: deepUnderstandingDialog.dialogs[8]))
         deepUnderstandingDialog.dialogs[7].answers.append(DialogAnswer("Yeah, I guess I got your point", then: deepUnderstandingDialog.dialogs[8]))
