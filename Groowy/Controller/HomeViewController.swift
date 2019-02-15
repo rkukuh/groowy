@@ -38,6 +38,7 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     override func viewDidAppear(_ animated: Bool) {
         bubbleChat?.startAnimationSelf()
         GroowieSound.changeSoundEffectRepeat(sound: .snooring)
+        GroowieSound.stopBackSound()
         animateHand()
     }
     
@@ -101,10 +102,20 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     
     @objc func actionButtonTop(_sender: UIButton){
         User.role = UserRole.mentor.rawValue
+        startToTalkToGroowy()
     }
     
     @objc func actionButtonBottom(_sender: UIButton){
         User.role = UserRole.mentee.rawValue
+        startToTalkToGroowy()
+    }
+    
+    func startToTalkToGroowy() {
+        User.state = UserState.deepUnderstanding.rawValue
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "deepUnderstanding") as! DialogViewController
+        self.present(newViewController, animated: false, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {

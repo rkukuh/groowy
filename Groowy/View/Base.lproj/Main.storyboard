@@ -69,9 +69,9 @@
                                 <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKV-cB-Nbf">
-                                <rect key="frame" x="167.5" y="475" width="40" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to wake " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKV-cB-Nbf">
+                                <rect key="frame" x="140" y="496.5" width="95.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -116,25 +116,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptj-yd-fKf">
-                                <rect key="frame" x="16" y="44" width="266" height="31.5"/>
+                                <rect key="frame" x="16" y="62" width="266" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want to learn ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc6-a1-zEF">
-                                <rect key="frame" x="16" y="125.5" width="247" height="24"/>
+                                <rect key="frame" x="16" y="127.5" width="247" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="I want to learn about ..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqB-oY-VXJ" customClass="UITextViewWithPlaceholder" customModule="Groowy" customModuleProvider="target">
-                                <rect key="frame" x="16" y="157.5" width="343" height="493.5"/>
+                                <rect key="frame" x="16" y="159.5" width="343" height="491.5"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IDe-lr-1ax" customClass="UITextViewWithPlaceholder" customModule="Groowy" customModuleProvider="target">
-                                <rect key="frame" x="16" y="157.5" width="343" height="493.5"/>
+                                <rect key="frame" x="16" y="159.5" width="343" height="491.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
@@ -162,12 +162,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="GEF-2D-utr" firstAttribute="centerX" secondItem="qn4-qf-xuq" secondAttribute="centerX" id="5oG-2F-LX9"/>
-                            <constraint firstItem="oc6-a1-zEF" firstAttribute="top" secondItem="Ptj-yd-fKf" secondAttribute="bottom" constant="50" id="FGh-zR-mhD"/>
-                            <constraint firstItem="Ptj-yd-fKf" firstAttribute="top" secondItem="XB2-AK-Hkb" secondAttribute="top" constant="24" id="GqV-ed-dlD"/>
+                            <constraint firstItem="oc6-a1-zEF" firstAttribute="top" secondItem="Ptj-yd-fKf" secondAttribute="bottom" constant="34" id="FGh-zR-mhD"/>
+                            <constraint firstItem="Ptj-yd-fKf" firstAttribute="top" secondItem="XB2-AK-Hkb" secondAttribute="top" constant="42" id="GqV-ed-dlD"/>
                             <constraint firstItem="oc6-a1-zEF" firstAttribute="leading" secondItem="XB2-AK-Hkb" secondAttribute="leading" constant="16" id="Jud-7f-0mz"/>
                             <constraint firstItem="XB2-AK-Hkb" firstAttribute="bottom" secondItem="GEF-2D-utr" secondAttribute="bottom" constant="80" id="ODg-Eo-SSJ"/>
                             <constraint firstItem="RqB-oY-VXJ" firstAttribute="leading" secondItem="IDe-lr-1ax" secondAttribute="leading" id="Paz-Ch-ypl"/>
@@ -249,7 +249,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="u4l-7f-tZy" firstAttribute="centerX" secondItem="D1d-9W-HXD" secondAttribute="centerX" id="57g-hW-frT"/>
@@ -332,7 +332,7 @@
                                 </date>
                             </datePicker>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bxS-FN-4ZT" firstAttribute="bottom" secondItem="4Pu-cY-VUX" secondAttribute="bottom" constant="80" id="1J6-06-E32"/>
@@ -409,7 +409,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Hew-dm-TVU" firstAttribute="top" secondItem="PtZ-jV-VJb" secondAttribute="top" constant="24" id="Ey5-eM-qnP"/>
@@ -488,7 +488,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.69306718909999998" blue="0.29862642299999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="RGT-oA-YSX" firstAttribute="trailing" secondItem="2kD-0z-Eov" secondAttribute="trailing" constant="16" id="2YF-x3-UiS"/>
@@ -555,6 +555,9 @@
                                                 <state key="normal" title="TALK TO GROOWY">
                                                     <color key="titleColor" red="0.87450980392156863" green="0.75686274509803919" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapTalkToGroowyWithSender:" destination="rls-Om-zRZ" eventType="touchUpInside" id="Gd3-2G-ZHC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eq-pW-6mf">
                                                 <rect key="frame" x="0.0" y="44" width="375" height="36"/>
@@ -562,6 +565,9 @@
                                                 <state key="normal" title="TAKE CHALLENGE">
                                                     <color key="titleColor" red="0.87450980392156863" green="0.75686274509803919" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapTakeChallengeWithSender:" destination="rls-Om-zRZ" eventType="touchUpInside" id="URf-od-VcE"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vp8-Pl-HRb">
                                                 <rect key="frame" x="0.0" y="88" width="375" height="36"/>
@@ -569,6 +575,9 @@
                                                 <state key="normal" title="THE JOURNAL">
                                                     <color key="titleColor" red="0.87450980392156863" green="0.75686274509803919" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapTheJournalWithSender:" destination="rls-Om-zRZ" eventType="touchUpInside" id="kJO-Y3-8sU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJh-B5-pnp">
                                                 <rect key="frame" x="0.0" y="132" width="375" height="36"/>
@@ -576,6 +585,9 @@
                                                 <state key="normal" title="SETTINGS">
                                                     <color key="titleColor" red="0.87450980392156863" green="0.75686274509803919" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapSettingWithSender:" destination="rls-Om-zRZ" eventType="touchUpInside" id="e6n-P9-AH4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

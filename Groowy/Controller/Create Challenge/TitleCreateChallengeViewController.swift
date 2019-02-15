@@ -10,6 +10,7 @@ import UIKit
 
 class TitleCreateChallengeViewController: SwipeFormViewController, UIViewNextQuestionDelegate {
 
+    var isNext = false
     @IBOutlet weak var titleTextView: UITextView!
     var createChallengeController = CreateChallengeController()
     
@@ -25,13 +26,22 @@ class TitleCreateChallengeViewController: SwipeFormViewController, UIViewNextQue
         
         if let segueDestination = segue.destination as? BodyCreateChallengeViewController {
             segueDestination.createChallengeController = createChallengeController
+            isNext = true
         }
     }
     
     func didTapNextButton() {
+        isNext = true
         performSegue(withIdentifier: "bodySegue", sender: nil)
     }
     
-    
+    override func tapToBack(sender: UIButton) {
+        parentDismiss(animated: true) {
+            
+        }
+        if self.isNext {
+            self.parentDismiss(animated: false, completion: nil)
+        }
+    }
 
 }
