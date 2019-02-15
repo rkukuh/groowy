@@ -133,6 +133,19 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
                 }
             }
             
+            // - START: Skip from WakeUp to Challenge -
+//             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//             let newViewController = storyBoard.instantiateViewController(withIdentifier: "create-challenge") as! TitleCreateChallengeViewController
+//             self.present(newViewController, animated: false, completion: nil)
+             //- FINISH: Skip from WakeUp to Challenge -
+            
+            
+            // - START: Skip from WakeUp to Journal -
+//            let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "journal") as! JournalViewController
+//            self.present(newViewController, animated: false, completion: nil)
+            //- FINISH: Skip from WakeUp to Journal -
+            
         } else if scene.groowyCharacter.currentAnimationState == .halfAwake {
             scene.groowyCharacter.changeGroowyAnimateState(nextState: .fullyAwake)
             

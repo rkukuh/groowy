@@ -400,21 +400,38 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lh6-Rq-a2S">
-                                <rect key="frame" x="124" y="318.5" width="127" height="30"/>
+                                <rect key="frame" x="124" y="418.5" width="127" height="30"/>
+                                <gestureRecognizers/>
                                 <state key="normal" title="Tap me to promise">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="didTapPromiseButtonWithSender:" destination="nC7-GU-Hwo" eventType="touchUpInside" id="Uoy-SJ-Aqg"/>
-                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVu-d4-3di">
+                                <rect key="frame" x="131.5" y="277" width="112.5" height="133"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="giftPurple" translatesAutoresizingMaskIntoConstraints="NO" id="aM6-do-6f2">
+                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="133"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aM6-do-6f2" firstAttribute="width" secondItem="aVu-d4-3di" secondAttribute="width" id="Edn-n3-VdS"/>
+                                    <constraint firstItem="aM6-do-6f2" firstAttribute="centerY" secondItem="aVu-d4-3di" secondAttribute="centerY" id="cxs-Qa-axR"/>
+                                    <constraint firstItem="aM6-do-6f2" firstAttribute="centerX" secondItem="aVu-d4-3di" secondAttribute="centerX" id="rc3-fl-HWV"/>
+                                    <constraint firstItem="aM6-do-6f2" firstAttribute="height" secondItem="aVu-d4-3di" secondAttribute="height" id="rk6-hn-yGC"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="aVu-d4-3di" firstAttribute="width" secondItem="B9Y-o1-07g" secondAttribute="width" multiplier="0.3" id="Etx-0F-tbw"/>
                             <constraint firstItem="Hew-dm-TVU" firstAttribute="top" secondItem="PtZ-jV-VJb" secondAttribute="top" constant="24" id="Ey5-eM-qnP"/>
-                            <constraint firstItem="Lh6-Rq-a2S" firstAttribute="centerY" secondItem="B9Y-o1-07g" secondAttribute="centerY" id="Kw6-Au-uJp"/>
+                            <constraint firstItem="Lh6-Rq-a2S" firstAttribute="centerY" secondItem="B9Y-o1-07g" secondAttribute="centerY" multiplier="1.3" id="Kw6-Au-uJp"/>
                             <constraint firstItem="G5v-UU-D3E" firstAttribute="centerX" secondItem="B9Y-o1-07g" secondAttribute="centerX" id="QzL-wg-3Fj"/>
+                            <constraint firstItem="aVu-d4-3di" firstAttribute="centerX" secondItem="PtZ-jV-VJb" secondAttribute="centerX" id="XiP-05-Yje"/>
+                            <constraint firstItem="aVu-d4-3di" firstAttribute="height" secondItem="B9Y-o1-07g" secondAttribute="height" multiplier="0.2" id="cLG-Hs-VHe"/>
+                            <constraint firstItem="aVu-d4-3di" firstAttribute="centerY" secondItem="PtZ-jV-VJb" secondAttribute="centerY" id="ciM-JV-r55"/>
                             <constraint firstItem="PtZ-jV-VJb" firstAttribute="bottom" secondItem="G5v-UU-D3E" secondAttribute="bottom" constant="80" id="ecH-DO-0ep"/>
                             <constraint firstItem="Lh6-Rq-a2S" firstAttribute="centerX" secondItem="B9Y-o1-07g" secondAttribute="centerX" id="keW-83-tQ5"/>
                             <constraint firstItem="26j-O6-CPq" firstAttribute="top" secondItem="PtZ-jV-VJb" secondAttribute="top" constant="110" id="klu-gc-pSA"/>
@@ -427,7 +444,8 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="promiseButton" destination="Lh6-Rq-a2S" id="B0S-Eh-bXG"/>
+                        <outlet property="promiseButton" destination="aM6-do-6f2" id="AMP-Gx-xX8"/>
+                        <outlet property="xxx" destination="aVu-d4-3di" id="P4V-hh-rvJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xQ-IU-wvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -436,8 +454,9 @@
                         <action selector="swipeDownToBackWithSender:" destination="nC7-GU-Hwo" id="WUB-cc-POG"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <gestureRecognizer id="7eE-bM-B6n" customClass="ForceTouchGestureRecognizer" customModule="Groowy" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="3121" y="-55"/>
+            <point key="canvasLocation" x="3120.8000000000002" y="-55.322338830584712"/>
         </scene>
         <!--Goal Create Challenge View Controller-->
         <scene sceneID="RDY-dA-bf9">
@@ -637,6 +656,7 @@
     </scenes>
     <resources>
         <image name="BrownHand" width="375" height="78"/>
+        <image name="giftPurple" width="167" height="199"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fCQ-qe-MMr"/>

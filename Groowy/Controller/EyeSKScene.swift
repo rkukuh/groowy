@@ -20,7 +20,7 @@ class EyeSKScene: SKScene {
     
     func setupGroowy() {
         let size = CGSize(width: frame.width, height: frame.width)
-        let position = CGPoint(x: frame.midX, y: frame.midY)
+        let position = CGPoint(x: frame.midX, y: frame.midY + frame.width / 2)
         
         groowyCharacter.build(initState: .wake, size: size, position: position, scene: self)
         groowyCharacter.startAnimate()
