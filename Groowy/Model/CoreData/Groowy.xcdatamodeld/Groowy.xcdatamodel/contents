@@ -15,14 +15,17 @@
         <relationship name="reflections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reflection" inverseName="challenge" inverseEntity="Reflection" syncable="YES"/>
     </entity>
     <entity name="Reflection" representedClassName=".Reflection" syncable="YES">
-        <attribute name="body" attributeType="String" syncable="YES"/>
         <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="evidence" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="feel" attributeType="String" syncable="YES"/>
+        <attribute name="learn" attributeType="String" syncable="YES"/>
         <attribute name="picture" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="struggle" attributeType="String" syncable="YES"/>
         <relationship name="challenge" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Challenge" inverseName="reflections" inverseEntity="Challenge" syncable="YES"/>
     </entity>
     <elements>
         <element name="Answer" positionX="-63" positionY="-18" width="128" height="75"/>
         <element name="Challenge" positionX="-54" positionY="9" width="128" height="165"/>
-        <element name="Reflection" positionX="-36" positionY="63" width="128" height="105"/>
+        <element name="Reflection" positionX="-36" positionY="63" width="128" height="150"/>
     </elements>
 </model>

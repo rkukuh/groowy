@@ -21,6 +21,9 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var journalTableView: UITableView!
     
     
+    @IBAction func closeJournal(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let sections = fetchedResults.sections,
@@ -41,6 +44,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     func setupGameScene() {
         // Add Gamescene to View Controller
         scene = GameScene(size: view.bounds.size)
+        scene.groowyCharacter.changeGroowyAnimateState(nextState: .awake)
         //scene.groowyCharacter.setImagePosition(position: CGPoint(x: spriteKit.frame.midX, y: spriteKit.frame.midY + spriteKit.frame.width / 2))
         scene.scaleMode = .resizeFill
         scene.sceneDidLoad()
@@ -51,9 +55,16 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     func stayAwake() {
         timer = Timer.scheduledTimer(withTimeInterval: Double.random(in: 1...3), repeats: false, block: { (timer) in
             GroowieSound.changeSoundEffect(sound: .blink)
+            self.scene.groowyCharacter.setImagePosition(position: CGPoint(x: self.spriteKit.frame.midX, y: self.spriteKit.frame.midY + self.spriteKit.frame.width / 2))
             self.scene.groowyCharacter.changeGroowyAnimateState(nextState: .awake)
             self.stayAwake()
         })
+    }
+    
+    func awake(){
+        self.scene.groowyCharacter.setImagePosition(position: CGPoint(x: self.spriteKit.frame.midX, y: self.spriteKit.frame.midY + self.spriteKit.frame.width / 2))
+        self.scene.groowyCharacter.changeGroowyAnimateState(nextState: .awake)
+        self.stayAwake()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,16 +93,17 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshData()
-        setupGameScene()
+        
         journalTableView.delegate = self
         journalTableView.dataSource = self
         journalTableView.reloadData()
-        
+        setupGameScene()
+        awake()
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        stayAwake()
+        
     }
     
     

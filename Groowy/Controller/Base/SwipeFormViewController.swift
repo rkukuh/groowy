@@ -10,6 +10,7 @@ import UIKit
 
 class SwipeFormViewController: UIViewController {
     
+    var isParentDismiss = false
     var previousVC:UIViewController?
     
     override func viewDidLoad() {
