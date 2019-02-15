@@ -25,33 +25,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupUserStateManage() {
-        let lastStateOfUser = User.state //UserState.dashboard // User.state
+        if let lastStateOfUser = UserState(rawValue: User.state) {
         
-        var storyBoardID = ""
-        var storyBoardName = ""
-        
-        switch lastStateOfUser {
-            case .introduction:
-                storyBoardName = "Main"
-                storyBoardID = "home"
-                break
-            case .deepUnderstanding:
-                storyBoardName = "Main"
-                storyBoardID = "create-challenge"
-                break
-            case .gift:
-                break
-            case .dashboard:
-                storyBoardName = "Main"
-                storyBoardID = "dashboard"
-                break
-        }
-        
-        if storyBoardID != "" && storyBoardName != "" {
-            let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
-            let viewController = storyboard.instantiateViewController(withIdentifier: storyBoardID)
+            var storyBoardID = ""
+            var storyBoardName = ""
             
-            setInitialViewController(viewController: viewController)
+            switch lastStateOfUser {
+                case .introduction:
+                    storyBoardName = "Main"
+                    storyBoardID = "home"
+                    break
+                case .deepUnderstanding:
+                    storyBoardName = "Jaya"
+                    storyBoardID = "deepUnderstanding"
+                    break
+                case .gift:
+                    break
+                case .dashboard:
+                    storyBoardName = "Main"
+                    storyBoardID = "dashboard"
+                    break
+            }
+            
+            if storyBoardID != "" && storyBoardName != "" {
+                let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: storyBoardID)
+                
+                setInitialViewController(viewController: viewController)
+            }
         }
     }
     
@@ -67,13 +68,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        GroowieSound.backSound.stop()
+        GroowieSound.stopBackSound()
+        GroowieSound.stopSoundEffect()
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        GroowieSound.backSound.play()
+        GroowieSound.startBackSound()
+        GroowieSound.startSoundEffect()
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
 

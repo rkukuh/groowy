@@ -35,6 +35,9 @@ class GiftViewController: UIViewController, MFMailComposeViewControllerDelegate,
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "dashboard") as! DashboardViewController
+        self.present(newViewController, animated: false, completion: nil)
     }
     
     override func viewDidLoad() {

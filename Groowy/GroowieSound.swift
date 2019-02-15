@@ -37,6 +37,7 @@ class GroowieSound {
             let soundBack = Bundle.main.path(forResource: sound.rawValue, ofType: "mp3")
             GroowieSound.backSound = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundBack!))
             GroowieSound.backSound.prepareToPlay()
+            GroowieSound.backSound.volume = 0.1
             GroowieSound.startBackSound()
         }catch{
             
@@ -86,8 +87,8 @@ class GroowieSound {
             let soundEffect = Bundle.main.path(forResource: GroowieSoundEnum.blink.rawValue, ofType: "mp3")
             GroowieSound.backSound = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundBack!))
             GroowieSound.backSound.prepareToPlay()
+            GroowieSound.backSound.numberOfLoops = -1
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
-            //GroowieSound.backSound.play()
             GroowieSound.soundEffect = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundEffect!))
             GroowieSound.soundEffect.prepareToPlay()
         }catch{

@@ -27,7 +27,6 @@ class SwipeUpStoryboardSegue: UIStoryboardSegue {
         
         let window = UIApplication.shared.keyWindow
         window?.insertSubview(secondView, aboveSubview: firstView)
-        print(screenHeight)
         UIView.animate(withDuration: 1.5, animations: {
             firstView.frame.origin.y -= screenHeight
             secondView.frame.origin.y -= screenHeight

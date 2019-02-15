@@ -25,7 +25,13 @@
 		4894D80C220D271D007F34F5 /* SwipeFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D80B220D271D007F34F5 /* SwipeFormViewController.swift */; };
 		4894D80F220D2929007F34F5 /* SwipeUpStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D80E220D2929007F34F5 /* SwipeUpStoryboardSegue.swift */; };
 		4894D812220D2AED007F34F5 /* UITextViewWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D811220D2AED007F34F5 /* UITextViewWithPlaceholder.swift */; };
+		4894D814220D31C2007F34F5 /* TitleCreateChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D813220D31C2007F34F5 /* TitleCreateChallengeViewController.swift */; };
+		4894D816220D32AD007F34F5 /* BodyCreateChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D815220D32AD007F34F5 /* BodyCreateChallengeViewController.swift */; };
 		4894D818220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4894D817220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift */; };
+		48A5F6232213C97700A6BE2A /* GoalCreateChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A5F6222213C97700A6BE2A /* GoalCreateChallengeViewController.swift */; };
+		48A5F6252213C98C00A6BE2A /* ReminderCreateChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A5F6242213C98C00A6BE2A /* ReminderCreateChallengeViewController.swift */; };
+		48A5F6272213C9AD00A6BE2A /* PromiseCreateChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A5F6262213C9AD00A6BE2A /* PromiseCreateChallengeViewController.swift */; };
+		48A5F6292213CF4000A6BE2A /* CreateChallengeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A5F6282213CF4000A6BE2A /* CreateChallengeControllerViewController.swift */; };
 		48A5F62B2213D1AE00A6BE2A /* UIViewNextQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A5F62A2213D1AE00A6BE2A /* UIViewNextQuestion.swift */; };
 		48A5F62E2213D1F600A6BE2A /* UIViewNextQuestion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A5F62D2213D1F600A6BE2A /* UIViewNextQuestion.xib */; };
 		48C3E1212215154C00DA1E7F /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3E11E2215154C00DA1E7F /* Gift.swift */; };
@@ -34,6 +40,7 @@
 		48C3E1242215169600DA1E7F /* blink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1A52C632214F1F600365D2A /* blink.mp3 */; };
 		48C3E1252215169E00DA1E7F /* sound-smile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B16F686B221423B5008BA51D /* sound-smile.mp3 */; };
 		48C3E12722151A4000DA1E7F /* GroowySleep.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 48C3E12622151A1100DA1E7F /* GroowySleep.atlas */; };
+		48C3E12922155CF100DA1E7F /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3E12822155CF100DA1E7F /* GiftViewController.swift */; };
 		4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F1220AD12700C180F9 /* AppDelegate.swift */; };
 		4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4F5220AD12700C180F9 /* Main.storyboard */; };
 		4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4FB220AD12800C180F9 /* Assets.xcassets */; };
@@ -45,6 +52,7 @@
 		4A3D97482214FE260011D25D /* Answer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D973B2214FE250011D25D /* Answer+CoreDataProperties.swift */; };
 		4A3D97492214FE260011D25D /* Answer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D973C2214FE250011D25D /* Answer+CoreDataClass.swift */; };
 		4A3D974A2214FE260011D25D /* Groowy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D973D2214FE250011D25D /* Groowy.xcdatamodeld */; };
+		4A3D974B2214FE260011D25D /* Reflection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D973F2214FE260011D25D /* Reflection+CoreDataProperties.swift */; };
 		4A3D974C2214FE260011D25D /* Reflection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D97402214FE260011D25D /* Reflection+CoreDataClass.swift */; };
 		4A3D974D2214FE260011D25D /* Challenge+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D97412214FE260011D25D /* Challenge+CoreDataClass.swift */; };
 		4A3D974E2214FE260011D25D /* Challenge+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3D97422214FE260011D25D /* Challenge+CoreDataProperties.swift */; };
@@ -64,19 +72,15 @@
 		4A5EA3A72211555500DEAD49 /* DialogAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A62211555500DEAD49 /* DialogAnswer.swift */; };
 		4A5EA3A92211562E00DEAD49 /* DialogState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3A82211562E00DEAD49 /* DialogState.swift */; };
 		4A5EA3AB2211567300DEAD49 /* DialogRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EA3AA2211567300DEAD49 /* DialogRule.swift */; };
-		4A85B10C22167AE00035B457 /* GoalCreateChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B10622167AE00035B457 /* GoalCreateChallengeViewController.swift */; };
-		4A85B10D22167AE00035B457 /* BodyCreateChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B10722167AE00035B457 /* BodyCreateChallengeViewController.swift */; };
-		4A85B10E22167AE00035B457 /* CreateChallengeControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B10822167AE00035B457 /* CreateChallengeControllerViewController.swift */; };
-		4A85B10F22167AE00035B457 /* PromiseCreateChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B10922167AE00035B457 /* PromiseCreateChallengeViewController.swift */; };
-		4A85B11022167AE00035B457 /* ReminderCreateChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B10A22167AE00035B457 /* ReminderCreateChallengeViewController.swift */; };
-		4A85B11122167AE00035B457 /* TitleCreateChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B10B22167AE00035B457 /* TitleCreateChallengeViewController.swift */; };
-		4A85B11322167AEC0035B457 /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B11222167AEC0035B457 /* GiftViewController.swift */; };
-		4A85B11522167B560035B457 /* Reflection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A85B11422167B560035B457 /* Reflection+CoreDataProperties.swift */; };
 		B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */; };
 		B14F69E4220BF14300D82D5B /* EyeSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E3220BF14300D82D5B /* EyeSKScene.swift */; };
 		B16F686D221423B5008BA51D /* sound-hey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B16F686A221423B4008BA51D /* sound-hey.mp3 */; };
+		B1811B7F221654330064F286 /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1811B7E221654330064F286 /* ForceTouchGestureRecognizer.swift */; };
 		B1A52C662214F3FC00365D2A /* GroowieSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C652214F3FC00365D2A /* GroowieSound.swift */; };
 		B1A52C6822150E8600365D2A /* snooring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1A52C6722150E8600365D2A /* snooring.mp3 */; };
+		B1A52C6A221527F300365D2A /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C69221527F300365D2A /* JournalViewController.swift */; };
+		B1A52C6C22152CB100365D2A /* ContohTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C6B22152CB100365D2A /* ContohTableViewController.swift */; };
+		B1A52C6E221559DD00365D2A /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C6D221559DD00365D2A /* JournalTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,13 +102,20 @@
 		4894D80B220D271D007F34F5 /* SwipeFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeFormViewController.swift; sourceTree = "<group>"; };
 		4894D80E220D2929007F34F5 /* SwipeUpStoryboardSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeUpStoryboardSegue.swift; sourceTree = "<group>"; };
 		4894D811220D2AED007F34F5 /* UITextViewWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewWithPlaceholder.swift; sourceTree = "<group>"; };
+		4894D813220D31C2007F34F5 /* TitleCreateChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCreateChallengeViewController.swift; sourceTree = "<group>"; };
+		4894D815220D32AD007F34F5 /* BodyCreateChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCreateChallengeViewController.swift; sourceTree = "<group>"; };
 		4894D817220D34EF007F34F5 /* UITextViewWithPlaceholderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewWithPlaceholderProtocol.swift; sourceTree = "<group>"; };
+		48A5F6222213C97700A6BE2A /* GoalCreateChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCreateChallengeViewController.swift; sourceTree = "<group>"; };
+		48A5F6242213C98C00A6BE2A /* ReminderCreateChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCreateChallengeViewController.swift; sourceTree = "<group>"; };
+		48A5F6262213C9AD00A6BE2A /* PromiseCreateChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseCreateChallengeViewController.swift; sourceTree = "<group>"; };
+		48A5F6282213CF4000A6BE2A /* CreateChallengeControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeControllerViewController.swift; sourceTree = "<group>"; };
 		48A5F62A2213D1AE00A6BE2A /* UIViewNextQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewNextQuestion.swift; sourceTree = "<group>"; };
 		48A5F62D2213D1F600A6BE2A /* UIViewNextQuestion.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIViewNextQuestion.xib; sourceTree = "<group>"; };
 		48C3E11E2215154C00DA1E7F /* Gift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
 		48C3E11F2215154C00DA1E7F /* GiftCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftCategory.swift; sourceTree = "<group>"; };
 		48C3E1202215154C00DA1E7F /* GiftData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftData.swift; sourceTree = "<group>"; };
 		48C3E12622151A1100DA1E7F /* GroowySleep.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowySleep.atlas; sourceTree = "<group>"; };
+		48C3E12822155CF100DA1E7F /* GiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 		4A33E4EE220AD12700C180F9 /* Groowy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groowy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A33E4F1220AD12700C180F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A33E4F6220AD12700C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +129,7 @@
 		4A3D973B2214FE250011D25D /* Answer+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Answer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4A3D973C2214FE250011D25D /* Answer+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Answer+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4A3D973E2214FE260011D25D /* Groowy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Groowy.xcdatamodel; sourceTree = "<group>"; };
+		4A3D973F2214FE260011D25D /* Reflection+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reflection+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4A3D97402214FE260011D25D /* Reflection+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reflection+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4A3D97412214FE260011D25D /* Challenge+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Challenge+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4A3D97422214FE260011D25D /* Challenge+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Challenge+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -137,22 +149,18 @@
 		4A5EA3A62211555500DEAD49 /* DialogAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogAnswer.swift; sourceTree = "<group>"; };
 		4A5EA3A82211562E00DEAD49 /* DialogState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogState.swift; sourceTree = "<group>"; };
 		4A5EA3AA2211567300DEAD49 /* DialogRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogRule.swift; sourceTree = "<group>"; };
-		4A85B10622167AE00035B457 /* GoalCreateChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalCreateChallengeViewController.swift; sourceTree = "<group>"; };
-		4A85B10722167AE00035B457 /* BodyCreateChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyCreateChallengeViewController.swift; sourceTree = "<group>"; };
-		4A85B10822167AE00035B457 /* CreateChallengeControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChallengeControllerViewController.swift; sourceTree = "<group>"; };
-		4A85B10922167AE00035B457 /* PromiseCreateChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseCreateChallengeViewController.swift; sourceTree = "<group>"; };
-		4A85B10A22167AE00035B457 /* ReminderCreateChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderCreateChallengeViewController.swift; sourceTree = "<group>"; };
-		4A85B10B22167AE00035B457 /* TitleCreateChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCreateChallengeViewController.swift; sourceTree = "<group>"; };
-		4A85B11222167AEC0035B457 /* GiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
-		4A85B11422167B560035B457 /* Reflection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reflection+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveAppleViewController.swift; sourceTree = "<group>"; };
 		B14F69E3220BF14300D82D5B /* EyeSKScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeSKScene.swift; sourceTree = "<group>"; };
 		B16F6869221423B4008BA51D /* bensound-goinghigher.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-goinghigher.mp3"; sourceTree = "<group>"; };
 		B16F686A221423B4008BA51D /* sound-hey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-hey.mp3"; sourceTree = "<group>"; };
 		B16F686B221423B5008BA51D /* sound-smile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-smile.mp3"; sourceTree = "<group>"; };
+		B1811B7E221654330064F286 /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
 		B1A52C632214F1F600365D2A /* blink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blink.mp3; sourceTree = "<group>"; };
 		B1A52C652214F3FC00365D2A /* GroowieSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroowieSound.swift; sourceTree = "<group>"; };
 		B1A52C6722150E8600365D2A /* snooring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snooring.mp3; sourceTree = "<group>"; };
+		B1A52C69221527F300365D2A /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		B1A52C6B22152CB100365D2A /* ContohTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContohTableViewController.swift; sourceTree = "<group>"; };
+		B1A52C6D221559DD00365D2A /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,17 +200,20 @@
 		4894D7A7220BC32A007F34F5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				48C3E12822155CF100DA1E7F /* GiftViewController.swift */,
 				48A5F6212213C60000A6BE2A /* Base */,
 				48A5F6202213C5F400A6BE2A /* Create Challenge */,
 				4894D80D220D290B007F34F5 /* Segue */,
 				B14F69E3220BF14300D82D5B /* EyeSKScene.swift */,
 				4894D7BC220BC97E007F34F5 /* GameScene.swift */,
-				4A85B11222167AEC0035B457 /* GiftViewController.swift */,
 				4894D7B1220BC564007F34F5 /* HomeViewController.swift */,
 				4A3D97372214FE020011D25D /* DialogViewController.swift */,
 				4A3D97362214FE020011D25D /* MotivationViewController.swift */,
 				B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */,
 				4845900D22150BD800508FCB /* DashboardViewController.swift */,
+				B1A52C69221527F300365D2A /* JournalViewController.swift */,
+				B1A52C6B22152CB100365D2A /* ContohTableViewController.swift */,
+				B1A52C6D221559DD00365D2A /* JournalTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,12 +286,12 @@
 		48A5F6202213C5F400A6BE2A /* Create Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				4A85B10722167AE00035B457 /* BodyCreateChallengeViewController.swift */,
-				4A85B10822167AE00035B457 /* CreateChallengeControllerViewController.swift */,
-				4A85B10622167AE00035B457 /* GoalCreateChallengeViewController.swift */,
-				4A85B10922167AE00035B457 /* PromiseCreateChallengeViewController.swift */,
-				4A85B10A22167AE00035B457 /* ReminderCreateChallengeViewController.swift */,
-				4A85B10B22167AE00035B457 /* TitleCreateChallengeViewController.swift */,
+				48A5F6282213CF4000A6BE2A /* CreateChallengeControllerViewController.swift */,
+				4894D813220D31C2007F34F5 /* TitleCreateChallengeViewController.swift */,
+				4894D815220D32AD007F34F5 /* BodyCreateChallengeViewController.swift */,
+				48A5F6222213C97700A6BE2A /* GoalCreateChallengeViewController.swift */,
+				48A5F6242213C98C00A6BE2A /* ReminderCreateChallengeViewController.swift */,
+				48A5F6262213C9AD00A6BE2A /* PromiseCreateChallengeViewController.swift */,
 			);
 			path = "Create Challenge";
 			sourceTree = "<group>";
@@ -351,6 +362,7 @@
 				4A33E4F1220AD12700C180F9 /* AppDelegate.swift */,
 				4A33E500220AD12800C180F9 /* Info.plist */,
 				B1A52C652214F3FC00365D2A /* GroowieSound.swift */,
+				B1811B7E221654330064F286 /* ForceTouchGestureRecognizer.swift */,
 			);
 			path = Groowy;
 			sourceTree = "<group>";
@@ -376,12 +388,12 @@
 			isa = PBXGroup;
 			children = (
 				4A3D973D2214FE250011D25D /* Groowy.xcdatamodeld */,
-				4A3D97412214FE260011D25D /* Challenge+CoreDataClass.swift */,
-				4A3D97402214FE260011D25D /* Reflection+CoreDataClass.swift */,
-				4A3D973C2214FE250011D25D /* Answer+CoreDataClass.swift */,
-				4A3D97422214FE260011D25D /* Challenge+CoreDataProperties.swift */,
-				4A85B11422167B560035B457 /* Reflection+CoreDataProperties.swift */,
 				4A3D973B2214FE250011D25D /* Answer+CoreDataProperties.swift */,
+				4A3D973C2214FE250011D25D /* Answer+CoreDataClass.swift */,
+				4A3D973F2214FE260011D25D /* Reflection+CoreDataProperties.swift */,
+				4A3D97402214FE260011D25D /* Reflection+CoreDataClass.swift */,
+				4A3D97412214FE260011D25D /* Challenge+CoreDataClass.swift */,
+				4A3D97422214FE260011D25D /* Challenge+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -554,16 +566,19 @@
 				4894D7C0220BC9BC007F34F5 /* ColorTheme.swift in Sources */,
 				4A5EA3A72211555500DEAD49 /* DialogAnswer.swift in Sources */,
 				4A5EA3A02211482500DEAD49 /* UIAnswerBodyView.swift in Sources */,
+				B1A52C6C22152CB100365D2A /* ContohTableViewController.swift in Sources */,
 				4A3D97562214FE450011D25D /* UIGiftView.swift in Sources */,
 				4A5EA3A92211562E00DEAD49 /* DialogState.swift in Sources */,
 				4A5EA3AB2211567300DEAD49 /* DialogRule.swift in Sources */,
 				B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */,
 				48A5F62B2213D1AE00A6BE2A /* UIViewNextQuestion.swift in Sources */,
+				48A5F6252213C98C00A6BE2A /* ReminderCreateChallengeViewController.swift in Sources */,
+				B1A52C6E221559DD00365D2A /* JournalTableViewCell.swift in Sources */,
+				B1A52C6A221527F300365D2A /* JournalViewController.swift in Sources */,
 				4A3D974A2214FE260011D25D /* Groowy.xcdatamodeld in Sources */,
 				48C3E1212215154C00DA1E7F /* Gift.swift in Sources */,
 				4894D812220D2AED007F34F5 /* UITextViewWithPlaceholder.swift in Sources */,
 				4A3D974D2214FE260011D25D /* Challenge+CoreDataClass.swift in Sources */,
-				4A85B11122167AE00035B457 /* TitleCreateChallengeViewController.swift in Sources */,
 				4A3D974C2214FE260011D25D /* Reflection+CoreDataClass.swift in Sources */,
 				4A3D97502214FE260011D25D /* Motivation.swift in Sources */,
 				4A5EA39E2211482500DEAD49 /* UICustomTextViewView.swift in Sources */,
@@ -575,27 +590,28 @@
 				4A5EA3A52211552D00DEAD49 /* Dialog.swift in Sources */,
 				4A3D97492214FE260011D25D /* Answer+CoreDataClass.swift in Sources */,
 				4894D80C220D271D007F34F5 /* SwipeFormViewController.swift in Sources */,
-				4A85B10E22167AE00035B457 /* CreateChallengeControllerViewController.swift in Sources */,
 				4894C2C92212625000E2AB6F /* User.swift in Sources */,
 				48C3E1222215154C00DA1E7F /* GiftCategory.swift in Sources */,
 				4894D7C6220BCF4E007F34F5 /* UITextFieldInputAccessoryView.swift in Sources */,
 				4A3D974E2214FE260011D25D /* Challenge+CoreDataProperties.swift in Sources */,
+				4894D816220D32AD007F34F5 /* BodyCreateChallengeViewController.swift in Sources */,
 				4894D7A6220BC31F007F34F5 /* BaseModel.swift in Sources */,
-				4A85B11022167AE00035B457 /* ReminderCreateChallengeViewController.swift in Sources */,
-				4A85B11522167B560035B457 /* Reflection+CoreDataProperties.swift in Sources */,
-				4A85B10D22167AE00035B457 /* BodyCreateChallengeViewController.swift in Sources */,
 				B1A52C662214F3FC00365D2A /* GroowieSound.swift in Sources */,
-				4A85B11322167AEC0035B457 /* GiftViewController.swift in Sources */,
 				4894C2CD221263B400E2AB6F /* UITextFieldInputAccessoryViewDelegate.swift in Sources */,
+				48A5F6272213C9AD00A6BE2A /* PromiseCreateChallengeViewController.swift in Sources */,
+				48C3E12922155CF100DA1E7F /* GiftViewController.swift in Sources */,
 				48C3E1232215154C00DA1E7F /* GiftData.swift in Sources */,
+				B1811B7F221654330064F286 /* ForceTouchGestureRecognizer.swift in Sources */,
 				4894D80F220D2929007F34F5 /* SwipeUpStoryboardSegue.swift in Sources */,
 				4A3D97512214FE260011D25D /* ChallengeStatus.swift in Sources */,
 				4894D7B7220BC623007F34F5 /* GroowyAnimationState.swift in Sources */,
+				4A3D974B2214FE260011D25D /* Reflection+CoreDataProperties.swift in Sources */,
 				4A3D97382214FE020011D25D /* MotivationViewController.swift in Sources */,
 				4A3D974F2214FE260011D25D /* MotivationCategory.swift in Sources */,
+				4894D814220D31C2007F34F5 /* TitleCreateChallengeViewController.swift in Sources */,
+				48A5F6292213CF4000A6BE2A /* CreateChallengeControllerViewController.swift in Sources */,
 				4894D7BA220BC661007F34F5 /* SpriteKitExtension.swift in Sources */,
-				4A85B10C22167AE00035B457 /* GoalCreateChallengeViewController.swift in Sources */,
-				4A85B10F22167AE00035B457 /* PromiseCreateChallengeViewController.swift in Sources */,
+				48A5F6232213C97700A6BE2A /* GoalCreateChallengeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,7 +774,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57VL32B9VS;
+				DEVELOPMENT_TEAM = 9MC3BZBH48;
 				INFOPLIST_FILE = Groowy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -777,7 +793,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57VL32B9VS;
+				DEVELOPMENT_TEAM = 9MC3BZBH48;
 				INFOPLIST_FILE = Groowy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
