@@ -21,6 +21,9 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var journalTableView: UITableView!
     
     
+    @IBAction func closeJournal(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let sections = fetchedResults.sections,

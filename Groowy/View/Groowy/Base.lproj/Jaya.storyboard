@@ -287,6 +287,13 @@
                             <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9Y-KN-gD3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </skView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2he-us-19A">
+                                <rect key="frame" x="329" y="44" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="✕">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bhe-cI-7cf" userLabel="ViewSpace135">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -338,8 +345,10 @@
                             <constraint firstItem="tj6-c0-Ucm" firstAttribute="top" secondItem="m9Y-KN-gD3" secondAttribute="top" constant="20" id="i06-LC-yxo"/>
                             <constraint firstItem="tj6-c0-Ucm" firstAttribute="trailing" secondItem="ig3-Cb-sn7" secondAttribute="trailing" id="kKZ-mb-Ad2"/>
                             <constraint firstItem="Lip-oN-kiy" firstAttribute="leading" secondItem="tj6-c0-Ucm" secondAttribute="leading" id="luc-A2-Mau"/>
+                            <constraint firstItem="tj6-c0-Ucm" firstAttribute="trailing" secondItem="2he-us-19A" secondAttribute="trailing" constant="16" id="nW4-uX-v1h"/>
                             <constraint firstItem="Bhe-cI-7cf" firstAttribute="height" secondItem="vGH-fe-kPe" secondAttribute="height" multiplier="0.2024" id="pDV-UO-g0j"/>
                             <constraint firstItem="foB-Ss-Sww" firstAttribute="height" secondItem="vGH-fe-kPe" secondAttribute="height" multiplier="0.0315" id="sMT-V5-cLs"/>
+                            <constraint firstItem="2he-us-19A" firstAttribute="top" secondItem="tj6-c0-Ucm" secondAttribute="top" constant="24" id="uUD-TN-Vrg"/>
                             <constraint firstAttribute="top" secondItem="Bhe-cI-7cf" secondAttribute="top" id="vE9-0H-Y3L"/>
                             <constraint firstItem="tj6-c0-Ucm" firstAttribute="trailing" secondItem="cby-1q-zaU" secondAttribute="trailing" id="yzP-dM-Jjq"/>
                             <constraint firstItem="WlF-JB-aRJ" firstAttribute="leading" secondItem="tj6-c0-Ucm" secondAttribute="leading" id="zor-km-ROf"/>
@@ -365,6 +374,16 @@
                             <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hM-0w-NBI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </skView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7F-uZ-03p">
+                                <rect key="frame" x="329" y="44" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="✕">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeJournal:" destination="fVh-Ue-LXZ" eventType="touchUpInside" id="iWR-7i-AUk"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldL-Zb-ORl" userLabel="ViewSpace135">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -450,6 +469,7 @@
                             <constraint firstItem="8FD-iE-TSd" firstAttribute="top" secondItem="VJP-XX-as9" secondAttribute="bottom" id="EUt-Gb-v8N"/>
                             <constraint firstItem="VJP-XX-as9" firstAttribute="leading" secondItem="wkO-P9-Edm" secondAttribute="leading" id="GNk-mf-3kO"/>
                             <constraint firstItem="VJP-XX-as9" firstAttribute="top" secondItem="znE-QE-vO7" secondAttribute="bottom" id="IhG-AE-NDf"/>
+                            <constraint firstItem="N7F-uZ-03p" firstAttribute="top" secondItem="wkO-P9-Edm" secondAttribute="top" constant="24" id="LSG-nW-Gqs"/>
                             <constraint firstItem="znE-QE-vO7" firstAttribute="height" secondItem="Wui-nZ-VYU" secondAttribute="height" multiplier="0.0554" id="QOk-op-eUR"/>
                             <constraint firstItem="wkO-P9-Edm" firstAttribute="trailing" secondItem="j8i-Fo-qMV" secondAttribute="trailing" id="QZn-oS-gMM"/>
                             <constraint firstItem="znE-QE-vO7" firstAttribute="leading" secondItem="wkO-P9-Edm" secondAttribute="leading" id="Ymb-sA-OX4"/>
@@ -457,6 +477,7 @@
                             <constraint firstItem="6hM-0w-NBI" firstAttribute="top" secondItem="Wui-nZ-VYU" secondAttribute="top" id="aXX-RU-lnf"/>
                             <constraint firstItem="wkO-P9-Edm" firstAttribute="top" secondItem="ldL-Zb-ORl" secondAttribute="top" constant="20" id="bCu-sw-d1M"/>
                             <constraint firstItem="3QU-bP-QhO" firstAttribute="height" secondItem="6hM-0w-NBI" secondAttribute="height" multiplier="0.174" id="blh-i6-7aO"/>
+                            <constraint firstItem="wkO-P9-Edm" firstAttribute="trailing" secondItem="N7F-uZ-03p" secondAttribute="trailing" constant="16" id="i3j-Pf-u71"/>
                             <constraint firstItem="8FD-iE-TSd" firstAttribute="height" secondItem="Wui-nZ-VYU" secondAttribute="height" multiplier="0.08" id="ing-MH-zTt"/>
                             <constraint firstItem="j8i-Fo-qMV" firstAttribute="top" secondItem="8FD-iE-TSd" secondAttribute="bottom" id="jiV-te-puo"/>
                             <constraint firstItem="ldL-Zb-ORl" firstAttribute="height" secondItem="Wui-nZ-VYU" secondAttribute="height" multiplier="0.2024" id="kAj-ve-ViH"/>
