@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     break
                 case .dashboard:
                     storyBoardName = "Main"
-                    storyBoardID = "reflection"
+                    storyBoardID = "dashboard"
                     break
             }
             

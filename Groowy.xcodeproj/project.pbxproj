@@ -43,6 +43,9 @@
 		48C3E12922155CF100DA1E7F /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3E12822155CF100DA1E7F /* GiftViewController.swift */; };
 		48C3E12B2216577500DA1E7F /* GroowyHappy.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 48C3E12A2216577500DA1E7F /* GroowyHappy.atlas */; };
 		48C3E12F22167C3A00DA1E7F /* ReflectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3E12E22167C3A00DA1E7F /* ReflectionViewController.swift */; };
+		48C3E1322216A94600DA1E7F /* UITextViewInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48C3E1312216A94600DA1E7F /* UITextViewInputAccessoryView.xib */; };
+		48C3E1342216A9E200DA1E7F /* UITextViewInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3E1332216A9E200DA1E7F /* UITextViewInputAccessoryView.swift */; };
+		48C3E1362216AA0600DA1E7F /* UITextViewInputAccessoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3E1352216AA0600DA1E7F /* UITextViewInputAccessoryViewDelegate.swift */; };
 		4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F1220AD12700C180F9 /* AppDelegate.swift */; };
 		4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4F5220AD12700C180F9 /* Main.storyboard */; };
 		4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4FB220AD12800C180F9 /* Assets.xcassets */; };
@@ -120,6 +123,9 @@
 		48C3E12822155CF100DA1E7F /* GiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 		48C3E12A2216577500DA1E7F /* GroowyHappy.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyHappy.atlas; sourceTree = "<group>"; };
 		48C3E12E22167C3A00DA1E7F /* ReflectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionViewController.swift; sourceTree = "<group>"; };
+		48C3E1312216A94600DA1E7F /* UITextViewInputAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextViewInputAccessoryView.xib; sourceTree = "<group>"; };
+		48C3E1332216A9E200DA1E7F /* UITextViewInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewInputAccessoryView.swift; sourceTree = "<group>"; };
+		48C3E1352216AA0600DA1E7F /* UITextViewInputAccessoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewInputAccessoryViewDelegate.swift; sourceTree = "<group>"; };
 		4A33E4EE220AD12700C180F9 /* Groowy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groowy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A33E4F1220AD12700C180F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A33E4F6220AD12700C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -336,6 +342,16 @@
 			path = Gift;
 			sourceTree = "<group>";
 		};
+		48C3E1302216A92700DA1E7F /* UITextViewInputAccessoryView */ = {
+			isa = PBXGroup;
+			children = (
+				48C3E1312216A94600DA1E7F /* UITextViewInputAccessoryView.xib */,
+				48C3E1332216A9E200DA1E7F /* UITextViewInputAccessoryView.swift */,
+				48C3E1352216AA0600DA1E7F /* UITextViewInputAccessoryViewDelegate.swift */,
+			);
+			path = UITextViewInputAccessoryView;
+			sourceTree = "<group>";
+		};
 		4A33E4E5220AD12700C180F9 = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +392,7 @@
 		4A33E50D220ADE8900C180F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				48C3E1302216A92700DA1E7F /* UITextViewInputAccessoryView */,
 				4A3D97522214FE450011D25D /* UIGift */,
 				48A5F62C2213D1DB00A6BE2A /* UIViewNextQuestion */,
 				4A5EA39A2211482500DEAD49 /* UIAnswerBody */,
@@ -550,6 +567,7 @@
 				4A3D97572214FE450011D25D /* UIGift.xib in Resources */,
 				4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */,
 				4A3D975B2214FF2D0011D25D /* GroowyFullyAwake.atlas in Resources */,
+				48C3E1322216A94600DA1E7F /* UITextViewInputAccessoryView.xib in Resources */,
 				4A33E508220ADA0300C180F9 /* Jaya.storyboard in Resources */,
 				4A33E50B220ADA4000C180F9 /* Kukuh.storyboard in Resources */,
 				4894D7B0220BC3E8007F34F5 /* GroowyAsleep.atlas in Resources */,
@@ -581,6 +599,7 @@
 				48A5F62B2213D1AE00A6BE2A /* UIViewNextQuestion.swift in Sources */,
 				48A5F6252213C98C00A6BE2A /* ReminderCreateChallengeViewController.swift in Sources */,
 				B1A52C6E221559DD00365D2A /* JournalTableViewCell.swift in Sources */,
+				48C3E1362216AA0600DA1E7F /* UITextViewInputAccessoryViewDelegate.swift in Sources */,
 				B1A52C6A221527F300365D2A /* JournalViewController.swift in Sources */,
 				4A3D974A2214FE260011D25D /* Groowy.xcdatamodeld in Sources */,
 				48C3E1212215154C00DA1E7F /* Gift.swift in Sources */,
@@ -607,6 +626,7 @@
 				4894C2CD221263B400E2AB6F /* UITextFieldInputAccessoryViewDelegate.swift in Sources */,
 				48C3E12F22167C3A00DA1E7F /* ReflectionViewController.swift in Sources */,
 				48A5F6272213C9AD00A6BE2A /* PromiseCreateChallengeViewController.swift in Sources */,
+				48C3E1342216A9E200DA1E7F /* UITextViewInputAccessoryView.swift in Sources */,
 				48C3E12922155CF100DA1E7F /* GiftViewController.swift in Sources */,
 				48C3E1232215154C00DA1E7F /* GiftData.swift in Sources */,
 				B1811B7F221654330064F286 /* ForceTouchGestureRecognizer.swift in Sources */,
