@@ -34,6 +34,9 @@ class PromiseCreateChallengeViewController: SwipeFormViewController {
                         if (force > 0.8 && oke == false){
                             oke = true
                             notification.notificationOccurred(.success)
+                            self.createChallengeController?.didPromiseTap()
+                            self.isParentDismiss = true
+                            self.dismiss(animated: true, completion: nil)
                         }
                         if (force <= 0.5){oke = false }
                         print("\(force)%force")
