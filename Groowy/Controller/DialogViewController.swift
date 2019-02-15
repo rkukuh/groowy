@@ -17,6 +17,7 @@ class DialogViewController: UIViewController {
     var textFieldInput: UICustomTextViewView?
     var deepUnderstandingDialog = DialogRule()
     
+    @IBOutlet weak var tapToContinueLabel: UILabel!
     @IBOutlet weak var bottomView: UIAnswerBodyView!
     @IBOutlet weak var spriteKitView: SKView!
     
@@ -31,9 +32,11 @@ class DialogViewController: UIViewController {
         spriteKitView.ignoresSiblingOrder = true
         spriteKitView.presentScene(scene)
         textFieldInput = UICustomTextViewView(view: view)
+        
         loadDialogData()
         setupCurrentDialog()
         
+        tapToContinueLabel.isHidden = true
         bottomView.topButton.addTarget(self, action: #selector(actionButtonTop), for: .touchUpInside)
         bottomView.bottomButton.addTarget(self, action: #selector(actionButtonBottom), for: .touchUpInside)
     }
@@ -42,13 +45,16 @@ class DialogViewController: UIViewController {
         textFieldInput!.startAnimationSelf()
         scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
         stayAwake()
+        GroowieSound.changeBackSound(sound: .smile)
+        GroowieSound.startBackSound()
+        GroowieSound.startSoundEffect()
     }
     // MARK: - Action buttons
     @objc func actionButtonTop(_sender: UIButton){
         if currentDialog.nextState(answerIndex: 0) == true{
             updateDialog()
         }else{
-            bottomView.bottomButton.isHidden = true
+            tapToContinueLabel.isHidden = false
             bottomView.topButton.isHidden = true
             updateDialog()
             bottomView.removeFromSuperview()
@@ -60,8 +66,8 @@ class DialogViewController: UIViewController {
         if currentDialog.nextState(answerIndex: 1) == true{
             updateDialog()
         }else{
+            tapToContinueLabel.isHidden = false
             bottomView.bottomButton.isHidden = true
-            bottomView.topButton.isHidden = true
             updateDialog()
             bottomView.removeFromSuperview()
             bottomView = nil
@@ -82,45 +88,54 @@ class DialogViewController: UIViewController {
         deepUnderstandingDialog.category = "Deep Understanding dialog"
         
         let dialogs = [
-            Dialog("Are you ready to take challenges in this Academy?"),
-            Dialog("Why? Are you going to avoid a challenge?"),
-            Dialog("Don't you want to even try?"),
-            Dialog("Great! We should face the challenge and not giving up easily, aren't we?"),
+            Dialog("Congratulations! You are the choosen from many candidates out there to join this Academy"),
+            Dialog("Before we started, I want to ask you some question..."),
+            Dialog("Are you ready to take any challenges in this Academy?"),
+            Dialog("Why? Do you mean to avoid challenges?"),
+            Dialog("But at least, you want to try, aren't you?"),
+            Dialog("Great! We should face it and never give up, right?"),
             Dialog("Why? How do you see an effort as?"),
-            Dialog("Don't you want to be successful? Don't you know it takes an effort?"),
-            Dialog("How you can be successful if you never give a try?"),
-            Dialog("Well, that's for your sake. Try to accept a critic as an improvement"),
-            Dialog("Great! That's the right mindset that you have"),
+            Dialog("Don't you want to make it happen? It will take much effort, isn't it?"),
+            Dialog("How it is possible if you don't want to create any efforts?"),
+            Dialog("I will give you this. Take any challenges and re-evaluate criticize as you do take a medicine"),
+            Dialog("Great! I know why this Academy choose you. It's the right-mindset that you have"),
+            Dialog("OK. Let's we start our Journey"),
         ]
         
         deepUnderstandingDialog.dialogs.append(contentsOf: dialogs)
         
-        deepUnderstandingDialog.dialogs[0].answers.append(DialogAnswer("Sure!", then: deepUnderstandingDialog.dialogs[2]))
-        deepUnderstandingDialog.dialogs[0].answers.append(DialogAnswer("Not Sure", then: deepUnderstandingDialog.dialogs[1]))
+        deepUnderstandingDialog.dialogs[0].answers.append(DialogAnswer("Yeah! 💪", then: deepUnderstandingDialog.dialogs[1]))
+        deepUnderstandingDialog.dialogs[0].answers.append(DialogAnswer("Thank you 😆", then: deepUnderstandingDialog.dialogs[1]))
         
-        deepUnderstandingDialog.dialogs[1].answers.append(DialogAnswer("No", then: deepUnderstandingDialog.dialogs[3]))
-        deepUnderstandingDialog.dialogs[1].answers.append(DialogAnswer("Yes", then: deepUnderstandingDialog.dialogs[2]))
+        deepUnderstandingDialog.dialogs[1].answers.append(DialogAnswer("OK", then: deepUnderstandingDialog.dialogs[2]))
+        deepUnderstandingDialog.dialogs[1].answers.append(DialogAnswer("I hope it will be quick", then: deepUnderstandingDialog.dialogs[2]))
         
-        deepUnderstandingDialog.dialogs[2].answers.append(DialogAnswer("Yes", then: deepUnderstandingDialog.dialogs[3]))
-        deepUnderstandingDialog.dialogs[2].answers.append(DialogAnswer("I'll Try", then: deepUnderstandingDialog.dialogs[3]))
+        deepUnderstandingDialog.dialogs[2].answers.append(DialogAnswer("Sure", then: deepUnderstandingDialog.dialogs[5]))
+        deepUnderstandingDialog.dialogs[2].answers.append(DialogAnswer("I'm not sure", then: deepUnderstandingDialog.dialogs[3]))
         
-        deepUnderstandingDialog.dialogs[3].answers.append(DialogAnswer("Sure", then: deepUnderstandingDialog.dialogs[8]))
-        deepUnderstandingDialog.dialogs[3].answers.append(DialogAnswer("Not sure", then: deepUnderstandingDialog.dialogs[4]))
+        deepUnderstandingDialog.dialogs[3].answers.append(DialogAnswer("Nope", then: deepUnderstandingDialog.dialogs[5]))
+        deepUnderstandingDialog.dialogs[3].answers.append(DialogAnswer("Yes", then: deepUnderstandingDialog.dialogs[4]))
         
-        deepUnderstandingDialog.dialogs[4].answers.append(DialogAnswer("The Path to Mastery", then: deepUnderstandingDialog.dialogs[8]))
-        deepUnderstandingDialog.dialogs[4].answers.append(DialogAnswer("Fruitless", then: deepUnderstandingDialog.dialogs[5]))
+        deepUnderstandingDialog.dialogs[4].answers.append(DialogAnswer("Yeah", then: deepUnderstandingDialog.dialogs[5]))
+        deepUnderstandingDialog.dialogs[4].answers.append(DialogAnswer("I'll Try", then: deepUnderstandingDialog.dialogs[5]))
         
-        deepUnderstandingDialog.dialogs[5].answers.append(DialogAnswer("OK, Sure", then: deepUnderstandingDialog.dialogs[8]))
-        deepUnderstandingDialog.dialogs[5].answers.append(DialogAnswer("Not Really", then: deepUnderstandingDialog.dialogs[6]))
+        deepUnderstandingDialog.dialogs[5].answers.append(DialogAnswer("Sure", then: deepUnderstandingDialog.dialogs[10]))
+        deepUnderstandingDialog.dialogs[5].answers.append(DialogAnswer("Not sure", then: deepUnderstandingDialog.dialogs[6]))
         
-        deepUnderstandingDialog.dialogs[6].answers.append(DialogAnswer("You are right. I got it", then: deepUnderstandingDialog.dialogs[8]))
-        deepUnderstandingDialog.dialogs[6].answers.append(DialogAnswer("Still No...", then: deepUnderstandingDialog.dialogs[7]))
+        deepUnderstandingDialog.dialogs[6].answers.append(DialogAnswer("The path to mastery", then: deepUnderstandingDialog.dialogs[10]))
+        deepUnderstandingDialog.dialogs[6].answers.append(DialogAnswer("Fruitless", then: deepUnderstandingDialog.dialogs[7]))
         
-        deepUnderstandingDialog.dialogs[7].answers.append(DialogAnswer("You are right. I got it", then: deepUnderstandingDialog.dialogs[8]))
-        deepUnderstandingDialog.dialogs[7].answers.append(DialogAnswer("Yeah, I guess I got your point", then: deepUnderstandingDialog.dialogs[8]))
+        deepUnderstandingDialog.dialogs[7].answers.append(DialogAnswer("Ok, sure", then: deepUnderstandingDialog.dialogs[10]))
+        deepUnderstandingDialog.dialogs[7].answers.append(DialogAnswer("Not really", then: deepUnderstandingDialog.dialogs[8]))
         
-        deepUnderstandingDialog.dialogs[8].answers.append(DialogAnswer("", then: nil))
-        deepUnderstandingDialog.dialogs[8].answers.append(DialogAnswer("", then: nil))
+        deepUnderstandingDialog.dialogs[8].answers.append(DialogAnswer("You are right. I got it", then: deepUnderstandingDialog.dialogs[10]))
+        deepUnderstandingDialog.dialogs[8].answers.append(DialogAnswer("Still no...", then: deepUnderstandingDialog.dialogs[9]))
+        
+        deepUnderstandingDialog.dialogs[9].answers.append(DialogAnswer("You are right. I got it", then: deepUnderstandingDialog.dialogs[10]))
+        deepUnderstandingDialog.dialogs[9].answers.append(DialogAnswer("Yeah, I guess I got your point", then: deepUnderstandingDialog.dialogs[10]))
+        
+        deepUnderstandingDialog.dialogs[10].answers.append(DialogAnswer("Of course!", then: deepUnderstandingDialog.dialogs[11]))
+        deepUnderstandingDialog.dialogs[10].answers.append(DialogAnswer("OK", then: deepUnderstandingDialog.dialogs[11]))
         
         currentDialog.current = deepUnderstandingDialog.dialogs[0]
         currentDialog.history = []
@@ -148,7 +163,7 @@ class DialogViewController: UIViewController {
                 bottomView.bottomButton.setTitle(currentDialog.answers[1].text, for: .normal)
             }
             
-            if currentDialog.text == "Great! It's the right mindset that you have" {
+            if currentDialog.text == "OK. Let's we start our Journey" {
                 isFinalState = true
             }
         }
@@ -160,7 +175,6 @@ class DialogViewController: UIViewController {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "gift") as! GiftViewController
             self.present(newViewController, animated: false, completion: nil)
-            self.dismiss(animated: false, completion: nil)
         }
     }
 }

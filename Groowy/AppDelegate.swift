@@ -40,10 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     storyBoardID = "deepUnderstanding"
                     break
                 case .gift:
+                    storyBoardName = "Jaya"
+                    storyBoardID = "gift"
                     break
                 case .dashboard:
                     storyBoardName = "Main"
-                    storyBoardID = "dashboard"
+                    storyBoardID = "reflection"
                     break
             }
             

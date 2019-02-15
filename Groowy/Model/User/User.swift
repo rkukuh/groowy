@@ -30,6 +30,14 @@ class User {
             userDefault.set(newValue, forKey: "name")
         }
     }
+    static var email: String {
+        get {
+            return userDefault.value(forKey: "email") as? String ?? ""
+        }
+        set {
+            userDefault.set(newValue, forKey: "email")
+        }
+    }
     
     static var role: String {
         get {
@@ -45,14 +53,6 @@ class User {
         }
         set {
             userDefault.set(newValue, forKey: "userState")
-        }
-    }
-    static var email: String {
-        get {
-            return userDefault.value(forKey: "email") as? String ?? ""
-        }
-        set {
-            userDefault.set(newValue, forKey: "email")
         }
     }
 }

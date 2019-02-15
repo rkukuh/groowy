@@ -26,4 +26,9 @@ class GameScene: SKScene {
         groowyCharacter.build(initState: .sleep, size: size, position: position, scene: self)
         groowyCharacter.startAnimate()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // Haptic Feedback
+        UISelectionFeedbackGenerator().selectionChanged()
+    }
 }

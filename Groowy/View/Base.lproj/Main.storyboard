@@ -185,6 +185,7 @@
                         <viewLayoutGuide key="safeArea" id="XB2-AK-Hkb"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ZMe-Br-sWN" appends="YES" id="E4R-Xn-4x9"/>
+                            <outletCollection property="gestureRecognizers" destination="rhL-ge-WTt" appends="YES" id="Q0O-AH-WIM"/>
                         </connections>
                     </view>
                     <connections>
@@ -195,6 +196,11 @@
                 <swipeGestureRecognizer direction="up" id="ZMe-Br-sWN">
                     <connections>
                         <segue destination="ROL-6B-PKD" kind="custom" identifier="bodySegue" customClass="SwipeUpStoryboardSegue" customModule="Groowy" customModuleProvider="target" id="4dy-A1-fzf"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="rhL-ge-WTt">
+                    <connections>
+                        <action selector="swipeDownToBackWithSender:" destination="I2c-cj-fgX" id="alT-SH-6vC"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -652,6 +658,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8p-wk-Yul" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1159.2" y="-55.322338830584712"/>
+        </scene>
+        <!--Reflection View Controller-->
+        <scene sceneID="sBq-wc-zbb">
+            <objects>
+                <viewController storyboardIdentifier="reflection" id="sC6-Gb-f03" customClass="ReflectionViewController" customModule="Groowy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PFh-s6-fq9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8d-Ii-OJA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                            </skView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xvg-b1-mWi" customClass="UIAnswerBodyView" customModule="Groowy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.68235294120000001" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Q8d-Ii-OJA" firstAttribute="leading" secondItem="VxC-35-tlI" secondAttribute="leading" id="8mU-lG-MIw"/>
+                            <constraint firstItem="VxC-35-tlI" firstAttribute="bottom" secondItem="Xvg-b1-mWi" secondAttribute="bottom" id="A7G-g7-0wo"/>
+                            <constraint firstItem="Q8d-Ii-OJA" firstAttribute="trailing" secondItem="VxC-35-tlI" secondAttribute="trailing" id="CY6-Ld-f3B"/>
+                            <constraint firstItem="Q8d-Ii-OJA" firstAttribute="bottom" secondItem="VxC-35-tlI" secondAttribute="bottom" id="RKQ-IK-87T"/>
+                            <constraint firstItem="Xvg-b1-mWi" firstAttribute="leading" secondItem="VxC-35-tlI" secondAttribute="leading" id="Vnj-bk-GPS"/>
+                            <constraint firstItem="Q8d-Ii-OJA" firstAttribute="top" secondItem="PFh-s6-fq9" secondAttribute="top" id="fRe-I2-ZE2"/>
+                            <constraint firstItem="Xvg-b1-mWi" firstAttribute="height" secondItem="PFh-s6-fq9" secondAttribute="height" multiplier="0.3" id="o6o-Jj-Z3a"/>
+                            <constraint firstAttribute="trailing" secondItem="Xvg-b1-mWi" secondAttribute="trailing" id="syc-7O-D5c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VxC-35-tlI"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomView" destination="Xvg-b1-mWi" id="abU-Jf-GZ9"/>
+                        <outlet property="spriteKitView" destination="Q8d-Ii-OJA" id="zlh-tg-5cX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pcb-VS-3RS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2047" y="754"/>
         </scene>
     </scenes>
     <resources>
