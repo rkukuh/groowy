@@ -202,7 +202,6 @@
 		4894D7A7220BC32A007F34F5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				48C3E12822155CF100DA1E7F /* GiftViewController.swift */,
 				48A5F6212213C60000A6BE2A /* Base */,
 				48A5F6202213C5F400A6BE2A /* Create Challenge */,
 				4894D80D220D290B007F34F5 /* Segue */,
@@ -210,6 +209,7 @@
 				4894D7BC220BC97E007F34F5 /* GameScene.swift */,
 				4894D7B1220BC564007F34F5 /* HomeViewController.swift */,
 				4A3D97372214FE020011D25D /* DialogViewController.swift */,
+				48C3E12822155CF100DA1E7F /* GiftViewController.swift */,
 				4A3D97362214FE020011D25D /* MotivationViewController.swift */,
 				B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */,
 				4845900D22150BD800508FCB /* DashboardViewController.swift */,
