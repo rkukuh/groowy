@@ -115,7 +115,8 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
         let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "deepUnderstanding") as! DialogViewController
         self.present(newViewController, animated: false, completion: nil)
-        self.dismiss(animated: false, completion: nil)
+        
+        
     }
     
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {

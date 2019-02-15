@@ -28,6 +28,7 @@ class GroowyCharacter {
         buildGroowyHalfAwake()
         buildGroowyWake()
         buildGroowyAwake()
+        
         buildGroowyAsleep()
         addToView(scene: scene)
     }
@@ -100,7 +101,14 @@ class GroowyCharacter {
         actions[.awake] = SKAction.animate(with: wakeFrames, timePerFrame: 1.0/8.0)
     }
     
-    // Function to generate groowy asleep animation using SKTextureAtlas
+    func buildGroowyHappy() {
+        let happyFrames = groowySprite.loadTextureAtlas(atlasFilename: GroowyAnimationState.happy.rawValue, namingSeries: "")
+        if currentAnimationState == .happy {
+            initSpriteNode(texture: happyFrames[0])
+        }
+        actions[.awake] = SKAction.animate(with: happyFrames, timePerFrame: 1.0/8.0)
+    }
+    
     private func buildGroowyAsleep() {
         let asleepFrames = groowySprite.loadTextureAtlas(atlasFilename: GroowyAnimationState.asleep.rawValue, namingSeries: "")
         if currentAnimationState == .asleep {

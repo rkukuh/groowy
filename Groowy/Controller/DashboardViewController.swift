@@ -13,7 +13,7 @@ class DashboardViewController: UIViewController {
 
     @IBOutlet weak var spriteKitView:SKView!
     
-    
+    var isPlaying = false
     var scene: GameScene!
     var timer:Timer!
     var bubbleChat:UICustomTextViewView?
@@ -27,9 +27,12 @@ class DashboardViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         bubbleChat?.startAnimationSelf()
-        GroowieSound.changeBackSound(sound: .smile)
-        GroowieSound.startBackSound()
-        GroowieSound.startSoundEffect()
+        if !isPlaying {
+            GroowieSound.changeBackSound(sound: .smile)
+            GroowieSound.startBackSound()
+            GroowieSound.startSoundEffect()
+            isPlaying = true
+        }
     }
     
     // MARK: - Setup
@@ -48,10 +51,20 @@ class DashboardViewController: UIViewController {
     func setupBubbleChat() {
         // Add Bubble Chat
         bubbleChat = UICustomTextViewView(view: view)
+        
+        let name = User.name
+        let greetings = [
+            "Hi \(name), what do you want to do today?",
+            "Don't decrease the goal, Increase the effort! Keep going, \(name)!",
+            "Challenges are waht make life interesting, ready for the next challenge?",
+            "Consistent effort is a consistent challenge, come on create a new challenge!"
+        ]
+        let randomGreeting = Int.random(in: 0..<greetings.count)
+        bubbleChat?.messageTextView.text = greetings[randomGreeting]
+        
         if let myText = bubbleChat{
             self.view.addSubview(myText)
         }
-        bubbleChat?.isHidden = true
         
     }
     

@@ -41,6 +41,7 @@
 		48C3E1252215169E00DA1E7F /* sound-smile.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B16F686B221423B5008BA51D /* sound-smile.mp3 */; };
 		48C3E12722151A4000DA1E7F /* GroowySleep.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 48C3E12622151A1100DA1E7F /* GroowySleep.atlas */; };
 		48C3E12922155CF100DA1E7F /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3E12822155CF100DA1E7F /* GiftViewController.swift */; };
+		48C3E12B2216577500DA1E7F /* GroowyHappy.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 48C3E12A2216577500DA1E7F /* GroowyHappy.atlas */; };
 		4A33E4F2220AD12700C180F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33E4F1220AD12700C180F9 /* AppDelegate.swift */; };
 		4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4F5220AD12700C180F9 /* Main.storyboard */; };
 		4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A33E4FB220AD12800C180F9 /* Assets.xcassets */; };
@@ -112,6 +113,7 @@
 		48C3E1202215154C00DA1E7F /* GiftData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftData.swift; sourceTree = "<group>"; };
 		48C3E12622151A1100DA1E7F /* GroowySleep.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowySleep.atlas; sourceTree = "<group>"; };
 		48C3E12822155CF100DA1E7F /* GiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
+		48C3E12A2216577500DA1E7F /* GroowyHappy.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GroowyHappy.atlas; sourceTree = "<group>"; };
 		4A33E4EE220AD12700C180F9 /* Groowy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groowy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A33E4F1220AD12700C180F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A33E4F6220AD12700C180F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		4894D7AA220BC3C8007F34F5 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
+				48C3E12A2216577500DA1E7F /* GroowyHappy.atlas */,
 				48C3E12622151A1100DA1E7F /* GroowySleep.atlas */,
 				4A3D97592214FF2D0011D25D /* GroowyFullyAwake.atlas */,
 				4A3D975A2214FF2D0011D25D /* GroowyHalfAwake.atlas */,
@@ -527,6 +530,7 @@
 				4A33E4FC220AD12800C180F9 /* Assets.xcassets in Resources */,
 				48A5F62E2213D1F600A6BE2A /* UIViewNextQuestion.xib in Resources */,
 				4A3D97582214FE450011D25D /* MessageDialogView.xib in Resources */,
+				48C3E12B2216577500DA1E7F /* GroowyHappy.atlas in Resources */,
 				4A5EA39F2211482500DEAD49 /* UIAnswerBody.xib in Resources */,
 				4A3D97572214FE450011D25D /* UIGift.xib in Resources */,
 				4A33E4F7220AD12700C180F9 /* Main.storyboard in Resources */,
