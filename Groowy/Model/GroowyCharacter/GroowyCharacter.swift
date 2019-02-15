@@ -57,6 +57,11 @@ class GroowyCharacter {
         groowySprite.position = position
     }
     
+    //Function to set image on top
+    func setImagePosition(position:CGPoint) {
+        groowySprite.position = position
+    }
+    
     // Function to generate groowy sleep animation using SKTextureAtlas
     private func buildGroowySleep() {
         let sleepFrames = groowySprite.loadTextureAtlas(atlasFilename: GroowyAnimationState.sleep.rawValue, namingSeries: "")

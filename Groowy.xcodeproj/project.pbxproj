@@ -78,6 +78,7 @@
 		B1A52C6822150E8600365D2A /* snooring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1A52C6722150E8600365D2A /* snooring.mp3 */; };
 		B1A52C6A221527F300365D2A /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C69221527F300365D2A /* JournalViewController.swift */; };
 		B1A52C6C22152CB100365D2A /* ContohTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C6B22152CB100365D2A /* ContohTableViewController.swift */; };
+		B1A52C6E221559DD00365D2A /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C6D221559DD00365D2A /* JournalTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +156,7 @@
 		B1A52C6722150E8600365D2A /* snooring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snooring.mp3; sourceTree = "<group>"; };
 		B1A52C69221527F300365D2A /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		B1A52C6B22152CB100365D2A /* ContohTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContohTableViewController.swift; sourceTree = "<group>"; };
+		B1A52C6D221559DD00365D2A /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				4845900D22150BD800508FCB /* DashboardViewController.swift */,
 				B1A52C69221527F300365D2A /* JournalViewController.swift */,
 				B1A52C6B22152CB100365D2A /* ContohTableViewController.swift */,
+				B1A52C6D221559DD00365D2A /* JournalTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				B14F69E2220BEBEA00D82D5B /* LoveAppleViewController.swift in Sources */,
 				48A5F62B2213D1AE00A6BE2A /* UIViewNextQuestion.swift in Sources */,
 				48A5F6252213C98C00A6BE2A /* ReminderCreateChallengeViewController.swift in Sources */,
+				B1A52C6E221559DD00365D2A /* JournalTableViewCell.swift in Sources */,
 				B1A52C6A221527F300365D2A /* JournalViewController.swift in Sources */,
 				4A3D974A2214FE260011D25D /* Groowy.xcdatamodeld in Sources */,
 				48C3E1212215154C00DA1E7F /* Gift.swift in Sources */,

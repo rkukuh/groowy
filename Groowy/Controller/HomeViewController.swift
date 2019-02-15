@@ -109,23 +109,30 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
     
     @IBAction func tapToWakeGroowy(sender:UITapGestureRecognizer) {
         if scene.groowyCharacter.currentAnimationState == .sleep {
-            GroowieSound.stopSoundEffect()
-            scene.groowyCharacter.changeGroowyAnimateState(nextState: .halfAwake)
-            bubbleChat?.messageTextView.text = "Hmm, who's there ?"
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                self.bubbleChat?.alpha = 0
-                self.bubbleChat?.isHidden = false
-                UIView.animate(withDuration: 0.5) {
-                    self.bubbleChat?.alpha = 1
-                }
-            }
+//            GroowieSound.stopSoundEffect()
+//            scene.groowyCharacter.changeGroowyAnimateState(nextState: .halfAwake)
+//            bubbleChat?.messageTextView.text = "Hmm, who's there ?"
+//
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+//                self.bubbleChat?.alpha = 0
+//                self.bubbleChat?.isHidden = false
+//                UIView.animate(withDuration: 0.5) {
+//                    self.bubbleChat?.alpha = 1
+//                }
+//            }
             
             // - START: Skip from WakeUp to Challenge -
-            // let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            // let newViewController = storyBoard.instantiateViewController(withIdentifier: "create-challenge") as! TitleCreateChallengeViewController
-            // self.present(newViewController, animated: false, completion: nil)
-            // - FINISH: Skip from WakeUp to Challenge -
+//             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//             let newViewController = storyBoard.instantiateViewController(withIdentifier: "create-challenge") as! TitleCreateChallengeViewController
+//             self.present(newViewController, animated: false, completion: nil)
+             //- FINISH: Skip from WakeUp to Challenge -
+            
+            
+            // - START: Skip from WakeUp to Journal -
+//            let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "journal") as! JournalViewController
+//            self.present(newViewController, animated: false, completion: nil)
+            //- FINISH: Skip from WakeUp to Journal -
             
         } else if scene.groowyCharacter.currentAnimationState == .halfAwake {
             scene.groowyCharacter.changeGroowyAnimateState(nextState: .fullyAwake)
