@@ -76,6 +76,7 @@
 		B14F69E4220BF14300D82D5B /* EyeSKScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F69E3220BF14300D82D5B /* EyeSKScene.swift */; };
 		B16F686D221423B5008BA51D /* sound-hey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B16F686A221423B4008BA51D /* sound-hey.mp3 */; };
 		B1811B7F221654330064F286 /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1811B7E221654330064F286 /* ForceTouchGestureRecognizer.swift */; };
+		B1811B8122167AD00064F286 /* DetailJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1811B8022167AD00064F286 /* DetailJournalViewController.swift */; };
 		B1A52C662214F3FC00365D2A /* GroowieSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C652214F3FC00365D2A /* GroowieSound.swift */; };
 		B1A52C6822150E8600365D2A /* snooring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1A52C6722150E8600365D2A /* snooring.mp3 */; };
 		B1A52C6A221527F300365D2A /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A52C69221527F300365D2A /* JournalViewController.swift */; };
@@ -155,6 +156,7 @@
 		B16F686A221423B4008BA51D /* sound-hey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-hey.mp3"; sourceTree = "<group>"; };
 		B16F686B221423B5008BA51D /* sound-smile.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-smile.mp3"; sourceTree = "<group>"; };
 		B1811B7E221654330064F286 /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
+		B1811B8022167AD00064F286 /* DetailJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJournalViewController.swift; sourceTree = "<group>"; };
 		B1A52C632214F1F600365D2A /* blink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blink.mp3; sourceTree = "<group>"; };
 		B1A52C652214F3FC00365D2A /* GroowieSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroowieSound.swift; sourceTree = "<group>"; };
 		B1A52C6722150E8600365D2A /* snooring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snooring.mp3; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				B14F69E1220BEBEA00D82D5B /* LoveAppleViewController.swift */,
 				4845900D22150BD800508FCB /* DashboardViewController.swift */,
 				B1A52C69221527F300365D2A /* JournalViewController.swift */,
+				B1811B8022167AD00064F286 /* DetailJournalViewController.swift */,
 				B1A52C6B22152CB100365D2A /* ContohTableViewController.swift */,
 				B1A52C6D221559DD00365D2A /* JournalTableViewCell.swift */,
 			);
@@ -604,6 +607,7 @@
 				B1811B7F221654330064F286 /* ForceTouchGestureRecognizer.swift in Sources */,
 				4894D80F220D2929007F34F5 /* SwipeUpStoryboardSegue.swift in Sources */,
 				4A3D97512214FE260011D25D /* ChallengeStatus.swift in Sources */,
+				B1811B8122167AD00064F286 /* DetailJournalViewController.swift in Sources */,
 				4894D7B7220BC623007F34F5 /* GroowyAnimationState.swift in Sources */,
 				4A3D974B2214FE260011D25D /* Reflection+CoreDataProperties.swift in Sources */,
 				4A3D97382214FE020011D25D /* MotivationViewController.swift in Sources */,

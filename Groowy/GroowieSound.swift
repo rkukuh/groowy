@@ -37,6 +37,7 @@ class GroowieSound {
             let soundBack = Bundle.main.path(forResource: sound.rawValue, ofType: "mp3")
             GroowieSound.backSound = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundBack!))
             GroowieSound.backSound.prepareToPlay()
+            GroowieSound.backSound.numberOfLoops = -1
             GroowieSound.backSound.volume = 0.1
             GroowieSound.startBackSound()
         }catch{

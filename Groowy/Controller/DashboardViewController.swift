@@ -75,7 +75,9 @@ class DashboardViewController: UIViewController {
         self.present(newViewController, animated: true, completion: nil)
     }
     @IBAction func didTapTheJournal(sender: UIButton) {
-        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "journal") as! JournalViewController
+        self.present(newViewController, animated: true, completion: nil)
     }
     @IBAction func didTapSetting(sender: UIButton) {
         
