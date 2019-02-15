@@ -18,7 +18,7 @@ struct DialogState {
             
             if answerIndex < current.answers.count {
                 self.current = current.answers[answerIndex].nextDialog
-                return self.current?.answers[0].text != "" ? true : false
+                return self.current != nil ?  true : false
             } else {
                 print("Invalid answer")
                 return false            }

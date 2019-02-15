@@ -13,23 +13,29 @@ class DashboardViewController: UIViewController {
 
     @IBOutlet weak var spriteKitView:SKView!
     
-    
+    var isPlaying = false
     var scene: GameScene!
     var timer:Timer!
     var bubbleChat:UICustomTextViewView?
-    
+    var greetings: [String] = []
 
     override func viewDidLoad() {
         view.backgroundColor = COLOR_THEME_PRIMARY
+        setupGreetings()
         setupGameScene()
         setupBubbleChat()
+        randomGreetingBubbleChat()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         bubbleChat?.startAnimationSelf()
-        GroowieSound.changeBackSound(sound: .smile)
-        GroowieSound.startBackSound()
-        GroowieSound.startSoundEffect()
+        randomGreetingBubbleChat()
+        if !isPlaying {
+            GroowieSound.changeBackSound(sound: .smile)
+            GroowieSound.startBackSound()
+            GroowieSound.startSoundEffect()
+            isPlaying = true
+        }
     }
     
     // MARK: - Setup
@@ -45,14 +51,27 @@ class DashboardViewController: UIViewController {
         stayAwake()
     }
     
+    func setupGreetings() {
+        let name = User.name
+        greetings.append(contentsOf: [
+            "Hi \(name), what do you want to do today?",
+            "Don't decrease the goal, Increase the effort! Keep going, \(name)!",
+            "Challenges are what make life interesting, ready for the next challenge?",
+            "Consistent effort is a consistent challenge, come on create a new challenge!"
+            ])
+    }
+    
     func setupBubbleChat() {
         // Add Bubble Chat
         bubbleChat = UICustomTextViewView(view: view)
         if let myText = bubbleChat{
             self.view.addSubview(myText)
         }
-        bubbleChat?.isHidden = true
-        
+    }
+    
+    func randomGreetingBubbleChat() {
+        let randomGreeting = Int.random(in: 0..<greetings.count)
+        bubbleChat?.messageTextView.text = greetings[randomGreeting]
     }
     
     

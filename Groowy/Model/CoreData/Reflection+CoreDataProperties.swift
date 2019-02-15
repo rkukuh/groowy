@@ -17,11 +17,12 @@ extension Reflection {
         return NSFetchRequest<Reflection>(entityName: "Reflection")
     }
 
-    @NSManaged public var feel: String
     @NSManaged public var created_at: NSDate?
-    @NSManaged public var picture: NSData?
+    @NSManaged public var feel: String
     @NSManaged public var learn: String
+    @NSManaged public var picture: NSData?
     @NSManaged public var struggle: String
+    @NSManaged public var evidence: NSData?
     @NSManaged public var challenge: Challenge?
 
 }
