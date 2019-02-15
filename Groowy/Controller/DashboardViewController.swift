@@ -17,16 +17,19 @@ class DashboardViewController: UIViewController {
     var scene: GameScene!
     var timer:Timer!
     var bubbleChat:UICustomTextViewView?
-    
+    var greetings: [String] = []
 
     override func viewDidLoad() {
         view.backgroundColor = COLOR_THEME_PRIMARY
+        setupGreetings()
         setupGameScene()
         setupBubbleChat()
+        randomGreetingBubbleChat()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         bubbleChat?.startAnimationSelf()
+        randomGreetingBubbleChat()
         if !isPlaying {
             GroowieSound.changeBackSound(sound: .smile)
             GroowieSound.startBackSound()
@@ -48,24 +51,27 @@ class DashboardViewController: UIViewController {
         stayAwake()
     }
     
+    func setupGreetings() {
+        let name = User.name
+        greetings.append(contentsOf: [
+            "Hi \(name), what do you want to do today?",
+            "Don't decrease the goal, Increase the effort! Keep going, \(name)!",
+            "Challenges are what make life interesting, ready for the next challenge?",
+            "Consistent effort is a consistent challenge, come on create a new challenge!"
+            ])
+    }
+    
     func setupBubbleChat() {
         // Add Bubble Chat
         bubbleChat = UICustomTextViewView(view: view)
-        
-        let name = User.name
-        let greetings = [
-            "Hi \(name), what do you want to do today?",
-            "Don't decrease the goal, Increase the effort! Keep going, \(name)!",
-            "Challenges are waht make life interesting, ready for the next challenge?",
-            "Consistent effort is a consistent challenge, come on create a new challenge!"
-        ]
-        let randomGreeting = Int.random(in: 0..<greetings.count)
-        bubbleChat?.messageTextView.text = greetings[randomGreeting]
-        
         if let myText = bubbleChat{
             self.view.addSubview(myText)
         }
-        
+    }
+    
+    func randomGreetingBubbleChat() {
+        let randomGreeting = Int.random(in: 0..<greetings.count)
+        bubbleChat?.messageTextView.text = greetings[randomGreeting]
     }
     
     

@@ -45,6 +45,9 @@ class DialogViewController: UIViewController {
         textFieldInput!.startAnimationSelf()
         scene.groowyCharacter.changeGroowyAnimateState(nextState: .wake)
         stayAwake()
+        GroowieSound.changeBackSound(sound: .smile)
+        GroowieSound.startBackSound()
+        GroowieSound.startSoundEffect()
     }
     // MARK: - Action buttons
     @objc func actionButtonTop(_sender: UIButton){
