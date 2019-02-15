@@ -13,6 +13,7 @@ enum GroowyAnimationState: String {
     case halfAwake = "GroowyHalfAwake"
     case fullyAwake = "GroowyFullyAwake"
     case wake = "GroowyWake"
+    case happy = "GroowyHappy"
     case asleep = "GroowyAsleep"
     case awake = "GroowyAwake"
 }

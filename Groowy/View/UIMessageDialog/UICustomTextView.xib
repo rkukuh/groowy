@@ -28,7 +28,7 @@
                             <rect key="frame" x="0.0" y="-99" width="375" height="267"/>
                         </imageView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kVA-AP-rXS">
-                            <rect key="frame" x="4" y="4" width="367" height="117.5"/>
+                            <rect key="frame" x="15" y="15" width="345" height="117.5"/>
                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -38,11 +38,11 @@
                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="7BQ-bJ-cWx" secondAttribute="trailing" id="PWr-h1-IPe"/>
-                        <constraint firstAttribute="trailing" secondItem="kVA-AP-rXS" secondAttribute="trailing" constant="4" id="PwD-dF-zkD"/>
+                        <constraint firstAttribute="trailing" secondItem="kVA-AP-rXS" secondAttribute="trailing" constant="15" id="PwD-dF-zkD"/>
                         <constraint firstAttribute="bottom" secondItem="7BQ-bJ-cWx" secondAttribute="bottom" id="bpF-TP-Ub3"/>
                         <constraint firstItem="kVA-AP-rXS" firstAttribute="height" secondItem="juO-yK-NB0" secondAttribute="height" multiplier="0.7" id="hE3-xf-ajI"/>
-                        <constraint firstItem="kVA-AP-rXS" firstAttribute="leading" secondItem="juO-yK-NB0" secondAttribute="leading" constant="4" id="qpI-Ic-fum"/>
-                        <constraint firstItem="kVA-AP-rXS" firstAttribute="top" secondItem="juO-yK-NB0" secondAttribute="top" constant="4" id="sQR-FE-ZJd"/>
+                        <constraint firstItem="kVA-AP-rXS" firstAttribute="leading" secondItem="juO-yK-NB0" secondAttribute="leading" constant="15" id="qpI-Ic-fum"/>
+                        <constraint firstItem="kVA-AP-rXS" firstAttribute="top" secondItem="juO-yK-NB0" secondAttribute="top" constant="15" id="sQR-FE-ZJd"/>
                         <constraint firstItem="7BQ-bJ-cWx" firstAttribute="leading" secondItem="juO-yK-NB0" secondAttribute="leading" id="xe3-xk-Jdh"/>
                     </constraints>
                 </view>

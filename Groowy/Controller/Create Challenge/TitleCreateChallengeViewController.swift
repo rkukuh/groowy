@@ -43,5 +43,14 @@ class TitleCreateChallengeViewController: SwipeFormViewController, UIViewNextQue
             self.parentDismiss(animated: false, completion: nil)
         }
     }
+    
+    override func swipeDownToBack(sender: UITapGestureRecognizer) {
+        parentDismiss(animated: true) {
+            
+        }
+        if self.isNext {
+            self.parentDismiss(animated: false, completion: nil)
+        }
+    }
 
 }

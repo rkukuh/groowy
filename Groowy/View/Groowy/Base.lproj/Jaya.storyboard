@@ -25,6 +25,12 @@
                                 <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to continue " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noj-Xx-0Vv">
+                                <rect key="frame" x="126.5" y="546.5" width="122.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -33,8 +39,10 @@
                             <constraint firstItem="GRW-Mi-l38" firstAttribute="leading" secondItem="LaE-87-A4v" secondAttribute="leading" id="JLV-fW-r5m"/>
                             <constraint firstItem="LaE-87-A4v" firstAttribute="bottom" secondItem="3NA-iS-Gc7" secondAttribute="bottom" id="Ou8-lm-kIW"/>
                             <constraint firstItem="3NA-iS-Gc7" firstAttribute="leading" secondItem="LaE-87-A4v" secondAttribute="leading" id="QRG-vw-b6t"/>
+                            <constraint firstItem="LaE-87-A4v" firstAttribute="bottom" secondItem="noj-Xx-0Vv" secondAttribute="bottom" constant="100" id="Rmh-5p-EGK"/>
                             <constraint firstItem="LaE-87-A4v" firstAttribute="trailing" secondItem="GRW-Mi-l38" secondAttribute="trailing" id="WhG-Wj-FPc"/>
                             <constraint firstItem="LaE-87-A4v" firstAttribute="trailing" secondItem="3NA-iS-Gc7" secondAttribute="trailing" id="Xrp-01-CtV"/>
+                            <constraint firstItem="noj-Xx-0Vv" firstAttribute="centerX" secondItem="5XK-lk-lzg" secondAttribute="centerX" id="cbG-Ke-vuC"/>
                             <constraint firstItem="3NA-iS-Gc7" firstAttribute="height" secondItem="5XK-lk-lzg" secondAttribute="height" multiplier="0.3" id="i92-pM-LDl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LaE-87-A4v"/>
@@ -42,6 +50,7 @@
                     <connections>
                         <outlet property="bottomView" destination="3NA-iS-Gc7" id="Uda-85-6ZG"/>
                         <outlet property="spriteKitView" destination="GRW-Mi-l38" id="zkR-40-sWR"/>
+                        <outlet property="tapToContinueLabel" destination="noj-Xx-0Vv" id="8dJ-2e-JO3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNU-mC-lP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
