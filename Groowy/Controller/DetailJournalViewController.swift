@@ -16,18 +16,23 @@ class DetailJournalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGameScene()
-        stayAwake()
+        awake()
         // Do any additional setup after loading the view.
     }
     
     func setupGameScene() {
         // Add Gamescene to View Controller
         scene = GameScene(size: view.bounds.size)
-        
         scene.scaleMode = .resizeFill
         scene.sceneDidLoad()
         spriteKitView.ignoresSiblingOrder = true
         spriteKitView.presentScene(scene)
+    }
+    
+    func awake(){
+        self.scene.groowyCharacter.setImagePosition(position: CGPoint(x: self.spriteKitView.frame.midX, y: self.spriteKitView.frame.midY + self.spriteKitView.frame.width / 2))
+        self.scene.groowyCharacter.changeGroowyAnimateState(nextState: .awake)
+        self.stayAwake()
     }
     
     func stayAwake() {

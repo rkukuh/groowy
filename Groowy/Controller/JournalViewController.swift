@@ -42,7 +42,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Add Gamescene to View Controller
         scene = GameScene(size: view.bounds.size)
         scene.groowyCharacter.changeGroowyAnimateState(nextState: .awake)
-        scene.groowyCharacter.setImagePosition(position: CGPoint(x: spriteKit.frame.midX, y: spriteKit.frame.midY + spriteKit.frame.width / 2))
+        //scene.groowyCharacter.setImagePosition(position: CGPoint(x: spriteKit.frame.midX, y: spriteKit.frame.midY + spriteKit.frame.width / 2))
         scene.scaleMode = .resizeFill
         scene.sceneDidLoad()
         spriteKit.ignoresSiblingOrder = true
@@ -56,6 +56,12 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.scene.groowyCharacter.changeGroowyAnimateState(nextState: .awake)
             self.stayAwake()
         })
+    }
+    
+    func awake(){
+        self.scene.groowyCharacter.setImagePosition(position: CGPoint(x: self.spriteKit.frame.midX, y: self.spriteKit.frame.midY + self.spriteKit.frame.width / 2))
+        self.scene.groowyCharacter.changeGroowyAnimateState(nextState: .awake)
+        self.stayAwake()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -89,12 +95,12 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
         journalTableView.dataSource = self
         journalTableView.reloadData()
         setupGameScene()
+        awake()
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
-        stayAwake()
     }
     
     
