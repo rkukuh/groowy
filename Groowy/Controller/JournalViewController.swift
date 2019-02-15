@@ -22,7 +22,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     @IBAction func closeJournal(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -138,14 +138,21 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "segueDetailJournal"){
+            if let detail = segue.destination as? DetailJournalViewController{
+                if let index = journalTableView.indexPathForSelectedRow{
+                    //let challange = fetchedResults.object(at: index)
+                    detail.challange = fetchedResults.object(at: index)
+                }
+                
+            }
+        }
     }
-    */
+    
 
 }

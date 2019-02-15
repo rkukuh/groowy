@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // set initial view controller depends on user state
+        User.state = UserState.dashboard.rawValue
         setupUserStateManage()
         GroowieSound.setAwal()
         return true
@@ -45,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     break
                 case .dashboard:
                     storyBoardName = "Main"
-                    storyBoardID = "reflection"
+                    storyBoardID = "dashboard"
                     break
             }
             
