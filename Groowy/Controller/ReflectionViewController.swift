@@ -13,12 +13,42 @@ import AVFoundation
 
 class ReflectionViewController: UIViewController, UITextFieldInputAccessoryViewDelegate {
     
+    var reflectionStart = false
     var scene: GameScene!
     var timer: Timer!
     var bubbleChat: UICustomTextViewView?
     var textFieldInput: UITextFieldInputAccessoryView?
     let textField = UITextField(frame: CGRect(x: 0, y: -50, width: 100, height: 50))
     
+    
+    var expressions = [
+        "😣","😔","😥","☹️","😕","😐","🙂","🧐","😏","😎","🤯"
+    ]
+    var expressionsText = [
+        "Frustate",
+        "Disappointed",
+        "Worry",
+        "Sad",
+        "Confused",
+        "Nothing",
+        "Happy",
+        "Curious",
+        "Confident",
+        "Awesome",
+        "Mind-blown"
+    ]
+    var negativeExpressionReactionsText = [
+        "It's okay to be $feeling, at least you had learn something today and it was awesome!"
+    ]
+    var positiveExpressionReactionsText = [
+        "Awesome!"
+    ]
+    
+    var lastExpression = ""
+    
+    @IBOutlet weak var expressionView: UIView!
+    @IBOutlet weak var expressionLabel: UILabel!
+    @IBOutlet weak var expressionTextLabel: UILabel!
     @IBOutlet weak var spriteKitView: SKView!
     @IBOutlet weak var bottomView: UIAnswerBodyView!
     @IBOutlet weak var bottomHandLayoutConstraint: NSLayoutConstraint!
@@ -32,6 +62,7 @@ class ReflectionViewController: UIViewController, UITextFieldInputAccessoryViewD
         setupHiddenTextField()
         setupGameScene()
         setupBubbleChat()
+        initBubbleChat()
         setupBottomView()
     }
     
@@ -59,6 +90,12 @@ class ReflectionViewController: UIViewController, UITextFieldInputAccessoryViewD
         stayAwake()
     }
     
+    
+    func setupExpression() {
+        lastExpression = expressionsText[5]
+        expressionLabel.text = expressions[5]
+        expressionTextLabel.text = expressionsText[5]
+    }
     func setupBubbleChat() {
         // Add Bubble Chat
         bubbleChat = UICustomTextViewView(view: view)
@@ -83,7 +120,20 @@ class ReflectionViewController: UIViewController, UITextFieldInputAccessoryViewD
         bottomView.bottomButton.setTitle("Mentee", for: .normal)
     }
     
-    // MARK: - Action buttons
+    
+    // MARK: - Action buttons & sliders
+    @IBAction func didChangeFeelingSlider(sender: UISlider) {
+        let valueInInt = Int(sender.value)
+        expressionLabel.text = expressions[valueInInt]
+        expressionTextLabel.text = expressionsText[valueInInt]
+        
+        if lastExpression != expressionsText[valueInInt] {
+            // Haptic Feedback
+            UISelectionFeedbackGenerator().selectionChanged()
+        }
+        lastExpression = expressionsText[valueInInt]
+        
+    }
     
     @objc func actionButtonTop(_sender: UIButton){
         User.role = UserRole.mentor.rawValue
@@ -96,6 +146,11 @@ class ReflectionViewController: UIViewController, UITextFieldInputAccessoryViewD
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Haptic Feedback
         UISelectionFeedbackGenerator().selectionChanged()
+        
+        if !reflectionStart {
+             bubbleChat?.messageTextView.text = "Tell me how do you feel?"
+            expressionView.isHidden = false
+        }
     }
     
     func stayAwake() {

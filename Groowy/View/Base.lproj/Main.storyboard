@@ -675,22 +675,73 @@
                                 <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to reflect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIJ-OY-oDg">
+                                <rect key="frame" x="137" y="546" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krC-fT-Jq0">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Xa-jo-C16">
+                                        <rect key="frame" x="18" y="115" width="339" height="31"/>
+                                        <color key="minimumTrackTintColor" red="0.87450980392156863" green="0.75686274509803919" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="maximumTrackTintColor" red="0.87450980392156863" green="0.75686274509803919" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="thumbTintColor" red="0.37647058820000001" green="0.23137254900000001" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="didChangeFeelingSliderWithSender:" destination="sC6-Gb-f03" eventType="valueChanged" id="yse-ez-LRp"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuN-1M-ZFl">
+                                        <rect key="frame" x="164" y="15" width="47" height="50.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqD-bT-Ieo">
+                                        <rect key="frame" x="153.5" y="75" width="68" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                        <color key="textColor" red="0.87450980389999999" green="0.75686274509999996" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.54509803921568623" green="0.3411764705882353" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="SqD-bT-Ieo" firstAttribute="centerX" secondItem="6Xa-jo-C16" secondAttribute="centerX" id="3Fa-Zq-qc0"/>
+                                    <constraint firstItem="6Xa-jo-C16" firstAttribute="centerY" secondItem="krC-fT-Jq0" secondAttribute="centerY" constant="30" id="4zt-Uj-hJO"/>
+                                    <constraint firstItem="BuN-1M-ZFl" firstAttribute="centerX" secondItem="6Xa-jo-C16" secondAttribute="centerX" id="IG1-gN-8Mm"/>
+                                    <constraint firstItem="BuN-1M-ZFl" firstAttribute="top" secondItem="6Xa-jo-C16" secondAttribute="top" constant="-100" id="UEC-hY-rnv"/>
+                                    <constraint firstItem="SqD-bT-Ieo" firstAttribute="top" secondItem="6Xa-jo-C16" secondAttribute="top" constant="-40" id="bCa-dM-8As"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Xa-jo-C16" secondAttribute="trailing" constant="20" id="fhQ-1V-Ecw"/>
+                                    <constraint firstItem="6Xa-jo-C16" firstAttribute="leading" secondItem="krC-fT-Jq0" secondAttribute="leading" constant="20" id="fuc-Zb-kmc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.68235294120000001" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="krC-fT-Jq0" firstAttribute="height" secondItem="Xvg-b1-mWi" secondAttribute="height" id="6dU-hX-909"/>
+                            <constraint firstItem="VxC-35-tlI" firstAttribute="bottom" secondItem="iIJ-OY-oDg" secondAttribute="bottom" constant="100" id="87f-ep-7Us"/>
                             <constraint firstItem="Q8d-Ii-OJA" firstAttribute="leading" secondItem="VxC-35-tlI" secondAttribute="leading" id="8mU-lG-MIw"/>
                             <constraint firstItem="VxC-35-tlI" firstAttribute="bottom" secondItem="Xvg-b1-mWi" secondAttribute="bottom" id="A7G-g7-0wo"/>
                             <constraint firstItem="Q8d-Ii-OJA" firstAttribute="trailing" secondItem="VxC-35-tlI" secondAttribute="trailing" id="CY6-Ld-f3B"/>
                             <constraint firstItem="Q8d-Ii-OJA" firstAttribute="bottom" secondItem="VxC-35-tlI" secondAttribute="bottom" id="RKQ-IK-87T"/>
+                            <constraint firstItem="VxC-35-tlI" firstAttribute="bottom" secondItem="krC-fT-Jq0" secondAttribute="bottom" id="Sjb-Pb-dr3"/>
                             <constraint firstItem="Xvg-b1-mWi" firstAttribute="leading" secondItem="VxC-35-tlI" secondAttribute="leading" id="Vnj-bk-GPS"/>
+                            <constraint firstItem="iIJ-OY-oDg" firstAttribute="centerX" secondItem="PFh-s6-fq9" secondAttribute="centerX" id="cOF-kz-mQd"/>
                             <constraint firstItem="Q8d-Ii-OJA" firstAttribute="top" secondItem="PFh-s6-fq9" secondAttribute="top" id="fRe-I2-ZE2"/>
+                            <constraint firstItem="krC-fT-Jq0" firstAttribute="leading" secondItem="VxC-35-tlI" secondAttribute="leading" id="lck-Mn-f5p"/>
                             <constraint firstItem="Xvg-b1-mWi" firstAttribute="height" secondItem="PFh-s6-fq9" secondAttribute="height" multiplier="0.3" id="o6o-Jj-Z3a"/>
                             <constraint firstAttribute="trailing" secondItem="Xvg-b1-mWi" secondAttribute="trailing" id="syc-7O-D5c"/>
+                            <constraint firstItem="krC-fT-Jq0" firstAttribute="trailing" secondItem="VxC-35-tlI" secondAttribute="trailing" id="tNd-SH-B5S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VxC-35-tlI"/>
                     </view>
                     <connections>
                         <outlet property="bottomView" destination="Xvg-b1-mWi" id="abU-Jf-GZ9"/>
+                        <outlet property="expressionLabel" destination="BuN-1M-ZFl" id="x1c-iv-TEg"/>
+                        <outlet property="expressionTextLabel" destination="SqD-bT-Ieo" id="VpH-9B-SGb"/>
+                        <outlet property="expressionView" destination="krC-fT-Jq0" id="uAj-7Z-PBO"/>
                         <outlet property="spriteKitView" destination="Q8d-Ii-OJA" id="zlh-tg-5cX"/>
                     </connections>
                 </viewController>
