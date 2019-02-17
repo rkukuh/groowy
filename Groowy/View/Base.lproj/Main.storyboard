@@ -411,6 +411,9 @@
                                 <state key="normal" title="Tap me to promise">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapPromiseButtonWithSender:" destination="nC7-GU-Hwo" eventType="touchUpInside" id="SOT-aI-AP8"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVu-d4-3di">
                                 <rect key="frame" x="131.5" y="277" width="112.5" height="133"/>
@@ -420,12 +423,16 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="aM6-do-6f2" firstAttribute="width" secondItem="aVu-d4-3di" secondAttribute="width" id="Edn-n3-VdS"/>
                                     <constraint firstItem="aM6-do-6f2" firstAttribute="centerY" secondItem="aVu-d4-3di" secondAttribute="centerY" id="cxs-Qa-axR"/>
                                     <constraint firstItem="aM6-do-6f2" firstAttribute="centerX" secondItem="aVu-d4-3di" secondAttribute="centerX" id="rc3-fl-HWV"/>
                                     <constraint firstItem="aM6-do-6f2" firstAttribute="height" secondItem="aVu-d4-3di" secondAttribute="height" id="rk6-hn-yGC"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="e0r-Qi-CD3" appends="YES" id="3Hs-WY-Aw8"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -450,6 +457,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="buttonTapTemp" destination="Lh6-Rq-a2S" id="BMs-mc-lGk"/>
                         <outlet property="promiseButton" destination="aM6-do-6f2" id="AMP-Gx-xX8"/>
                         <outlet property="xxx" destination="aVu-d4-3di" id="P4V-hh-rvJ"/>
                     </connections>
@@ -460,7 +468,11 @@
                         <action selector="swipeDownToBackWithSender:" destination="nC7-GU-Hwo" id="WUB-cc-POG"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <gestureRecognizer id="7eE-bM-B6n" customClass="ForceTouchGestureRecognizer" customModule="Groowy" customModuleProvider="target"/>
+                <tapGestureRecognizer id="e0r-Qi-CD3">
+                    <connections>
+                        <action selector="clickedPromisedButton:" destination="nC7-GU-Hwo" id="jiY-ri-SPV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3120.8000000000002" y="-55.322338830584712"/>
         </scene>

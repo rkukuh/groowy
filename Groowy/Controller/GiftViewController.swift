@@ -127,10 +127,40 @@ class GiftViewController: UIViewController, MFMailComposeViewControllerDelegate,
             textFieldInput.resignFirstResponder()
             view.endEditing(true)
             
+            // prepare json data
+            let json: [String: Any] = ["username": "jaya","email": email ?? "","link":"www.google.com",
+                                       "dict": ["1":"First", "2":"Second"]]
+            
+            let jsonData = try? JSONSerialization.data(withJSONObject: json)
+            
+            // create post request
+            let url = URL(string: "http://glorious-institution.com/restGroowie/rest_controller.php/email")!
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            
+            // insert json data to the request
+            request.httpBody = jsonData
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                guard let data = data, error == nil else {
+                    print(error?.localizedDescription ?? "No data")
+                    return
+                }
+                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                if let responseJSON = responseJSON as? [String: Any] {
+                    print(responseJSON)
+                }
+            }
+            
+            task.resume()
+            
             bubbleChat?.messageTextView.text = "Nice! Already send it!"
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "dashboard") as! DashboardViewController
             self.present(newViewController, animated: false, completion: nil)
+            
+            
+            
         }
         
         

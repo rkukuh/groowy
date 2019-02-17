@@ -36,8 +36,8 @@ class DetailJournalTableViewController: UITableViewController, SectionHeaderTabl
         goalLabel.text = chalange?.goal
         
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        if chalange?.finished_at != nil {
-            let myString = String(format: "%@", chalange!.finished_at!)
+        if chalange?.remind_at != nil {
+            let myString = String(format: "%@", chalange!.remind_at!)
             timeLabel.text = myString
         }else{
             timeLabel.text = ""

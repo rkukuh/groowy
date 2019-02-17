@@ -9,32 +9,15 @@
 import UIKit
 import SpriteKit
 import CoreData
-extension JournalViewController: UIImagePickerControllerDelegate{
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
-        imagePicker.dismiss(animated: true, completion: nil)
-        guard let selectedImage = info[.originalImage] as? UIImage else {
-            print("Image not found!")
-            return
-        }
-        //imageTake.image = selectedImage
-    }
-}
 
-class JournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UINavigationControllerDelegate {
+
+class JournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var scene: GameScene!
     var timer: Timer!
-    var imagePicker: UIImagePickerController!
-    enum ImageSource {
-        case photoLibrary
-        case camera
-    }
     
-    func showAlertWith(title: String, message: String){
-        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
-    }
+    
+    
+    
     
     private var fetchedResults: NSFetchedResultsController<Challenge>!
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -45,54 +28,10 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     @IBAction func closeJournal(_ sender: UIButton) {
-        /*guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
-            selectImageFrom(.photoLibrary)
-            return
-        }
-        selectImageFrom(.camera)
-        */
-        
-        // prepare json data
-        let json: [String: Any] = ["username": "jaya","email": "jaya_pranata@hotmail.co.id","link":"saya suka sama siapa?",
-                                   "dict": ["1":"First", "2":"Second"]]
-        
-        let jsonData = try? JSONSerialization.data(withJSONObject: json)
-        
-        // create post request
-        let url = URL(string: "http://glorious-institution.com/restGroowie/rest_controller.php/email")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        
-        // insert json data to the request
-        request.httpBody = jsonData
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {
-                print(error?.localizedDescription ?? "No data")
-                return
-            }
-            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-            if let responseJSON = responseJSON as? [String: Any] {
-                print(responseJSON)
-            }
-        }
-        
-        task.resume()
-        
-        //dismiss(animated: false, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
     
-    func selectImageFrom(_ source: ImageSource){
-        imagePicker =  UIImagePickerController()
-        imagePicker.delegate = self
-        switch source {
-        case .camera:
-            imagePicker.sourceType = .camera
-        case .photoLibrary:
-            imagePicker.sourceType = .photoLibrary
-        }
-        present(imagePicker, animated: true, completion: nil)
-    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let sections = fetchedResults.sections,

@@ -23,8 +23,14 @@ enum ReflectionState {
     case promise
 }
 
-class ReflectionViewController: UIViewController, UITextViewInputAccessoryViewDelegate {
+enum ImageSource {
+    case photoLibrary
+    case camera
+}
+
+class ReflectionViewController: UIViewController, UITextViewInputAccessoryViewDelegate,UINavigationControllerDelegate {
     
+    var imagePicker: UIImagePickerController!
     var currentReflectionState = ReflectionState.didNotStart
     var scene: GameScene!
     var timer: Timer!
@@ -166,14 +172,15 @@ class ReflectionViewController: UIViewController, UITextViewInputAccessoryViewDe
             currentReflectionState = .askLearn
             updateReflectionState()
         } else if currentReflectionState == .takeAPhoto {
-            currentReflectionState = .reChallenge
-            updateReflectionState()
+            takeAPhoto()
         } else if currentReflectionState == .advise {
             currentReflectionState = .promise
             updateReflectionState()
+            doPromise()
         } else if currentReflectionState == .reChallenge {
             currentReflectionState = .promise
             updateReflectionState()
+            doPromise()
         }
     }
     
@@ -186,13 +193,16 @@ class ReflectionViewController: UIViewController, UITextViewInputAccessoryViewDe
             currentReflectionState = .askFeeling
             updateReflectionState()
         } else if currentReflectionState == .takeAPhoto {
-            takeAPhoto()
+            currentReflectionState = .reChallenge
+            updateReflectionState()
         } else if currentReflectionState == .reChallenge {
             currentReflectionState = .advise
             updateReflectionState()
+            doPromise()
         } else if currentReflectionState == .advise {
             currentReflectionState = .promise
             updateReflectionState()
+            doPromise()
         }
     }
     
@@ -316,17 +326,57 @@ class ReflectionViewController: UIViewController, UITextViewInputAccessoryViewDe
     
     // TODO: JAYA
     func takeAPhoto() {
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+         selectImageFrom(.photoLibrary)
+         return
+         }
+         selectImageFrom(.camera)
+         
+ 
         
+    }
+    
+    func selectImageFrom(_ source: ImageSource){
+        imagePicker =  UIImagePickerController()
+        imagePicker.delegate = self
+        switch source {
+        case .camera:
+            imagePicker.sourceType = .camera
+        case .photoLibrary:
+            imagePicker.sourceType = .photoLibrary
+        }
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func showAlertWith(title: String, message: String){
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
+    
+    func doPromise() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "dashboard") as! DashboardViewController
+        self.present(newViewController, animated: false, completion: nil)
+        
+        //after you do promise you can dismiss the view controller
+        //self.dismiss(animated: false, completion: nil)
+    }
+}
+
+
+extension ReflectionViewController: UIImagePickerControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+        imagePicker.dismiss(animated: true, completion: nil)
+        guard let selectedImage = info[.originalImage] as? UIImage else {
+            print("Image not found!")
+            return
+        }
         
         //after you take a photo please call this function to update to next state
         currentReflectionState = .reChallenge
         updateReflectionState()
-    }
-    
-    func doPromise() {
-        
-        
-        //after you do promise you can dismiss the view controller
-        self.dismiss(animated: false, completion: nil)
+        //imageTake.image = selectedImage
     }
 }
