@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class CreateChallengeController {
     
@@ -36,9 +37,31 @@ class CreateChallengeController {
         
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
         if let date = dateFormatter.date(from: data["reminder_at"]!) {
+            createLocalNotification(remindAt: date)
             challenge.remind_at = date as NSDate
         }
         
         appDelegate.saveContext()
+    }
+    
+    
+    
+    func createLocalNotification(remindAt: Date) {
+        let content = UNMutableNotificationContent()
+        let name = User.name
+        content.title = "Hi, \(name). Reflection Time! 😉"
+        content.body = "It's a good time to reflect your challenge today!"
+        content.sound = UNNotificationSound.default
+        
+        let now = Date()
+        let sub = remindAt.timeIntervalSinceNow - now.timeIntervalSinceNow
+        
+        if sub > 0 {
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: sub, repeats: false)
+            let request = UNNotificationRequest(identifier: "reminder-challenge", content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request) { (error) in
+                
+            }
+        }
     }
 }

@@ -40,5 +40,8 @@ class UITextViewWithPlaceholder: UITextView, UITextViewDelegate {
             self.placeholderTextView.alpha = 0
         }, completion: nil)
     }
-
+    func clear() {
+        self.text = ""
+        textViewDidChange(self)
+    }
 }

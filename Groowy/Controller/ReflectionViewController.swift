@@ -10,14 +10,26 @@ import UIKit
 import SpriteKit
 import AVFoundation
 
+enum ReflectionState {
+    case didNotStart
+    case askFeeling
+    case confirmFeeling
+    case reactFeeling
+    case askLearn
+    case askQuestion
+    case takeAPhoto
+    case reChallenge
+    case advise
+    case promise
+}
 
-class ReflectionViewController: UIViewController, UITextFieldInputAccessoryViewDelegate {
+class ReflectionViewController: UIViewController, UITextViewInputAccessoryViewDelegate {
     
-    var reflectionStart = false
+    var currentReflectionState = ReflectionState.didNotStart
     var scene: GameScene!
     var timer: Timer!
     var bubbleChat: UICustomTextViewView?
-    var textFieldInput: UITextFieldInputAccessoryView?
+    var textFieldInput: UITextViewInputAccessoryView?
     let textField = UITextField(frame: CGRect(x: 0, y: -50, width: 100, height: 50))
     
     
@@ -44,7 +56,9 @@ class ReflectionViewController: UIViewController, UITextFieldInputAccessoryViewD
         "Awesome!"
     ]
     
+    var lastExpressionValue = 5
     var lastExpression = ""
+    var isAboutToConfirmFelling = false
     
     @IBOutlet weak var expressionView: UIView!
     @IBOutlet weak var expressionLabel: UILabel!
@@ -52,8 +66,6 @@ class ReflectionViewController: UIViewController, UITextFieldInputAccessoryViewD
     @IBOutlet weak var spriteKitView: SKView!
     @IBOutlet weak var bottomView: UIAnswerBodyView!
     @IBOutlet weak var bottomHandLayoutConstraint: NSLayoutConstraint!
-    
-    var reflectionDialog = DialogRule()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +104,7 @@ class ReflectionViewController: UIViewController, UITextFieldInputAccessoryViewD
     
     
     func setupExpression() {
+        lastExpressionValue = 5
         lastExpression = expressionsText[5]
         expressionLabel.text = expressions[5]
         expressionTextLabel.text = expressionsText[5]
@@ -116,10 +129,9 @@ class ReflectionViewController: UIViewController, UITextFieldInputAccessoryViewD
         
         bottomView.isHidden = true
         
-        bottomView.topButton.setTitle("Mentor", for: .normal)
-        bottomView.bottomButton.setTitle("Mentee", for: .normal)
+        bottomView.topButton.setTitle("Yes", for: .normal)
+        bottomView.bottomButton.setTitle("No", for: .normal)
     }
-    
     
     // MARK: - Action buttons & sliders
     @IBAction func didChangeFeelingSlider(sender: UISlider) {
@@ -132,24 +144,65 @@ class ReflectionViewController: UIViewController, UITextFieldInputAccessoryViewD
             UISelectionFeedbackGenerator().selectionChanged()
         }
         lastExpression = expressionsText[valueInInt]
+        lastExpressionValue = valueInInt
         
+        isAboutToConfirmFelling = true
+    }
+    
+    @IBAction func didEndFeelingSlider(sender: UISlider) {
+        if isAboutToConfirmFelling {
+            isAboutToConfirmFelling = false
+            currentReflectionState = .confirmFeeling
+            updateReflectionState()
+        }
     }
     
     @objc func actionButtonTop(_sender: UIButton){
-        User.role = UserRole.mentor.rawValue
+        if currentReflectionState == .confirmFeeling {
+            // YES
+            currentReflectionState = .reactFeeling
+            updateReflectionState()
+        } else if currentReflectionState == .reactFeeling {
+            currentReflectionState = .askLearn
+            updateReflectionState()
+        } else if currentReflectionState == .takeAPhoto {
+            currentReflectionState = .reChallenge
+            updateReflectionState()
+        } else if currentReflectionState == .advise {
+            currentReflectionState = .promise
+            updateReflectionState()
+        } else if currentReflectionState == .reChallenge {
+            currentReflectionState = .promise
+            updateReflectionState()
+        }
     }
     
     @objc func actionButtonBottom(_sender: UIButton){
-        User.role = UserRole.mentee.rawValue
+        if currentReflectionState == .confirmFeeling {
+            // NO
+            currentReflectionState = .askFeeling
+            updateReflectionState()
+        } else if currentReflectionState == .reactFeeling {
+            currentReflectionState = .askFeeling
+            updateReflectionState()
+        } else if currentReflectionState == .takeAPhoto {
+            takeAPhoto()
+        } else if currentReflectionState == .reChallenge {
+            currentReflectionState = .advise
+            updateReflectionState()
+        } else if currentReflectionState == .advise {
+            currentReflectionState = .promise
+            updateReflectionState()
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Haptic Feedback
         UISelectionFeedbackGenerator().selectionChanged()
         
-        if !reflectionStart {
-             bubbleChat?.messageTextView.text = "Tell me how do you feel?"
-            expressionView.isHidden = false
+        if currentReflectionState == .didNotStart {
+            currentReflectionState = .askFeeling
+            updateReflectionState()
         }
     }
     
@@ -161,12 +214,65 @@ class ReflectionViewController: UIViewController, UITextFieldInputAccessoryViewD
         })
     }
     
-    func showKeyboardWithTextFieldAccessoryView() {
-        if let textFieldInput = loadViewFromNib(nibName: "UITextFieldInputAccessory") as? UITextFieldInputAccessoryView {
+    func updateReflectionState() {
+        if currentReflectionState == .askFeeling {
+            bubbleChat?.messageTextView.text = "Tell me how do you feel?"
+            expressionView.isHidden = false
+        } else if currentReflectionState == .confirmFeeling {
+            bubbleChat?.messageTextView.text = "Hmm, are you feeling \(lastExpression.lowercased())?"
+            expressionView.isHidden = true
+            bottomView.topButton.setTitle("Yes", for: .normal)
+            bottomView.bottomButton.setTitle("No", for: .normal)
+            bottomView.isHidden = false
+        } else if currentReflectionState == .reactFeeling {
+            if lastExpressionValue == 5 {
+                currentReflectionState = .askLearn
+                updateReflectionState()
+            } else if lastExpressionValue > 5 {
+                let randomIndex = Int.random(in: 0..<positiveExpressionReactionsText.count)
+                bubbleChat?.messageTextView.text = positiveExpressionReactionsText[randomIndex].replacingOccurrences(of: "$feeling", with: lastExpression.lowercased())
+                
+                bottomView.topButton.setTitle("Absolutely!", for: .normal)
+                bottomView.bottomButton.setTitle("I want to change my feeling", for: .normal)
+            } else {
+                let randomIndex = Int.random(in: 0..<negativeExpressionReactionsText.count)
+                bubbleChat?.messageTextView.text = negativeExpressionReactionsText[randomIndex].replacingOccurrences(of: "$feeling", with: lastExpression.lowercased())
+                
+                bottomView.topButton.setTitle("Thanks for cheer me up!", for: .normal)
+                bottomView.bottomButton.setTitle("I want to change my feeling", for: .normal)
+            }
+        } else if currentReflectionState == .askLearn {
+            bubbleChat?.messageTextView.text = "What did you learn?"
+            showKeyboardWithTextViewAccessoryView()
+        } else if currentReflectionState == .askQuestion {
+            bubbleChat?.messageTextView.text = "What questions are still bother you?"
+            resetTextView()
+        } else if currentReflectionState == .takeAPhoto {
+            bubbleChat?.messageTextView.text = "Great progress with great memory, take a photo to help you memorize"
+            dismissKeyboard()
+            
+            bottomView.topButton.setTitle("Take a photo", for: .normal)
+            bottomView.bottomButton.setTitle("I don't want to take a photo", for: .normal)
+        } else if currentReflectionState == .reChallenge {
+            bubbleChat?.messageTextView.text = "Are you want to take a challenge tomorrow?"
+            
+            bottomView.topButton.setTitle("Sure", for: .normal)
+            bottomView.bottomButton.setTitle("Nope", for: .normal)
+        } else if currentReflectionState == .advise {
+            bubbleChat?.messageTextView.text = "I suggest you to keep learning by taking many challenges every day"
+            
+            
+            bottomView.topButton.setTitle("OK, I'll take it tomorrow", for: .normal)
+            bottomView.bottomButton.setTitle("I think I got your point", for: .normal)
+        }
+    }
+    
+    func showKeyboardWithTextViewAccessoryView() {
+        if let textFieldInput = loadViewFromNib(nibName: "UITextViewInputAccessoryView") as? UITextViewInputAccessoryView {
             self.textFieldInput = textFieldInput
             
             textField.autocorrectionType = .no
-            textFieldInput.textField.autocapitalizationType = .words
+            textFieldInput.textView.autocapitalizationType = .sentences
             textField.inputAccessoryView = textFieldInput
             
             textField.becomeFirstResponder()
@@ -175,16 +281,52 @@ class ReflectionViewController: UIViewController, UITextFieldInputAccessoryViewD
         }
     }
     
+    func resetTextView() {
+        if let textViewWithPlaceholder = self.textFieldInput?.textView as? UITextViewWithPlaceholder {
+            textViewWithPlaceholder.placeholderTextView.text = "What actions do motivated me as a learner?"
+        }
+        self.textFieldInput?.clear()
+    }
+    
     func didTapSendButton() {
-        // Dismiss keyboard, need to refine
+        
         if let textFieldInput = textFieldInput {
-            let name = textFieldInput.textField.text
-            User.name = name ?? ""
-            textFieldInput.resignFirstResponder()
-            view.endEditing(true)
+            let content = textFieldInput.textView.text
+            
+            // Get content from User
+            if currentReflectionState == .askLearn {
+                print("Learn : \(content)")
+                currentReflectionState = .askQuestion
+                updateReflectionState()
+            } else if currentReflectionState == .askQuestion {
+                print("Question : \(content)")
+                currentReflectionState = .takeAPhoto
+                updateReflectionState()
+            }
         }
         
         bottomView.isHidden = false
         
+    }
+    
+    func dismissKeyboard() {
+        textFieldInput?.resignFirstResponder()
+        view.endEditing(true)
+    }
+    
+    // TODO: JAYA
+    func takeAPhoto() {
+        
+        
+        //after you take a photo please call this function to update to next state
+        currentReflectionState = .reChallenge
+        updateReflectionState()
+    }
+    
+    func doPromise() {
+        
+        
+        //after you do promise you can dismiss the view controller
+        self.dismiss(animated: false, completion: nil)
     }
 }
