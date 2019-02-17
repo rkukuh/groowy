@@ -11,9 +11,11 @@ import UIKit
 class DetailJournalTableViewController: UITableViewController, SectionHeaderTableViewCellDelegate {
     func toggleSection(header: SectionHeaderTableViewCell, section: Int) {
         print("yayyyy")
+        isHidden[section] = !isHidden[section]
+        tableView.reloadSections(IndexSet(section...section), with: .automatic)
     }
     
-
+    var isHidden :[Bool] = [false,false]
     var chalange : Challenge?
     let formatter = DateFormatter()
     @IBOutlet weak var evidenceImageView: UIImageView!
@@ -56,13 +58,24 @@ class DetailJournalTableViewController: UITableViewController, SectionHeaderTabl
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        if isHidden[section] == false {
+            return 1
+        }else{
+            return 0
+        }
+        
     }
     
    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = SectionHeaderTableViewCell(view: self.view)
         cell.section = section
+        
+        if isHidden[section] {
+            cell.arrowLabel?.text = "▶︎"
+        }else{
+            cell.arrowLabel?.text = "▼"
+        }
         
         if section == 0 {
             cell.titleLabel?.text = "Detail"

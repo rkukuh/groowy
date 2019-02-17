@@ -33,6 +33,17 @@ class HomeViewController: UIViewController, UITextFieldInputAccessoryViewDelegat
         setupGameScene()
         setupBubbleChat()
         setupBottomView()
+        
+        // MARK: Stop Timer When Change to Background
+        NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { (notification) in
+            print("app did enter background")
+            if self.timer != nil {
+                self.timer.invalidate()
+                self.timer = nil
+            }
+            // run your code here (or whatever)
+        }
+        // Stop Timer When Change to Background
     }
     
     override func viewDidAppear(_ animated: Bool) {

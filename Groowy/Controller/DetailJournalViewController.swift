@@ -14,6 +14,8 @@ class DetailJournalViewController: UIViewController {
     var scene: GameScene!
     var timer: Timer!
     var challange:Challenge?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGameScene()
