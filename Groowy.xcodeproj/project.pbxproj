@@ -93,7 +93,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4845900D22150BD800508FCB /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		4845900D22150BD800508FCB /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; tabWidth = 1; };
 		4894C2C82212625000E2AB6F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4894C2CC221263B400E2AB6F /* UITextFieldInputAccessoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldInputAccessoryViewDelegate.swift; sourceTree = "<group>"; };
 		4894D7A5220BC31F007F34F5 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -818,7 +818,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5NULCBGY98;
+				DEVELOPMENT_TEAM = 57VL32B9VS;
 				INFOPLIST_FILE = Groowy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -837,7 +837,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5NULCBGY98;
+				DEVELOPMENT_TEAM = 57VL32B9VS;
 				INFOPLIST_FILE = Groowy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
