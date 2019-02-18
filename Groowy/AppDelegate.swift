@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // set initial view controller depends on user state
-        User.state = UserState.dashboard.rawValue
+//        User.state = UserState.dashboard.rawValue
         setupUserStateManage()
         GroowieSound.setAwal()
         return true
