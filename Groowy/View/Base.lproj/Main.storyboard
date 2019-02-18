@@ -418,7 +418,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVu-d4-3di">
                                 <rect key="frame" x="131.5" y="277" width="112.5" height="133"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="giftPurple" translatesAutoresizingMaskIntoConstraints="NO" id="aM6-do-6f2">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fingerprint" translatesAutoresizingMaskIntoConstraints="NO" id="aM6-do-6f2">
                                         <rect key="frame" x="0.0" y="0.0" width="112.5" height="133"/>
                                     </imageView>
                                 </subviews>
@@ -619,7 +619,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJh-B5-pnp">
                                                 <rect key="frame" x="0.0" y="132" width="375" height="36"/>
                                                 <color key="backgroundColor" red="0.16470588235294117" green="0.10980392156862745" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="SETTINGS">
+                                                <state key="normal" title="DO REFLECTION">
                                                     <color key="titleColor" red="0.87450980392156863" green="0.75686274509803919" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -772,7 +772,7 @@
     </scenes>
     <resources>
         <image name="BrownHand" width="375" height="78"/>
-        <image name="giftPurple" width="167" height="199"/>
+        <image name="fingerprint" width="85" height="85"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fCQ-qe-MMr"/>
