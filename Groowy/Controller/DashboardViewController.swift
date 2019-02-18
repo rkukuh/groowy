@@ -97,7 +97,9 @@ class DashboardViewController: UIViewController {
     
     // MARK: - Action Buttons
     @IBAction func didTapTalkToGroowy(sender: UIButton) {
-        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Jaya", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "deepUnderstanding") as! DialogViewController
+        self.present(newViewController, animated: true, completion: nil)
     }
     @IBAction func didTapTakeChallenge(sender: UIButton) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -112,6 +114,8 @@ class DashboardViewController: UIViewController {
     @IBAction func didTapSetting(sender: UIButton) {
         
     }
-    
+    func sasa() -> Bool{
+        return true
+    }
     
 }
