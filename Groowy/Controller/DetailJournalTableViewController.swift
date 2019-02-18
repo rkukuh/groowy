@@ -42,6 +42,11 @@ class DetailJournalTableViewController: UITableViewController, SectionHeaderTabl
         }else{
             timeLabel.text = ""
         }
+        
+        questionLabel.text = ""
+        learnReflectionLabel.text = ""
+        feelLabel.text = ""
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

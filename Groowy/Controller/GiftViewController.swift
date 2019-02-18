@@ -128,7 +128,7 @@ class GiftViewController: UIViewController, MFMailComposeViewControllerDelegate,
             view.endEditing(true)
             
             // prepare json data
-            let json: [String: Any] = ["username": "jaya","email": email ?? "","link":"www.google.com",
+            let json: [String: Any] = ["username": User.name,"email": email ?? "","link":"www.google.com",
                                        "dict": ["1":"First", "2":"Second"]]
             
             let jsonData = try? JSONSerialization.data(withJSONObject: json)

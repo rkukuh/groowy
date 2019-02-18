@@ -112,7 +112,9 @@ class DashboardViewController: UIViewController {
         self.present(newViewController, animated: true, completion: nil)
     }
     @IBAction func didTapSetting(sender: UIButton) {
-        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "reflection") as! ReflectionViewController
+        self.present(newViewController, animated: true, completion: nil)
     }
     func sasa() -> Bool{
         return true
